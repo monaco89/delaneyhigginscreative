@@ -5,6 +5,12 @@ import Content from '../components/Content'
 import Layout from '../components/Layout'
 import Image from '../components/Image'
 import DH from '../../static/images/dh.jpg'
+import skills from '../../static/images/skills.png'
+import collage from '../../static/images/collage.png'
+import home from '../../static/images/home.png'
+import merchandising from '../../static/images/merchandising.png'
+import style from '../../static/images/style.png'
+import sexy from '../../static/images/sexy.png'
 
 // Export Template for use in CMS preview
 export const HomePageTemplate = ({ title, subtitle, featuredImage, body }) => (
@@ -22,7 +28,7 @@ export const HomePageTemplate = ({ title, subtitle, featuredImage, body }) => (
           }}
           className="bam"
         >
-          <img src={DH} style={{ height: '450px' }} className="hero" />
+          <img src={DH} style={{ height: '550px' }} className="hero" />
           <div
             className="hero"
             style={{
@@ -31,7 +37,7 @@ export const HomePageTemplate = ({ title, subtitle, featuredImage, body }) => (
               maxWidth: '600px',
               padding: '1.5em',
               textAlign: 'left',
-              maxHeight: '500px',
+              height: '550px',
               overflow: 'scroll'
             }}
           >
@@ -40,6 +46,61 @@ export const HomePageTemplate = ({ title, subtitle, featuredImage, body }) => (
         </div>
       </div>
       <div className="container">{/* <Content source={body} /> */}</div>
+    </section>
+    <section className="section" style={{ marginTop: '150px' }}>
+      <div className="container">
+        <div
+          style={{
+            display: 'flex',
+            justifyContent: 'space-around',
+            flexDirection: 'row',
+            alignItems: 'center',
+            flexWrap: 'wrap'
+          }}
+          className="skills"
+        >
+          <p>Visual Merchandising</p>
+          <p style={{ borderRight: '4px solid #7C4847' }}>
+            <a href="/style">Styling</a>
+          </p>
+          <p
+            style={{
+              fontSize: '4.0rem',
+              borderRight: '4px solid #7C4847',
+              borderLeft: '4px solid #7C4847'
+            }}
+          >
+            Skills In:
+          </p>
+          <p style={{ borderLeft: '4px solid #7C4847' }}>Photography</p>
+          <p>Interior Design</p>
+        </div>
+      </div>
+    </section>
+    <section className="section" style={{ marginTop: '150px' }}>
+      <div className="container">
+        <img src={collage} style={{ width: '100%' }} />
+      </div>
+    </section>
+    <section className="section" style={{ marginTop: '150px' }}>
+      <div className="container">
+        <img src={home} style={{ width: '100%' }} />
+      </div>
+    </section>
+    <section className="section" style={{ marginTop: '150px' }}>
+      <div className="container">
+        <img src={merchandising} style={{ width: '100%' }} />
+      </div>
+    </section>
+    <section className="section" style={{ marginTop: '150px' }}>
+      <div className="container">
+        <img src={style} style={{ width: '100%' }} />
+      </div>
+    </section>
+    <section className="section">
+      <div className="container">
+        <img src={sexy} style={{ width: '100%' }} />
+      </div>
     </section>
   </main>
 )

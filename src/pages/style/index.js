@@ -2,7 +2,6 @@ import React, { useState } from 'react'
 import Layout from '../../components/Layout'
 import InfiniteScroll from 'react-infinite-scroll-component'
 import axios from 'axios'
-import Logo from '../../../static/images/logo.jpg'
 
 const Image = ({ url, key }) => (
   <div className="image-item" key={key}>
@@ -35,8 +34,7 @@ const StyePage = () => {
       <section className="section">
         <div className="container">
           <div className="content">
-            <img src={Logo} style={{ height: '250px' }} />
-            <h2 style={{ textAlign: 'left' }}>Style</h2>
+            <h1 style={{ textAlign: 'left', fontSize: '5rem' }}>Style</h1>
             <InfiniteScroll
               dataLength={images}
               next={() => fetchImages(5)}
