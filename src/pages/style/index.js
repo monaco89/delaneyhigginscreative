@@ -44,7 +44,7 @@ const StyePage = () => {
                 {loaded
                   ? images.map((data, i) => (
                       <ImageTile
-                        url={`https://res.cloudinary.com/demo/image/upload/${data.public_id}.jpg`}
+                        url={`https://res.cloudinary.com/nickmonaco/image/upload/${data.public_id}.jpg`}
                         key={i}
                       />
                     ))
