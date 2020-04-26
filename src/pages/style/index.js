@@ -19,15 +19,6 @@ const StyePage = () => {
   }, [])
 
   const fetchImages = (count = 7) => {
-    const apiRoot = 'https://api.unsplash.com'
-    const accessKey = 'xVZ2D44A9qBV0wxv6Um3RVIuiP5isGgOfKRliMnPtNs'
-
-    // axios
-    //   .get(`${apiRoot}/photos/random?client_id=${accessKey}&count=${count}`)
-    //   .then(res => {
-    //     setImages([...images, ...res.data])
-    //     setIsLoaded(true)
-    //   })
     axios
       .get('https://res.cloudinary.com/nickmonaco/image/list/style.json')
       .then(res => {
