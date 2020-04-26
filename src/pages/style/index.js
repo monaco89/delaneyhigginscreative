@@ -2,9 +2,10 @@ import React, { useState } from 'react'
 import Layout from '../../components/Layout'
 import InfiniteScroll from 'react-infinite-scroll-component'
 import axios from 'axios'
+// import { CloudinaryContext, Transformation, Image } from 'cloudinary-react'
 
-const Image = ({ url, key }) => (
-  <div className="image-item" key={key}>
+const ImageTile = ({ url }) => (
+  <div className="image-item">
     <img src={url} />
   </div>
 )
@@ -21,10 +22,17 @@ const StyePage = () => {
     const apiRoot = 'https://api.unsplash.com'
     const accessKey = 'xVZ2D44A9qBV0wxv6Um3RVIuiP5isGgOfKRliMnPtNs'
 
+    // axios
+    //   .get(`${apiRoot}/photos/random?client_id=${accessKey}&count=${count}`)
+    //   .then(res => {
+    //     setImages([...images, ...res.data])
+    //     setIsLoaded(true)
+    //   })
     axios
-      .get(`${apiRoot}/photos/random?client_id=${accessKey}&count=${count}`)
+      .get('https://res.cloudinary.com/nickmonaco/image/list/style.json')
       .then(res => {
-        setImages([...images, ...res.data])
+        console.log(res.data.resources)
+        setImages(res.data.resources)
         setIsLoaded(true)
       })
   }
@@ -39,12 +47,15 @@ const StyePage = () => {
               dataLength={images}
               next={() => fetchImages(5)}
               hasMore={true}
-              loader={<p>loading...</p>}
+              loader={!loaded && <p>loading...</p>}
             >
               <div className="image-grid" style={{ marginTop: '30px' }}>
                 {loaded
-                  ? images.map((image, index) => (
-                      <Image url={image.urls.regular} key={index} />
+                  ? images.map((data, i) => (
+                      <ImageTile
+                        url={`https://res.cloudinary.com/demo/image/upload/${data.public_id}.jpg`}
+                        key={i}
+                      />
                     ))
                   : ''}
               </div>
