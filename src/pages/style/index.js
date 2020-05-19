@@ -22,7 +22,7 @@ const StyePage = () => {
     axios
       .get('https://res.cloudinary.com/nickmonaco/image/list/style.json')
       .then(res => {
-        console.log(res.data.resources)
+        // console.log(res.data.resources)
         setImages(res.data.resources)
         setIsLoaded(true)
       })
