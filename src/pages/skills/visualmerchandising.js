@@ -20,7 +20,9 @@ const StyePage = () => {
 
   const fetchImages = (count = 7) => {
     axios
-      .get('https://res.cloudinary.com/nickmonaco/image/list/style.json')
+      .get(
+        'https://res.cloudinary.com/nickmonaco/image/list/visualmerchandising.json'
+      )
       .then(res => {
         // console.log(res.data.resources)
         setImages(res.data.resources)
@@ -28,12 +30,15 @@ const StyePage = () => {
       })
   }
 
+  // TODO Make into own component
   return (
     <Layout>
       <section className="section">
         <div className="container">
           <div className="content">
-            <h1 style={{ textAlign: 'left', fontSize: '5rem' }}>Style</h1>
+            <h1 style={{ textAlign: 'left', fontSize: '5rem' }}>
+              Visual Merchandising
+            </h1>
             <InfiniteScroll
               dataLength={images}
               next={() => fetchImages(5)}

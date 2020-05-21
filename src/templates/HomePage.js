@@ -1,11 +1,12 @@
 import React from 'react'
 import { graphql } from 'gatsby'
 import HomeHero from '../components/HomeHero'
-import Content from '../components/Content'
+import InstagramFeed from '../components/InstagramFeed'
+// import Content from '../components/Content'
 import Layout from '../components/Layout'
-import Image from '../components/Image'
+// import Image from '../components/Image'
 import DH from '../../static/images/dh.jpg'
-import skills from '../../static/images/skills.png'
+// import skills from '../../static/images/skills.png'
 import collage from '../../static/images/collage.png'
 import home from '../../static/images/home.png'
 import merchandising from '../../static/images/merchandising.png'
@@ -100,6 +101,15 @@ export const HomePageTemplate = ({ title, subtitle, featuredImage, body }) => (
     <section className="section">
       <div className="container">
         <img src={sexy} style={{ width: '100%' }} />
+      </div>
+    </section>
+    <section className="section">
+      <div className="container">
+        <h2 className="taCenter">
+          <a href="https://instagram.com/higginsdelaney">@higginsdelaney</a>
+        </h2>
+        <br />
+        <InstagramFeed count="8" />
       </div>
     </section>
   </main>
