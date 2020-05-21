@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import Layout from '../../components/Layout'
 import InfiniteScroll from 'react-infinite-scroll-component'
 import axios from 'axios'
+import PageHeader from '../../components/PageHeader'
 // import { CloudinaryContext, Transformation, Image } from 'cloudinary-react'
 
 const ImageTile = ({ url }) => (
@@ -36,9 +37,7 @@ const StyePage = () => {
       <section className="section">
         <div className="container">
           <div className="content">
-            <h1 style={{ textAlign: 'left', fontSize: '5rem' }}>
-              Visual Merchandising
-            </h1>
+            <PageHeader title="Visual Merchandising" subtitle="" />
             <InfiniteScroll
               dataLength={images}
               next={() => fetchImages(5)}

@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import Layout from '../../components/Layout'
 import InfiniteScroll from 'react-infinite-scroll-component'
 import axios from 'axios'
+import PageHeader from '../../components/PageHeader'
 
 const ImageTile = ({ url }) => (
   <div className="image-item">
@@ -35,9 +36,7 @@ const StyePage = () => {
       <section className="section">
         <div className="container">
           <div className="content">
-            <h1 style={{ textAlign: 'left', fontSize: '5rem' }}>
-              Interior Design
-            </h1>
+            <PageHeader title="Interior Design" subtitle="" />
             <InfiniteScroll
               dataLength={images}
               next={() => fetchImages(5)}

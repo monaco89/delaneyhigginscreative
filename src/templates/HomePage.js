@@ -6,7 +6,6 @@ import InstagramFeed from '../components/InstagramFeed'
 import Layout from '../components/Layout'
 // import Image from '../components/Image'
 import DH from '../../static/images/dh.jpg'
-// import skills from '../../static/images/skills.png'
 import collage from '../../static/images/collage.png'
 import home from '../../static/images/home.png'
 import merchandising from '../../static/images/merchandising.png'
@@ -106,10 +105,12 @@ export const HomePageTemplate = ({ title, subtitle, featuredImage, body }) => (
     <section className="section">
       <div className="container">
         <h2 className="taCenter">
-          <a href="https://instagram.com/higginsdelaney">@higginsdelaney</a>
+          <a href="https://instagram.com/delaneyhigginscollection">
+            @delaneyhigginscollection
+          </a>
         </h2>
         <br />
-        <InstagramFeed count="8" />
+        {/* <InstagramFeed count="8" /> */}
       </div>
     </section>
   </main>

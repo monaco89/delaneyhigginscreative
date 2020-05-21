@@ -17,7 +17,7 @@ const HomeHero = ({ backgroundImage, large, className = '' }) => {
         />
       )}
       <div className="container relative">
-        <img src={Logo} style={{ height: '250px' }} />
+        <img src={Logo} style={{ height: '250px' }} alt="delaney higgins" />
       </div>
     </div>
   )

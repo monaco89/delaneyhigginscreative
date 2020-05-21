@@ -2,10 +2,10 @@ import React from 'react'
 import CMS from 'netlify-cms-app'
 import './cms-utils'
 
+// TODO About me
 import { HomePageTemplate } from '../templates/HomePage'
 import { ComponentsPageTemplate } from '../templates/ComponentsPage'
 import { ContactPageTemplate } from '../templates/ContactPage'
-import { DefaultPageTemplate } from '../templates/DefaultPage'
 import { BlogIndexTemplate } from '../templates/BlogIndex'
 import { SinglePostTemplate } from '../templates/SinglePost'
 import uploadcare from 'netlify-cms-media-library-uploadcare'
