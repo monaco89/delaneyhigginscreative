@@ -105,7 +105,10 @@ export const HomePageTemplate = ({ title, subtitle, featuredImage, body }) => (
     <section className="section">
       <div className="container">
         <h2 className="taCenter">
-          <a href="https://instagram.com/delaneyhigginscollection">
+          <a
+            href="https://instagram.com/delaneyhigginscollection"
+            target="_blank"
+          >
             @delaneyhigginscollection
           </a>
         </h2>
