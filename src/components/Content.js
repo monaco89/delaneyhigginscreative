@@ -1,7 +1,6 @@
 import React from 'react'
 import ReactDOMServer from 'react-dom/server'
 import Marked from 'react-markdown'
-import PropTypes from 'prop-types'
 import Image from './Image'
 
 import './Content.css'
@@ -91,12 +90,6 @@ const Content = ({ source, src, className = '' }) => {
       }}
     />
   )
-}
-
-Content.propTypes = {
-  source: PropTypes.string,
-  src: PropTypes.string,
-  className: PropTypes.string
 }
 
 export default Content

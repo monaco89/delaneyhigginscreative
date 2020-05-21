@@ -1,5 +1,4 @@
 import React from 'react'
-import PropTypes from 'prop-types'
 import MoveTo from 'moveto'
 
 const AnchorLink = ({
@@ -34,14 +33,6 @@ const AnchorLink = ({
       {children}
     </a>
   )
-}
-
-AnchorLink.propTypes = {
-  href: PropTypes.string.isRequired,
-  onClick: PropTypes.func,
-  options: PropTypes.object,
-  className: PropTypes.string,
-  toleranceElement: PropTypes.string
 }
 
 export default AnchorLink
