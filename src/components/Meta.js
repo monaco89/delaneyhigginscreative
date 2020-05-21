@@ -27,10 +27,11 @@ export default class Meta extends Component {
       noindex,
       canonicalLink,
       siteTitle,
-      siteDescription,
-      googleTrackingId
+      siteDescription
       // overwrite { title, description } if in fields or fields.meta
     } = this.props
+
+    const googleTrackingId = process.env.GOOGLE_ID
 
     return (
       <Helmet>
