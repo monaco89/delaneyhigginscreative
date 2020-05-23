@@ -1,13 +1,13 @@
 import React, { useState } from 'react'
-import Layout from '../../components/Layout'
+import Layout from '../components/Layout'
 import InfiniteScroll from 'react-infinite-scroll-component'
 import axios from 'axios'
-import PageHeader from '../../components/PageHeader'
+import PageHeader from '../components/PageHeader'
 // import { CloudinaryContext, Transformation, Image } from 'cloudinary-react'
 
-const ImageTile = ({ url }) => (
+const ImageTile = ({ url, height, width }) => (
   <div className="image-item">
-    <img src={url} />
+    <img src={url} height={height} width={width} />
   </div>
 )
 
@@ -21,9 +21,7 @@ const StyePage = () => {
 
   const fetchImages = (count = 7) => {
     axios
-      .get(
-        'https://res.cloudinary.com/nickmonaco/image/list/graphicdesign.json'
-      )
+      .get('https://res.cloudinary.com/nickmonaco/image/list/style.json')
       .then(res => {
         // console.log(res.data.resources)
         setImages(res.data.resources)
@@ -36,7 +34,7 @@ const StyePage = () => {
       <section className="section">
         <div className="container">
           <div className="content">
-            <PageHeader title="Graphic Design" subtitle="" />
+            <PageHeader title="Style" subtitle="" />
             <InfiniteScroll
               dataLength={images}
               next={() => fetchImages(5)}
@@ -45,12 +43,19 @@ const StyePage = () => {
             >
               <div className="image-grid" style={{ marginTop: '30px' }}>
                 {loaded
-                  ? images.map((data, i) => (
-                      <ImageTile
-                        url={`https://res.cloudinary.com/nickmonaco/image/upload/${data.public_id}.jpg`}
-                        key={i}
-                      />
-                    ))
+                  ? images.map(
+                      (data, i) => (
+                        console.log(data),
+                        (
+                          <ImageTile
+                            url={`https://res.cloudinary.com/nickmonaco/image/upload/${data.public_id}.jpg`}
+                            key={i}
+                            height={data.height || 405}
+                            width={data.width || 270}
+                          />
+                        )
+                      )
+                    )
                   : 'No Photos'}
               </div>
             </InfiniteScroll>

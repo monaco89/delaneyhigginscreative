@@ -10,25 +10,12 @@
   --borderRadius: 3px;
 }
 
-::-webkit-scrollbar {
-  width: 0.4rem;
-}
-
-::-webkit-scrollbar-track {
-  -webkit-box-shadow: inset 0 0 3px var(--grey);
-}
-
-::-webkit-scrollbar-thumb {
-  background-color: var(--primary);
-}
-
 ::selection {
   background: #7c4847;
 }
 
 html {
   box-sizing: border-box;
-  font-size: 62.5%;
   min-height: 100%;
   background: var(--lightGrey);
 }
@@ -132,6 +119,7 @@ blockquote {
 }
 .taCenter {
   text-align: center;
+  word-wrap: break-word;
 }
 .taLeft {
   text-align: left;
@@ -277,4 +265,24 @@ blockquote {
 
 .skills a:hover {
   text-decoration: underline;
+}
+
+.exp img {
+  max-height: 600px;
+  width: 100%;
+}
+
+.exp a:hover {
+  /* -webkit-box-shadow: 3px -3px 26px -10px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 3px -3px 26px -10px rgba(0, 0, 0, 0.75);
+  box-shadow: 3px -3px 26px -10px rgba(0, 0, 0, 0.75); */
+}
+
+.exp .exp_title {
+  margin-top: 15px;
+}
+
+.exp .exp_blurp {
+  border-top: 2px solid black;
+  padding-top: 15px;
 }

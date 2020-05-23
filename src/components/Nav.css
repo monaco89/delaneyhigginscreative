@@ -7,6 +7,14 @@
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.025);
 }
 
+.Nav a {
+  color: black;
+}
+
+.Nav a:hover {
+  color: #7c4847;
+}
+
 .Nav--Container {
   display: flex;
   align-items: center;
@@ -18,6 +26,7 @@
   align-items: center;
   justify-content: center;
   flex-direction: row;
+  width: 100%;
 }
 
 .Nav--Links > * + * {
@@ -47,8 +56,9 @@
 .NavLink:hover,
 .NavLink.active,
 .NavLink:focus {
-  color: var(--primary);
-  border-bottom-color: currentColor;
+  color: #7c4847;
+  border-bottom-color: #7c4847;
+  text-decoration: none;
 }
 
 .Nav--Group {

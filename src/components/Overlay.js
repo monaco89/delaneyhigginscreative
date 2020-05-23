@@ -11,7 +11,7 @@ export default ({
     style={{
       color,
       opacity,
-      backgroundColor: 'currentColor',
+      backgroundColor: '#7c4847',
       position: 'absolute',
       left: 0,
       right: 0,

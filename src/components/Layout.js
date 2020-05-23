@@ -2,7 +2,7 @@ import React, { Fragment } from 'react'
 import Helmet from 'react-helmet'
 import { StaticQuery, graphql } from 'gatsby'
 import Meta from './Meta'
-// import Nav from './Nav'
+import Nav from './Nav'
 import Footer from './Footer'
 
 import 'modern-normalize/modern-normalize.css'
@@ -71,7 +71,7 @@ export default ({ children, meta, title }) => {
               {...data.settingsYaml}
             />
 
-            {/* <Nav subNav={subNav} /> */}
+            <Nav subNav={subNav} />
 
             <Fragment>{children}</Fragment>
 

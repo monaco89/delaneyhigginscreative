@@ -45,45 +45,80 @@ export class Navigation extends Component {
     return (
       <nav className={`Nav ${active ? 'Nav-active' : ''}`}>
         <div className="Nav--Container container">
-          <Link to="/" onClick={this.handleLinkClick}>
-            <Logo />
-          </Link>
           <div className="Nav--Links">
-            <NavLink to="/">Home</NavLink>
-            <NavLink to="/components/">Components</NavLink>
             <div
               className={`Nav--Group ${
-                this.state.activeSubNav === 'posts' ? 'active' : ''
+                this.state.activeSubNav === 'exp' ? 'active' : ''
               }`}
             >
               <span
                 className={`NavLink Nav--GroupParent ${
-                  this.props.location.pathname.includes('posts') ||
-                  this.props.location.pathname.includes('blog') ||
-                  this.props.location.pathname.includes('post-categories')
+                  this.props.location.pathname.includes('style') ||
+                  this.props.location.pathname.includes('interiordesign')
                     ? 'active'
                     : ''
                 }`}
-                onClick={() => this.toggleSubNav('posts')}
+                onClick={() => this.toggleSubNav('exp')}
               >
-                Blog
+                Experience
                 <div className="Nav--GroupLinks">
-                  <NavLink to="/blog/" className="Nav--GroupLink">
-                    All Posts
+                  <NavLink to="/style" className="Nav--GroupLink">
+                    Styling
                   </NavLink>
-                  {subNav.posts.map((link, index) => (
-                    <NavLink
-                      to={link.slug}
-                      key={'posts-subnav-link-' + index}
-                      className="Nav--GroupLink"
-                    >
-                      {link.title}
-                    </NavLink>
-                  ))}
+                  <NavLink to="/interiordesign" className="Nav--GroupLink">
+                    Interior Design
+                  </NavLink>
                 </div>
               </span>
             </div>
-            <NavLink to="/default/">Default</NavLink>
+            <div
+              className={`Nav--Group ${
+                this.state.activeSubNav === 'skills' ? 'active' : ''
+              }`}
+            >
+              <span
+                className={`NavLink Nav--GroupParent ${
+                  this.props.location.pathname.includes('photography') ||
+                  this.props.location.pathname.includes(
+                    'visualmerchandising'
+                  ) ||
+                  this.props.location.pathname.includes('graphicdesign') ||
+                  this.props.location.pathname.includes('sewing')
+                    ? 'active'
+                    : ''
+                }`}
+                onClick={() => this.toggleSubNav('skills')}
+              >
+                Skills
+                <div className="Nav--GroupLinks">
+                  <NavLink to="/photography/" className="Nav--GroupLink">
+                    Photography
+                  </NavLink>
+                  <NavLink
+                    to="/visualmerchandising/"
+                    className="Nav--GroupLink"
+                  >
+                    Visual Merchandising
+                  </NavLink>
+                  <NavLink to="/graphicdesign/" className="Nav--GroupLink">
+                    Graphic Design
+                  </NavLink>
+                  <NavLink to="/sewing/" className="Nav--GroupLink">
+                    Sewing and Alterations
+                  </NavLink>
+                </div>
+              </span>
+            </div>
+            <Link to="/" onClick={this.handleLinkClick}>
+              <Logo />
+            </Link>
+            <a
+              href="https://instagram.com/delaneyhigginscollection"
+              target="_blank"
+              className="NavLink"
+            >
+              Instagram
+            </a>
             <NavLink to="/contact/">Contact</NavLink>
           </div>
           <button

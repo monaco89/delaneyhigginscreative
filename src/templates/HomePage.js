@@ -6,115 +6,102 @@ import InstagramFeed from '../components/InstagramFeed'
 import Layout from '../components/Layout'
 // import Image from '../components/Image'
 import DH from '../../static/images/dh.jpg'
-import collage from '../../static/images/collage.png'
-import home from '../../static/images/home.png'
-import merchandising from '../../static/images/merchandising.png'
-import style from '../../static/images/style.png'
-import sexy from '../../static/images/sexy.png'
+import Photography from '../../static/images/photography.jpeg'
+import VisualMerch from '../../static/images/visual_merch.jpg'
+import SewingAlts from '../../static/images/nick_apron.jpeg'
+import GraphicDesign from '../../static/images/graphic_design.jpg'
+import { Container, Row, Col } from 'reactstrap'
+import 'bootstrap/dist/css/bootstrap.min.css'
 
 // Export Template for use in CMS preview
 export const HomePageTemplate = ({ title, subtitle, featuredImage, body }) => (
   <main className="Home">
     <HomeHero large backgroundImage={featuredImage} />
-    <section className="section">
-      <div style={{ marginTop: '100px' }}>
-        <div
-          style={{
-            display: 'flex',
-            justifyContent: 'space-evenly',
-            flexDirection: 'row',
-            alignItems: 'center',
-            flexWrap: 'wrap'
-          }}
-          className="bam"
-        >
-          <img src={DH} style={{ height: '550px' }} className="hero" />
+    <section className="section" style={{ marginTop: '100px' }}>
+      <Row className="bam">
+        <Col sm={{ size: 'auto', offset: 1 }} md="5">
+          <img
+            src={DH}
+            style={{ maxHeight: '500px', width: '100%' }}
+            className="hero"
+          />
+        </Col>
+        <Col sm={{ size: 'auto', offset: 1 }} md="5">
           <div
             className="hero"
             style={{
               backgroundColor: 'white',
               color: 'black',
-              maxWidth: '600px',
+              maxWidth: '500px',
               padding: '1.5em',
               textAlign: 'left',
-              height: '550px',
+              maxHeight: '500px',
               overflow: 'scroll'
             }}
           >
             {subtitle}
           </div>
-        </div>
-      </div>
+        </Col>
+      </Row>
       <div className="container">{/* <Content source={body} /> */}</div>
     </section>
-    <section className="section" style={{ marginTop: '150px' }}>
-      <div className="container">
-        <div
-          style={{
-            display: 'flex',
-            justifyContent: 'space-around',
-            flexDirection: 'row',
-            alignItems: 'center',
-            flexWrap: 'wrap'
-          }}
-          className="skills"
-        >
-          <p>Visual Merchandising</p>
-          <p style={{ borderRight: '4px solid #7C4847' }}>
-            <a href="/style">Styling</a>
-          </p>
-          <p
-            style={{
-              fontSize: '4.0rem',
-              borderRight: '4px solid #7C4847',
-              borderLeft: '4px solid #7C4847'
-            }}
-          >
-            Skills In:
-          </p>
-          <p style={{ borderLeft: '4px solid #7C4847' }}>Photography</p>
-          <p>Interior Design</p>
-        </div>
-      </div>
+    <section className="section" style={{ marginTop: '100px' }}>
+      <Row>
+        <Col sm={{ size: 'auto', offset: 1 }} md="5" className="exp">
+          <div>
+            <a href="/photography">
+              <img src={Photography} />
+            </a>
+            <h2 className="exp_title">Photography</h2>
+            <p className="exp_blurp">blah blah blah</p>
+          </div>
+        </Col>
+        <Col sm={{ size: 'auto', offset: 1 }} md="5" className="exp">
+          <div>
+            <a href="/visualmerchandising">
+              <img src={VisualMerch} />
+            </a>
+            <h2 className="exp_title">Visual Merchandising</h2>
+            <p className="exp_blurp">blah</p>
+          </div>
+        </Col>
+      </Row>
+      <Row style={{ marginTop: '150px' }}>
+        <Col sm={{ size: 'auto', offset: 1 }} md="5" className="exp">
+          <div>
+            <a href="/graphicdesign">
+              <img src={GraphicDesign} />
+            </a>
+            <h2 className="exp_title">Graphic Design</h2>
+            <p className="exp_blurp">blah blah blah</p>
+          </div>
+        </Col>
+        <Col sm={{ size: 'auto', offset: 1 }} md="5" className="exp">
+          <div>
+            <a href="/sewing">
+              <img src={SewingAlts} />
+            </a>
+            <h2 className="exp_title">Sewing and Alterations</h2>
+            <p className="exp_blurp">blah</p>
+          </div>
+        </Col>
+      </Row>
     </section>
-    <section className="section" style={{ marginTop: '150px' }}>
-      <div className="container">
-        <img src={collage} style={{ width: '100%' }} />
-      </div>
-    </section>
-    <section className="section" style={{ marginTop: '150px' }}>
-      <div className="container">
-        <img src={home} style={{ width: '100%' }} />
-      </div>
-    </section>
-    <section className="section" style={{ marginTop: '150px' }}>
-      <div className="container">
-        <img src={merchandising} style={{ width: '100%' }} />
-      </div>
-    </section>
-    <section className="section" style={{ marginTop: '150px' }}>
-      <div className="container">
-        <img src={style} style={{ width: '100%' }} />
-      </div>
-    </section>
-    <section className="section">
-      <div className="container">
-        <img src={sexy} style={{ width: '100%' }} />
-      </div>
-    </section>
-    <section className="section">
-      <div className="container">
-        <h2 className="taCenter">
-          <a
-            href="https://instagram.com/delaneyhigginscollection"
-            target="_blank"
-          >
-            @delaneyhigginscollection
-          </a>
-        </h2>
-        <br />
-        {/* <InstagramFeed count="8" /> */}
-      </div>
+    <section className="section" style={{ marginTop: '100px' }}>
+      <Row>
+        <Col>
+          <h3 className="taCenter">
+            <a
+              href="https://instagram.com/delaneyhigginscollection"
+              target="_blank"
+            >
+              @delaneyhigginscollection
+            </a>
+          </h3>
+          <br />
+          {/* <InstagramFeed count="8" /> */}
+        </Col>
+      </Row>
     </section>
   </main>
 )
@@ -122,7 +109,9 @@ export const HomePageTemplate = ({ title, subtitle, featuredImage, body }) => (
 // Export Default HomePage for front-end
 const HomePage = ({ data: { page } }) => (
   <Layout meta={page.frontmatter.meta || false}>
-    <HomePageTemplate {...page} {...page.frontmatter} body={page.html} />
+    <Container>
+      <HomePageTemplate {...page} {...page.frontmatter} body={page.html} />
+    </Container>
   </Layout>
 )
 

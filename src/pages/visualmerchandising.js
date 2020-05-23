@@ -1,8 +1,9 @@
 import React, { useState } from 'react'
-import Layout from '../../components/Layout'
+import Layout from '../components/Layout'
 import InfiniteScroll from 'react-infinite-scroll-component'
 import axios from 'axios'
-import PageHeader from '../../components/PageHeader'
+import PageHeader from '../components/PageHeader'
+// import { CloudinaryContext, Transformation, Image } from 'cloudinary-react'
 
 const ImageTile = ({ url }) => (
   <div className="image-item">
@@ -21,22 +22,22 @@ const StyePage = () => {
   const fetchImages = (count = 7) => {
     axios
       .get(
-        'https://res.cloudinary.com/nickmonaco/image/list/interiordesign.json'
+        'https://res.cloudinary.com/nickmonaco/image/list/visualmerchandising.json'
       )
       .then(res => {
+        // console.log(res.data.resources)
         setImages(res.data.resources)
         setIsLoaded(true)
       })
   }
 
-  console.log(images)
-
+  // TODO Make into own component
   return (
     <Layout>
       <section className="section">
         <div className="container">
           <div className="content">
-            <PageHeader title="Interior Design" subtitle="" />
+            <PageHeader title="Visual Merchandising" subtitle="" />
             <InfiniteScroll
               dataLength={images}
               next={() => fetchImages(5)}
