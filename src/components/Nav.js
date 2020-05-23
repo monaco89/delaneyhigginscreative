@@ -28,7 +28,6 @@ export class Navigation extends Component {
 
   render() {
     const { active } = this.state,
-      { subNav } = this.props,
       NavLink = ({ to, className, children, ...props }) => (
         <Link
           to={to}
@@ -133,6 +132,4 @@ export class Navigation extends Component {
   }
 }
 
-export default ({ subNav }) => (
-  <Location>{route => <Navigation subNav={subNav} {...route} />}</Location>
-)
+export default () => <Location>{route => <Navigation {...route} />}</Location>

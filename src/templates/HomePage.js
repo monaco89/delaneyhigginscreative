@@ -17,16 +17,16 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 export const HomePageTemplate = ({ title, subtitle, featuredImage, body }) => (
   <main className="Home">
     <HomeHero large backgroundImage={featuredImage} />
-    <section className="section" style={{ marginTop: '100px' }}>
+    <section className="section" style={{ marginTop: '80px' }}>
       <Row className="bam">
-        <Col sm={{ size: 'auto', offset: 1 }} md="5">
+        <Col sm={{ size: 'auto', offset: 1 }} md="4">
           <img
             src={DH}
             style={{ maxHeight: '500px', width: '100%' }}
             className="hero"
           />
         </Col>
-        <Col sm={{ size: 'auto', offset: 1 }} md="5">
+        <Col sm={{ size: 'auto', offset: 1 }} md="6">
           <div
             className="hero"
             style={{
@@ -34,9 +34,7 @@ export const HomePageTemplate = ({ title, subtitle, featuredImage, body }) => (
               color: 'black',
               maxWidth: '500px',
               padding: '1.5em',
-              textAlign: 'left',
-              maxHeight: '500px',
-              overflow: 'scroll'
+              textAlign: 'left'
             }}
           >
             {subtitle}
@@ -45,7 +43,7 @@ export const HomePageTemplate = ({ title, subtitle, featuredImage, body }) => (
       </Row>
       <div className="container">{/* <Content source={body} /> */}</div>
     </section>
-    <section className="section" style={{ marginTop: '100px' }}>
+    <section className="section" style={{ marginTop: '80px' }}>
       <Row>
         <Col sm={{ size: 'auto', offset: 1 }} md="5" className="exp">
           <div>
@@ -56,7 +54,7 @@ export const HomePageTemplate = ({ title, subtitle, featuredImage, body }) => (
             <p className="exp_blurp">blah blah blah</p>
           </div>
         </Col>
-        <Col sm={{ size: 'auto', offset: 1 }} md="5" className="exp">
+        <Col sm={{ size: 'auto', offset: 0 }} md="5" className="exp">
           <div>
             <a href="/visualmerchandising">
               <img src={VisualMerch} />
@@ -66,7 +64,7 @@ export const HomePageTemplate = ({ title, subtitle, featuredImage, body }) => (
           </div>
         </Col>
       </Row>
-      <Row style={{ marginTop: '150px' }}>
+      <Row style={{ marginTop: '125px' }}>
         <Col sm={{ size: 'auto', offset: 1 }} md="5" className="exp">
           <div>
             <a href="/graphicdesign">
@@ -76,7 +74,7 @@ export const HomePageTemplate = ({ title, subtitle, featuredImage, body }) => (
             <p className="exp_blurp">blah blah blah</p>
           </div>
         </Col>
-        <Col sm={{ size: 'auto', offset: 1 }} md="5" className="exp">
+        <Col sm={{ size: 'auto', offset: 0 }} md="5" className="exp">
           <div>
             <a href="/sewing">
               <img src={SewingAlts} />
@@ -87,7 +85,7 @@ export const HomePageTemplate = ({ title, subtitle, featuredImage, body }) => (
         </Col>
       </Row>
     </section>
-    <section className="section" style={{ marginTop: '100px' }}>
+    <section className="section" style={{ marginTop: '80px' }}>
       <Row>
         <Col>
           <h3 className="taCenter">
@@ -109,7 +107,7 @@ export const HomePageTemplate = ({ title, subtitle, featuredImage, body }) => (
 // Export Default HomePage for front-end
 const HomePage = ({ data: { page } }) => (
   <Layout meta={page.frontmatter.meta || false}>
-    <Container>
+    <Container fluid={true}>
       <HomePageTemplate {...page} {...page.frontmatter} body={page.html} />
     </Container>
   </Layout>

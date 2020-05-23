@@ -3,7 +3,7 @@ template: SinglePost
 title: Red
 status: Featured / Published
 date: '2018-03-27'
-featuredImage: 'https://ucarecdn.com/94633346-778b-4474-8039-b18280ec73a3/'
+featuredImage: ''
 excerpt: >-
   Etiam ac quam eget lectus venenatis ullamcorper sit amet non arcu. Nullam
   interdum arcu vitae augue pulvinar sodales. Sed non dui diam. Quisque lectus
@@ -17,9 +17,8 @@ meta:
   noindex: false
   title: test meta title
 ---
-Paragraphs are separated by a blank line.
 
-![Test Image](https://ucarecdn.com/ac9898a0-413a-467b-95fa-0a9959c30710/)
+Paragraphs are separated by a blank line.
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/Id64silK_7M" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
@@ -27,9 +26,9 @@ The second paragraph. This is placeholder text that our web designers put here t
 
 ### Unordered lists:
 
-* this one
-* that one
-* the other one
+- this one
+- that one
+- the other one
 
 ### Ordered lists:
 

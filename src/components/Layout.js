@@ -20,32 +20,10 @@ export default ({ children, meta, title }) => {
               image
             }
           }
-          allPosts: allMarkdownRemark(
-            filter: { fields: { contentType: { eq: "postCategories" } } }
-            sort: { order: DESC, fields: [frontmatter___date] }
-          ) {
-            edges {
-              node {
-                fields {
-                  slug
-                }
-                frontmatter {
-                  title
-                }
-              }
-            }
-          }
         }
       `}
       render={data => {
-        const { siteTitle, socialMediaCard } = data.settingsYaml || {},
-          subNav = {
-            posts: data.allPosts.hasOwnProperty('edges')
-              ? data.allPosts.edges.map(post => {
-                  return { ...post.node.fields, ...post.node.frontmatter }
-                })
-              : false
-          }
+        const { siteTitle, socialMediaCard } = data.settingsYaml || {}
 
         return (
           <Fragment>
@@ -54,8 +32,6 @@ export default ({ children, meta, title }) => {
               titleTemplate={`%s | ${siteTitle}`}
             >
               {title}
-              <link href="https://ucarecdn.com" rel="preconnect" crossorigin />
-              <link rel="dns-prefetch" href="https://ucarecdn.com" />
               {/* Add font link tags here */}
             </Helmet>
 
@@ -69,7 +45,7 @@ export default ({ children, meta, title }) => {
               {...data.settingsYaml}
             />
 
-            <Nav subNav={subNav} />
+            <Nav />
 
             <Fragment>{children}</Fragment>
 

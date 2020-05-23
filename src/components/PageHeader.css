@@ -12,8 +12,9 @@
 }
 
 .PageHeader--Title {
-  font-size: 5rem;
+  font-size: 3rem;
   margin-bottom: 0;
+  word-wrap: break-word;
 }
 
 .PageHeader--Subtitle {

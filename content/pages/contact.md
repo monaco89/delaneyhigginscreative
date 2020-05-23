@@ -2,7 +2,7 @@
 template: ContactPage
 slug: contact
 title: Contact Page
-featuredImage: https://ucarecdn.com/e22a858a-b420-47af-99f6-ed54b6860333/
+featuredImage: ''
 subtitle: This is the contact page subtitle.
 address: 'Washington, DC 20002'
 phone: 0987 123 456
