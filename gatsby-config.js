@@ -117,6 +117,12 @@ module.exports = {
       }
     },
     {
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        trackingId: process.env.GOOGLE_ID || 'none'
+      }
+    },
+    {
       resolve: 'gatsby-plugin-nprogress',
       options: {
         // Setting a color is optional.

@@ -9,7 +9,6 @@ import 'modern-normalize/modern-normalize.css'
 import './globalStyles.css'
 
 export default ({ children, meta, title }) => {
-  const googleTrackingId = process.env.GOOGLE_ID
   return (
     <StaticQuery
       query={graphql`
@@ -61,7 +60,6 @@ export default ({ children, meta, title }) => {
             </Helmet>
 
             <Meta
-              googleTrackingId={googleTrackingId}
               absoluteImageUrl={
                 socialMediaCard &&
                 socialMediaCard.image &&

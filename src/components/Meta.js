@@ -31,8 +31,6 @@ export default class Meta extends Component {
       // overwrite { title, description } if in fields or fields.meta
     } = this.props
 
-    const googleTrackingId = process.env.GOOGLE_ID
-
     return (
       <Helmet>
         {title && <title>{title}</title>}
@@ -67,17 +65,6 @@ export default class Meta extends Component {
             src={`https://www.googletagmanager.com/gtag/js?id=${googleTrackingId}`}
           />
         )} */}
-
-        {googleTrackingId && (
-          <script>
-            {`
-              window.dataLayer = window.dataLayer || [];
-              function gtag(){dataLayer.push(arguments);}
-              gtag('js', new Date());
-              gtag('config', '${googleTrackingId}');
-            `}
-          </script>
-        )}
       </Helmet>
     )
   }
