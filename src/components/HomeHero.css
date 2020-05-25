@@ -11,14 +11,15 @@
 }
 
 .HomeHero-large {
-  padding: 8rem 0;
+  padding: 1rem 0;
 }
 
 .HomeHero .container {
   animation: fadeIn 0.5s ease-out;
 }
 
-.HomeHero img {
+.HomeHero .logo {
+  width: 40%;
 }
 
 @media (max-width: 600px) {
@@ -26,6 +27,9 @@
     padding: 7rem 0;
   }
   .HomeHero-large {
-    padding: 12.5rem 0;
+    padding: 2rem 0;
+  }
+  .HomeHero .logo {
+    width: 100%;
   }
 }

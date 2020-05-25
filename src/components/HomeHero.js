@@ -1,6 +1,6 @@
 import React from 'react'
 import Image from './Image'
-import Logo from '../../static/images/logo.jpg'
+import Logo from '../../static/images/logo.png'
 import './HomeHero.css'
 
 const HomeHero = ({ backgroundImage, large, className = '' }) => {
@@ -17,7 +17,7 @@ const HomeHero = ({ backgroundImage, large, className = '' }) => {
         />
       )}
       <div className="container relative">
-        <img src={Logo} style={{ height: '250px' }} alt="delaney higgins" />
+        <img src={Logo} className="logo" alt="delaney higgins" />
       </div>
     </div>
   )

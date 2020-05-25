@@ -1,11 +1,12 @@
 import React from 'react'
 import { graphql } from 'gatsby'
 import HomeHero from '../components/HomeHero'
+import AboutMe from '../components/AboutMe'
+import SomeListThingy from '../components/SomeListThingy'
+import Style from '../components/Style'
+import InteriorDesign from '../components/InteriorDesign'
 import InstagramFeed from '../components/InstagramFeed'
-// import Content from '../components/Content'
 import Layout from '../components/Layout'
-// import Image from '../components/Image'
-import DH from '../../static/images/dh.jpg'
 import Photography from '../../static/images/photography.jpeg'
 import VisualMerch from '../../static/images/visual_merch.jpg'
 import SewingAlts from '../../static/images/nick_apron.jpeg'
@@ -17,33 +18,11 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 export const HomePageTemplate = ({ title, subtitle, featuredImage, body }) => (
   <main className="Home">
     <HomeHero large backgroundImage={featuredImage} />
-    <section className="section" style={{ marginTop: '80px' }}>
-      <Row className="bam">
-        <Col sm={{ size: 'auto', offset: 1 }} md="4">
-          <img
-            src={DH}
-            style={{ maxHeight: '500px', width: '100%' }}
-            className="hero"
-          />
-        </Col>
-        <Col sm={{ size: 'auto', offset: 1 }} md="6">
-          <div
-            className="hero"
-            style={{
-              backgroundColor: 'white',
-              color: 'black',
-              maxWidth: '500px',
-              padding: '1.5em',
-              textAlign: 'left'
-            }}
-          >
-            {subtitle}
-          </div>
-        </Col>
-      </Row>
-      <div className="container">{/* <Content source={body} /> */}</div>
-    </section>
-    <section className="section" style={{ marginTop: '80px' }}>
+    <AboutMe body={body} subtitle={subtitle} />
+    <SomeListThingy />
+    <Style />
+    <InteriorDesign />
+    <section className="section" style={{ marginTop: '1em' }}>
       <Row>
         <Col sm={{ size: 'auto', offset: 1 }} md="5" className="exp">
           <div>

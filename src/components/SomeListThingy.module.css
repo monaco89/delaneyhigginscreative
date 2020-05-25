@@ -1,0 +1,16 @@
+.img {
+  width: 100%;
+}
+
+.list {
+  background-color: white;
+  min-height: 100%;
+  padding: 2em;
+}
+
+.section {
+  background-color: lightgray;
+  padding: 4em;
+  padding-top: 8em;
+  padding-bottom: 8em;
+}

@@ -1,0 +1,17 @@
+.dh {
+  max-width: 550px;
+  width: 100%;
+}
+
+.bio {
+  background-color: white;
+  color: black;
+  max-width: 500px;
+  text-align: center;
+  margin-top: 50px;
+  font-size: 1.2rem;
+}
+
+.title {
+  font-size: 4rem;
+}
