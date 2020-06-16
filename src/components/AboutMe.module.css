@@ -8,10 +8,26 @@
   color: black;
   max-width: 500px;
   text-align: center;
-  margin-top: 50px;
+  margin-top: 150px;
   font-size: 1.2rem;
 }
 
 .title {
   font-size: 4rem;
+  color: #898888;
+  position: absolute;
+  margin-left: -75px;
+}
+
+@media (max-width: 600px) {
+  .title {
+    font-size: 3rem;
+    color: #898888;
+    position: relative;
+    margin-left: 0;
+  }
+
+  .bio {
+    margin-top: 50px;
+  }
 }

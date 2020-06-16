@@ -68,15 +68,12 @@ export const HomePageTemplate = ({ title, subtitle, featuredImage, body }) => (
       <Row>
         <Col>
           <h3 className="taCenter">
-            <a
-              href="https://instagram.com/delaneyhigginscollection"
-              target="_blank"
-            >
-              @delaneyhigginscollection
+            <a href="https://instagram.com/higginsdelaney" target="_blank">
+              @higginsdelaney
             </a>
           </h3>
           <br />
-          {/* <InstagramFeed count="8" /> */}
+          {/* <InstagramFeed count="4" /> */}
         </Col>
       </Row>
     </section>

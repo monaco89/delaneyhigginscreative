@@ -51,7 +51,7 @@ export class Navigation extends Component {
               }`}
             >
               <span
-                className={`NavLink Nav--GroupParent ${
+                className={`NavLink ${
                   this.props.location.pathname.includes('style') ||
                   this.props.location.pathname.includes('interiordesign')
                     ? 'active'
@@ -76,7 +76,7 @@ export class Navigation extends Component {
               }`}
             >
               <span
-                className={`NavLink Nav--GroupParent ${
+                className={`NavLink ${
                   this.props.location.pathname.includes('photography') ||
                   this.props.location.pathname.includes(
                     'visualmerchandising'
@@ -112,7 +112,7 @@ export class Navigation extends Component {
               <Logo />
             </Link>
             <a
-              href="https://instagram.com/delaneyhigginscollection"
+              href="https://instagram.com/higginsdelaney"
               target="_blank"
               className="NavLink"
             >

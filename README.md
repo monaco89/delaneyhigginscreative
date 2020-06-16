@@ -28,7 +28,3 @@
 The Netlify CMS configuration is located in `public/admin/config.yml`. This is where you will configure the pages, fields, posts and settings that are editable by the CMS.
 
 Find out more in the [Netlify CMS Docs](https://www.netlifycms.org/docs/#configuration).
-
-## Instagram Feed
-
-Get Your Instagram Access Token [here](https://generator.thrivex.io/). In order to display your Instagram photos on your own website, you are required to provide an Instagram Access Token. You can do this by clicking the generator button on this site you will first need to login to your account.

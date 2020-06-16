@@ -139,6 +139,7 @@
     bottom: 0;
     background: white;
     animation: Nav--Links 0.2s ease;
+    text-align: center;
   }
 
   .Nav--Links > * + * {
