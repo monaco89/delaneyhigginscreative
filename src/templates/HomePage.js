@@ -27,7 +27,7 @@ export const HomePageTemplate = ({ title, subtitle, featuredImage, body }) => (
         <Col sm={{ size: 'auto', offset: 1 }} md="5" className="exp">
           <div>
             <a href="/photography">
-              <img src={Photography} />
+              <img src={Photography} alt="church building" />
             </a>
             <h2 className="exp_title">Photography</h2>
             <p className="exp_blurp">
@@ -39,7 +39,7 @@ export const HomePageTemplate = ({ title, subtitle, featuredImage, body }) => (
         <Col sm={{ size: 'auto', offset: 0 }} md="5" className="exp">
           <div>
             <a href="/visualmerchandising">
-              <img src={VisualMerch} />
+              <img src={VisualMerch} alt="stocked shelves" />
             </a>
             <h2 className="exp_title">Visual Merchandising</h2>
             <p className="exp_blurp">
@@ -53,7 +53,7 @@ export const HomePageTemplate = ({ title, subtitle, featuredImage, body }) => (
         <Col sm={{ size: 'auto', offset: 1 }} md="5" className="exp">
           <div>
             <a href="/graphicdesign">
-              <img src={GraphicDesign} />
+              <img src={GraphicDesign} alt="stories in text" />
             </a>
             <h2 className="exp_title">Graphic Design</h2>
             <p className="exp_blurp">
@@ -65,7 +65,7 @@ export const HomePageTemplate = ({ title, subtitle, featuredImage, body }) => (
         <Col sm={{ size: 'auto', offset: 0 }} md="5" className="exp">
           <div>
             <a href="/sewing">
-              <img src={SewingAlts} />
+              <img src={SewingAlts} alt="man wearing apron" />
             </a>
             <h2 className="exp_title">Sewing and Alterations</h2>
             <p className="exp_blurp">

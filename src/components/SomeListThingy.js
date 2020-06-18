@@ -15,7 +15,7 @@ const SomeListThingy = () => (
         </div>
       </Col>
       <Col sm={{ size: 'auto', offset: 1 }} md="6">
-        <img src={Books} className={ThingyStyle.img} />
+        <img src={Books} className={ThingyStyle.img} alt="fashion books" />
       </Col>
     </Row>
     <div className="container">{/* <Content source={body} /> */}</div>

@@ -8,7 +8,7 @@ const nodeURL = 'https://www.instagram.com/higginsdelaney/'
 const InstagramFeed = () => (
   <Row>
     <Col xs="12" md="2">
-      <a href={`${nodeURL}}`}>
+      <a href={`${nodeURL}}`} target="_blank" rel="noreferrer">
         {/* <Img
           loading="lazy"
           alt={''}
@@ -23,7 +23,7 @@ const InstagramFeed = () => (
           }}
         /> */}
         <img
-          alt={''}
+          alt="instagram profile"
           src={
             'https://images.unsplash.com/photo-1592219641948-0f6332845ae2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=934&q=80'
           }
@@ -37,9 +37,9 @@ const InstagramFeed = () => (
       </a>
     </Col>
     <Col xs="12" md="2">
-      <a href={`${nodeURL}`}>
+      <a href={`${nodeURL}`} target="_blank" rel="noreferrer">
         <img
-          alt={''}
+          alt="instagram profile"
           src={
             'https://images.unsplash.com/photo-1592219641948-0f6332845ae2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=934&q=80'
           }
@@ -65,15 +65,19 @@ const InstagramFeed = () => (
       </p>
       <h3 className="taCenter">
         <br />
-        <a href="https://instagram.com/higginsdelaney" target="_blank">
+        <a
+          href="https://instagram.com/higginsdelaney"
+          target="_blank"
+          rel="noreferrer"
+        >
           @higginsdelaney
         </a>
       </h3>
     </Col>
     <Col xs="12" md="2">
-      <a href={`${nodeURL}`}>
+      <a href={`${nodeURL}`} target="_blank" rel="noreferrer">
         <img
-          alt={''}
+          alt="instagram profile"
           src={
             'https://images.unsplash.com/photo-1592219641948-0f6332845ae2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=934&q=80'
           }
@@ -87,9 +91,9 @@ const InstagramFeed = () => (
       </a>
     </Col>
     <Col xs="12" md="2">
-      <a href={`${nodeURL}`}>
+      <a href={`${nodeURL}`} target="_blank" rel="noreferrer">
         <img
-          alt={''}
+          alt="instagram profile"
           src={
             'https://images.unsplash.com/photo-1592219641948-0f6332845ae2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=934&q=80'
           }

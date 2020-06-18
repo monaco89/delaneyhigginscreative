@@ -12,7 +12,7 @@ const AboutMe = ({ subtitle }) => (
       </Col>
       <Col sm={{ size: 'auto', offset: 0 }} md="7">
         {/* // TODO Move h2 on picture */}
-        <h2 className={AboutMeStyle.title}>About Me</h2>
+        <h1 className={AboutMeStyle.title}>About Me</h1>
         <div className={AboutMeStyle.bio}>{subtitle}</div>
       </Col>
     </Row>

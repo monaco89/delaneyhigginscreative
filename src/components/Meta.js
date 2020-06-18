@@ -21,7 +21,7 @@ export default class Meta extends Component {
       title,
       url,
       description,
-      absoluteImageUrl = '',
+      absoluteImageUrl,
       twitterSiteAccount,
       twitterCreatorAccount,
       noindex,
@@ -31,6 +31,7 @@ export default class Meta extends Component {
       // overwrite { title, description } if in fields or fields.meta
     } = this.props
 
+    console.log(absoluteImageUrl)
     return (
       <Helmet>
         {title && <title>{title}</title>}
@@ -53,11 +54,41 @@ export default class Meta extends Component {
         <meta property="og:locale" content="en_US" />
         <meta property="og:site_name" content={siteTitle} />
         <meta name="twitter:description" content={siteDescription} />
+        <meta
+          property="og:url"
+          content={url || 'https://www.delaneyhiggins.com'}
+        />
+
         <meta name="twitter:title" content={siteTitle} />
-        <meta name="twitter:image" content={absoluteImageUrl} />
-        <meta property="og:image:secure_url" content={absoluteImageUrl} />
-        <meta property="og:image" content={absoluteImageUrl} />
-        <meta name="twitter:card" content={absoluteImageUrl} />
+        <meta
+          name="twitter:image"
+          content={
+            absoluteImageUrl ||
+            'https://res.cloudinary.com/nickmonaco/image/upload/v1590099560/delaney_home_cxtben.jpg'
+          }
+        />
+        <meta property="og:type" content="website" />
+        <meta
+          property="og:image:secure_url"
+          content={
+            absoluteImageUrl ||
+            'https://res.cloudinary.com/nickmonaco/image/upload/v1590099560/delaney_home_cxtben.jpg'
+          }
+        />
+        <meta
+          property="og:image"
+          content={
+            absoluteImageUrl ||
+            'https://res.cloudinary.com/nickmonaco/image/upload/v1590099560/delaney_home_cxtben.jpg'
+          }
+        />
+        <meta
+          name="twitter:card"
+          content={
+            absoluteImageUrl ||
+            'https://res.cloudinary.com/nickmonaco/image/upload/v1590099560/delaney_home_cxtben.jpg'
+          }
+        />
 
         {/* {googleTrackingId && (
           <script
