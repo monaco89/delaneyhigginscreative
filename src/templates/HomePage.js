@@ -30,7 +30,10 @@ export const HomePageTemplate = ({ title, subtitle, featuredImage, body }) => (
               <img src={Photography} />
             </a>
             <h2 className="exp_title">Photography</h2>
-            <p className="exp_blurp">blah blah blah</p>
+            <p className="exp_blurp">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            </p>
           </div>
         </Col>
         <Col sm={{ size: 'auto', offset: 0 }} md="5" className="exp">
@@ -39,7 +42,10 @@ export const HomePageTemplate = ({ title, subtitle, featuredImage, body }) => (
               <img src={VisualMerch} />
             </a>
             <h2 className="exp_title">Visual Merchandising</h2>
-            <p className="exp_blurp">blah</p>
+            <p className="exp_blurp">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            </p>
           </div>
         </Col>
       </Row>
@@ -50,7 +56,10 @@ export const HomePageTemplate = ({ title, subtitle, featuredImage, body }) => (
               <img src={GraphicDesign} />
             </a>
             <h2 className="exp_title">Graphic Design</h2>
-            <p className="exp_blurp">blah blah blah</p>
+            <p className="exp_blurp">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            </p>
           </div>
         </Col>
         <Col sm={{ size: 'auto', offset: 0 }} md="5" className="exp">
@@ -59,7 +68,10 @@ export const HomePageTemplate = ({ title, subtitle, featuredImage, body }) => (
               <img src={SewingAlts} />
             </a>
             <h2 className="exp_title">Sewing and Alterations</h2>
-            <p className="exp_blurp">blah</p>
+            <p className="exp_blurp">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            </p>
           </div>
         </Col>
       </Row>
@@ -67,13 +79,7 @@ export const HomePageTemplate = ({ title, subtitle, featuredImage, body }) => (
     <section className="section" style={{ marginTop: '80px' }}>
       <Row>
         <Col>
-          <h3 className="taCenter">
-            <a href="https://instagram.com/higginsdelaney" target="_blank">
-              @higginsdelaney
-            </a>
-          </h3>
-          <br />
-          {/* <InstagramFeed count="4" /> */}
+          <InstagramFeed count="4" />
         </Col>
       </Row>
     </section>

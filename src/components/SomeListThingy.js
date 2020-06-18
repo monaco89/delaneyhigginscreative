@@ -8,7 +8,10 @@ const SomeListThingy = () => (
     <Row>
       <Col sm={{ size: 'auto', offset: 0 }} md="5">
         <div className={ThingyStyle.list}>
-          <p>blah...</p>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          </p>
         </div>
       </Col>
       <Col sm={{ size: 'auto', offset: 1 }} md="6">

@@ -4,13 +4,9 @@ import './cms-utils'
 
 // TODO About me
 import { HomePageTemplate } from '../templates/HomePage'
-import { ComponentsPageTemplate } from '../templates/ComponentsPage'
 import { ContactPageTemplate } from '../templates/ContactPage'
 import { BlogIndexTemplate } from '../templates/BlogIndex'
 import { SinglePostTemplate } from '../templates/SinglePost'
-import uploadcare from 'netlify-cms-media-library-uploadcare'
-
-CMS.registerMediaLibrary(uploadcare)
 
 if (
   window.location.hostname === 'localhost' &&
@@ -25,9 +21,6 @@ if (
 
 CMS.registerPreviewTemplate('home-page', ({ entry }) => (
   <HomePageTemplate {...entry.toJS().data} />
-))
-CMS.registerPreviewTemplate('components-page', ({ entry }) => (
-  <ComponentsPageTemplate {...entry.toJS().data} />
 ))
 CMS.registerPreviewTemplate('contact-page', ({ entry }) => (
   <ContactPageTemplate {...entry.toJS().data} />

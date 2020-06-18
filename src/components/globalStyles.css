@@ -22,6 +22,11 @@ html {
   background: var(--lightGrey);
 }
 
+.container-fluid {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+
 body {
   font-family: var(--font-system);
   min-height: 100%;
@@ -189,7 +194,7 @@ blockquote {
 /* Buttons */
 
 .Button {
-  color: white;
+  color: #7c4847;
   text-transform: uppercase;
   text-decoration: none;
   font-weight: 700;
@@ -197,7 +202,7 @@ blockquote {
   font-size: 1.4rem;
   display: inline-block;
   padding: 1.25rem 3rem;
-  border: none;
+  border: 2px solid #7c4847;
   transition: all 0.2s ease;
   cursor: pointer;
   border-radius: var(--borderRadius);
@@ -206,6 +211,10 @@ blockquote {
 .Button:focus {
   opacity: 0.95;
   outline: none;
+  /* border: 2px solid black;
+  color: black; */
+  background-color: #7c4847;
+  color: white;
 }
 .Button[disabled] {
   opacity: 0.4;
@@ -262,7 +271,7 @@ blockquote {
 }
 
 .exp img {
-  max-height: 650px;
+  max-height: 600px;
   width: 100%;
 }
 

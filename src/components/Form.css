@@ -105,12 +105,12 @@
 
 .Form--Input:focus {
   outline: none;
-  border-color: black;
+  border-color: #7c4847;
 }
 
 .Form--Input:focus {
   outline: none;
-  border-color: black;
+  border-color: #7c4847;
 }
 
 .Form--Input[disabled],

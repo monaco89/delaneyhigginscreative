@@ -9,7 +9,7 @@ const InteriorDesign = () => (
     <Row>
       <Col sm={{ size: 'auto', offset: 1 }} md="6">
         {/* // TODO Move h2 on picture */}
-        <h2 className={AboutMeStyle.title}>Interior Design</h2>
+        <h2 className={AboutMeStyle.idTitle}>Interior Design</h2>
         <div className={AboutMeStyle.bio}>Incorporating a mix....</div>
       </Col>
       <Col sm={{ size: 'auto', offset: 0 }} md="4">

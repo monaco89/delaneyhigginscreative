@@ -1,64 +1,109 @@
-// import React from 'react'
-// import Image from '../components/Image'
+import React from 'react'
 // import { graphql, useStaticQuery } from 'gatsby'
 // import Img from 'gatsby-image'
+import { Row, Col } from 'reactstrap'
 
-// const nodeURL = 'https://www.instagram.com/p'
+const nodeURL = 'https://www.instagram.com/higginsdelaney/'
 
-// const InstagramFeed = () => {
-//   const {
-//     allInstaNode: { edges }
-//   } = useStaticQuery(graphql`
-//     {
-//       allInstaNode(sort: { fields: timestamp, order: DESC }, limit: 4) {
-//         edges {
-//           node {
-//             id
-//             caption
-//             localFile {
-//               childImageSharp {
-//                 fluid {
-//                   ...GatsbyImageSharpFluid
-//                 }
-//               }
-//             }
-//           }
-//         }
-//       }
-//     }
-//   `)
+const InstagramFeed = () => (
+  <Row>
+    <Col xs="12" md="2">
+      <a href={`${nodeURL}}`}>
+        {/* <Img
+          loading="lazy"
+          alt={''}
+          fluid={
+            'https://images.unsplash.com/photo-1592219641948-0f6332845ae2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=934&q=80'
+          }
+          style={{
+            objectFit: 'cover',
+            width: '100%',
+            height: '100%',
+            maxHeight: '25rem'
+          }}
+        /> */}
+        <img
+          alt={''}
+          src={
+            'https://images.unsplash.com/photo-1592219641948-0f6332845ae2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=934&q=80'
+          }
+          style={{
+            objectFit: 'cover',
+            width: '100%',
+            height: '100%',
+            maxHeight: '15rem'
+          }}
+        />
+      </a>
+    </Col>
+    <Col xs="12" md="2">
+      <a href={`${nodeURL}`}>
+        <img
+          alt={''}
+          src={
+            'https://images.unsplash.com/photo-1592219641948-0f6332845ae2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=934&q=80'
+          }
+          style={{
+            objectFit: 'cover',
+            width: '100%',
+            height: '100%',
+            maxHeight: '15rem'
+          }}
+        />
+      </a>
+    </Col>
+    <Col xs="12" md="4">
+      <p
+        style={{
+          textAlign: 'center',
+          fontSize: '3.5rem',
+          padding: '15px',
+          fontWeight: '100'
+        }}
+      >
+        Follow Along
+      </p>
+      <h3 className="taCenter">
+        <br />
+        <a href="https://instagram.com/higginsdelaney" target="_blank">
+          @higginsdelaney
+        </a>
+      </h3>
+    </Col>
+    <Col xs="12" md="2">
+      <a href={`${nodeURL}`}>
+        <img
+          alt={''}
+          src={
+            'https://images.unsplash.com/photo-1592219641948-0f6332845ae2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=934&q=80'
+          }
+          style={{
+            objectFit: 'cover',
+            width: '100%',
+            height: '100%',
+            maxHeight: '15rem'
+          }}
+        />
+      </a>
+    </Col>
+    <Col xs="12" md="2">
+      <a href={`${nodeURL}`}>
+        <img
+          alt={''}
+          src={
+            'https://images.unsplash.com/photo-1592219641948-0f6332845ae2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=934&q=80'
+          }
+          style={{
+            objectFit: 'cover',
 
-//   const renderImages = () => {
-//     const images = edges.map(({ node }) => {
-//       const {
-//         id,
-//         caption,
-//         localFile: { childImageSharp }
-//       } = node
-//       return (
-//         <div>
-//           <a href={`${nodeURL}/${id}`}>
-//             <Img
-//               loading="lazy"
-//               alt={caption || ''}
-//               fluid={childImageSharp.fluid}
-//               style={{
-//                 objectFit: 'cover',
-//                 objectPosition: '100% 0',
-//                 width: '100%',
-//                 height: '100%',
-//                 maxHeight: '25rem'
-//               }}
-//             />
-//           </a>
-//         </div>
-//       )
-//     })
+            width: '100%',
+            height: '100%',
+            maxHeight: '15rem'
+          }}
+        />
+      </a>
+    </Col>
+  </Row>
+)
 
-//     return images
-//   }
-
-//   return <div>{renderImages()}</div>
-// }
-
-// export default InstagramFeed
+export default InstagramFeed
