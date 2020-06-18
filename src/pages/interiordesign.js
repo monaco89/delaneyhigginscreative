@@ -32,7 +32,13 @@ const StyePage = () => {
   console.log(images)
 
   return (
-    <Layout>
+    <Layout
+      meta={{
+        canonicalLink: '/interiordesign',
+        title: 'Interior Design',
+        description: 'Interior design photos by delaney higgins'
+      }}
+    >
       <section className="section">
         <div className="container">
           <div className="content">

@@ -68,7 +68,14 @@ const StyePage = () => {
   }
 
   return (
-    <Layout>
+    <Layout
+      title="Style"
+      meta={{
+        canonicalLink: '/style',
+        title: 'Style',
+        description: 'Styling photos by delaney higgins'
+      }}
+    >
       <section className="section">
         <div className="container">
           <div className="content">

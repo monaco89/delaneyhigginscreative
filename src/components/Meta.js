@@ -31,7 +31,6 @@ export default class Meta extends Component {
       // overwrite { title, description } if in fields or fields.meta
     } = this.props
 
-    console.log(absoluteImageUrl)
     return (
       <Helmet>
         {title && <title>{title}</title>}
