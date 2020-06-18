@@ -8,6 +8,7 @@
     "url": "https://github.com/monaco89/delaneyhigginscreative"
   },
   "dependencies": {
+    "@material-ui/core": "^4.10.2",
     "@reach/router": "^1.2.1",
     "axios": "^0.19.2",
     "bootstrap": "^4.5.0",

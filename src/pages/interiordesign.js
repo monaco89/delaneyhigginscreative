@@ -6,7 +6,7 @@ import PageHeader from '../components/PageHeader'
 
 const ImageTile = ({ url }) => (
   <div className="image-item">
-    <img src={url} />
+    <img src={url} alt="interior design by delaney" />
   </div>
 )
 
