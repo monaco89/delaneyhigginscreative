@@ -36,12 +36,10 @@ const ThreeColumnInfo = () => {
       <Row>
         <Col sm={{ size: 'auto', offset: 0 }} md="4" className={Styles.exp}>
           <div>
-            <a href="/photography">
-              <Img
-                fluid={data.photography.childImageSharp.fluid}
-                alt="old white church"
-              />
-            </a>
+            <Img
+              fluid={data.photography.childImageSharp.fluid}
+              alt="old white church"
+            />
             <h2 className={Styles.exp_title}>Photography</h2>
             <p className={Styles.exp_blurb}>
               Utilizing a Canon Rebel T7i to capture flat lays, product shots,
@@ -70,12 +68,10 @@ const ThreeColumnInfo = () => {
         </Col>
         <Col sm={{ size: 'auto', offset: 0 }} md="4" className="exp">
           <div>
-            <a href="/sewing">
-              <Img
-                fluid={data.sewing.childImageSharp.fluid}
-                alt="man wearing apron"
-              />
-            </a>
+            <Img
+              fluid={data.sewing.childImageSharp.fluid}
+              alt="man wearing apron"
+            />
             <h2 className={Styles.exp_title}>Sewing and Alterations</h2>
             <p className={Styles.exp_blurb}>
               Have a basic alteration? I can help! I excel at transforming old,
