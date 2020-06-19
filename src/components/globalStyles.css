@@ -273,6 +273,7 @@ blockquote {
 .exp {
   padding-left: 40px !important;
   padding-right: 40px !important;
+  text-align: center;
 }
 
 .exp img {
@@ -286,23 +287,19 @@ blockquote {
   transition: all 0.5s linear;
 }
 
-.exp img:hover {
-  opacity: 0.7;
-}
-
-.exp a:hover {
-  /* -webkit-box-shadow: 3px -3px 26px -10px rgba(0, 0, 0, 0.75);
-  -moz-box-shadow: 3px -3px 26px -10px rgba(0, 0, 0, 0.75);
-  box-shadow: 3px -3px 26px -10px rgba(0, 0, 0, 0.75); */
+.exp button {
+  text-align: center;
 }
 
 .exp .exp_title {
   margin-top: 15px;
+  text-align: left;
 }
 
 .exp .exp_blurp {
   border-top: 2px solid black;
   padding-top: 15px;
+  text-align: left;
 }
 
 .followAlong {

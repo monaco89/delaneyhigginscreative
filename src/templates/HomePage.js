@@ -7,7 +7,7 @@ import Style from '../components/Style'
 import InteriorDesign from '../components/InteriorDesign'
 import InstagramFeed from '../components/InstagramFeed'
 import Layout from '../components/Layout'
-import { Container, Row, Col } from 'reactstrap'
+import { Container, Row, Col, Button } from 'reactstrap'
 import Img from 'gatsby-image'
 import 'bootstrap/dist/css/bootstrap.min.css'
 
@@ -43,21 +43,25 @@ export const HomePageTemplate = ({
               Utilizing a Canon Rebel T7i to capture flat lays, product shots,
               and travel imagery.
             </p>
+            <Button outline color="secondary" href="/photography">
+              More To See
+            </Button>
           </div>
         </Col>
         <Col sm={{ size: 'auto', offset: 0 }} md="4" className="exp">
           <div>
-            <a href="/visualmerchandising">
-              <Img
-                fluid={visualmerch.childImageSharp.fluid}
-                alt="stocked shelves"
-              />
-            </a>
+            <Img
+              fluid={visualmerch.childImageSharp.fluid}
+              alt="stocked shelves"
+            />
             <h2 className="exp_title">Visual Merchandising</h2>
             <p className="exp_blurp">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
               eiusmod tempor incididunt ut labore et dolore magna aliqua.
             </p>
+            <Button outline color="secondary" href="/visualmerchandising">
+              More To See
+            </Button>
           </div>
         </Col>
         <Col sm={{ size: 'auto', offset: 0 }} md="4" className="exp">
@@ -74,6 +78,9 @@ export const HomePageTemplate = ({
               unwanted clothes into fresh garments. Plus, I design some of my
               own apparel, so I'm constantly perfecting my skills.
             </p>
+            <Button outline color="secondary" href="/sewing">
+              More To See
+            </Button>
           </div>
         </Col>
       </Row>
