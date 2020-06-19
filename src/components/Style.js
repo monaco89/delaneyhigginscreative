@@ -35,6 +35,7 @@ const Style = () => (
                 want and power they deserve. I love helping people become the
                 best version of themselves, just by finding the right outfits.
               </p>
+              <button className="Button">More To See</button>
               <Button
                 href="/style"
                 color="secondary"

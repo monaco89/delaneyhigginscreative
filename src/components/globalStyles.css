@@ -199,9 +199,9 @@ blockquote {
   text-decoration: none;
   font-weight: 700;
   letter-spacing: 0.05em;
-  font-size: 1.4rem;
+  font-size: 1rem;
   display: inline-block;
-  padding: 1.25rem 3rem;
+  padding: 1.2rem 2.8rem;
   border: 2px solid #7c4847;
   transition: all 0.2s ease;
   cursor: pointer;
@@ -250,58 +250,7 @@ blockquote {
   grid-column-end: span 2;
 }
 
-.skills p {
-  font-size: 3rem;
-  font-weight: bold;
-  width: 19%;
-  height: 200px;
-  text-align: center;
-  padding: 15px;
-  padding-top: 50px;
-  min-width: 200px;
-}
-
-.skills a {
-  text-decoration: none;
-  color: black;
-}
-
-.skills a:hover {
-  text-decoration: underline;
-}
-
-.exp {
-  padding-left: 40px !important;
-  padding-right: 40px !important;
-  text-align: center;
-}
-
-.exp img {
-  max-height: 500px;
-  width: 100%;
-  background: black;
-  -webkit-transition: all 0.5s linear;
-  -moz-transition: all 0.5s linear;
-  -ms-transition: all 0.5s linear;
-  -o-transition: all 0.5s linear;
-  transition: all 0.5s linear;
-}
-
-.exp button {
-  text-align: center;
-}
-
-.exp .exp_title {
-  margin-top: 15px;
-  text-align: left;
-}
-
-.exp .exp_blurp {
-  border-top: 2px solid black;
-  padding-top: 15px;
-  text-align: left;
-}
-
+/* insta feed */
 .followAlong {
   text-align: center;
   font-size: 3.5rem;
@@ -310,7 +259,3 @@ blockquote {
   text-decoration: underline;
   line-height: 3em;
 }
-
-/* .insta {
-
-} */

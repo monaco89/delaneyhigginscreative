@@ -2,6 +2,7 @@ import React from 'react'
 import Img from 'gatsby-image'
 import { Row, Col, Button } from 'reactstrap'
 import { useStaticQuery, graphql } from 'gatsby'
+import Styles from './Experience.module.css'
 
 const ThreeColumnInfo = () => {
   const data = useStaticQuery(graphql`
@@ -32,9 +33,8 @@ const ThreeColumnInfo = () => {
 
   return (
     <section className="section" style={{ marginTop: '1em' }}>
-      {/* // TODO: New component */}
       <Row>
-        <Col sm={{ size: 'auto', offset: 0 }} md="4" className="exp">
+        <Col sm={{ size: 'auto', offset: 0 }} md="4" className={Styles.exp}>
           <div>
             <a href="/photography">
               <Img
@@ -42,8 +42,8 @@ const ThreeColumnInfo = () => {
                 alt="old white church"
               />
             </a>
-            <h2 className="exp_title">Photography</h2>
-            <p className="exp_blurp">
+            <h2 className={Styles.exp_title}>Photography</h2>
+            <p className={Styles.exp_blurb}>
               Utilizing a Canon Rebel T7i to capture flat lays, product shots,
               and travel imagery.
             </p>
@@ -58,8 +58,8 @@ const ThreeColumnInfo = () => {
               fluid={data.visualmerch.childImageSharp.fluid}
               alt="stocked shelves"
             />
-            <h2 className="exp_title">Visual Merchandising</h2>
-            <p className="exp_blurp">
+            <h2 className={Styles.exp_title}>Visual Merchandising</h2>
+            <p className={Styles.exp_blurb}>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
               eiusmod tempor incididunt ut labore et dolore magna aliqua.
             </p>
@@ -76,8 +76,8 @@ const ThreeColumnInfo = () => {
                 alt="man wearing apron"
               />
             </a>
-            <h2 className="exp_title">Sewing and Alterations</h2>
-            <p className="exp_blurp">
+            <h2 className={Styles.exp_title}>Sewing and Alterations</h2>
+            <p className={Styles.exp_blurb}>
               Have a basic alteration? I can help! I excel at transforming old,
               unwanted clothes into fresh garments. Plus, I design some of my
               own apparel, so I'm constantly perfecting my skills.

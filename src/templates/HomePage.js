@@ -7,7 +7,7 @@ import Style from '../components/Style'
 import InteriorDesign from '../components/InteriorDesign'
 import InstagramFeed from '../components/InstagramFeed'
 import Layout from '../components/Layout'
-import ThreeColumnInfo from '../components/ThreeColumnInfo'
+import Experience from '../components/Experience'
 import { Container } from 'reactstrap'
 import 'bootstrap/dist/css/bootstrap.min.css'
 
@@ -24,7 +24,7 @@ export const HomePageTemplate = ({
     <Style />
     <SomeListThingy />
     <InteriorDesign />
-    <ThreeColumnInfo />
+    <Experience />
     <InstagramFeed />
   </main>
 )

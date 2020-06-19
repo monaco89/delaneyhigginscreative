@@ -1,0 +1,31 @@
+.exp {
+  padding-left: 40px !important;
+  padding-right: 40px !important;
+  text-align: center;
+}
+
+.exp img {
+  max-height: 500px;
+  width: 100%;
+  background: black;
+  -webkit-transition: all 0.5s linear;
+  -moz-transition: all 0.5s linear;
+  -ms-transition: all 0.5s linear;
+  -o-transition: all 0.5s linear;
+  transition: all 0.5s linear;
+}
+
+.exp button {
+  text-align: center;
+}
+
+.exp_title {
+  margin-top: 15px;
+  text-align: left;
+}
+
+.exp_blurb {
+  border-top: 2px solid black;
+  padding-top: 15px;
+  text-align: left;
+}
