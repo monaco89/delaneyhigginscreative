@@ -2,11 +2,9 @@ import React from 'react'
 import CMS from 'netlify-cms-app'
 import './cms-utils'
 
-// TODO About me
 import { HomePageTemplate } from '../templates/HomePage'
 import { ContactPageTemplate } from '../templates/ContactPage'
-import { BlogIndexTemplate } from '../templates/BlogIndex'
-import { SinglePostTemplate } from '../templates/SinglePost'
+import { AboutMePageTemplate } from '../templates/AboutMePage'
 
 if (
   window.location.hostname === 'localhost' &&
@@ -25,9 +23,6 @@ CMS.registerPreviewTemplate('home-page', ({ entry }) => (
 CMS.registerPreviewTemplate('contact-page', ({ entry }) => (
   <ContactPageTemplate {...entry.toJS().data} />
 ))
-CMS.registerPreviewTemplate('blog-page', ({ entry }) => (
-  <BlogIndexTemplate {...entry.toJS().data} />
-))
-CMS.registerPreviewTemplate('posts', ({ entry }) => (
-  <SinglePostTemplate {...entry.toJS().data} />
+CMS.registerPreviewTemplate('aboutme-page', ({ entry }) => (
+  <AboutMePageTemplate {...entry.toJS().data} />
 ))
