@@ -2,13 +2,17 @@ import React from 'react'
 // import { graphql, useStaticQuery } from 'gatsby'
 // import Img from 'gatsby-image'
 import { Row, Col } from 'reactstrap'
+import insta1 from '../../static/images/insta1.jpg'
+import insta2 from '../../static/images/insta2.jpg'
+import insta3 from '../../static/images/insta3.jpg'
+import insta4 from '../../static/images/insta4.jpg'
 
-const nodeURL = 'https://www.instagram.com/higginsdelaney/'
+const nodeURL = 'https://instagram.com/higginsdelaney/'
 
 const InstagramFeed = () => (
   <Row>
-    <Col xs="12" md="2">
-      <a href={`${nodeURL}}`} target="_blank" rel="noreferrer">
+    <Col xs="6" md="2" className="insta">
+      <a href={`${nodeURL}`} target="_blank" rel="noreferrer">
         {/* <Img
           loading="lazy"
           alt={''}
@@ -24,9 +28,7 @@ const InstagramFeed = () => (
         /> */}
         <img
           alt="instagram profile"
-          src={
-            'https://images.unsplash.com/photo-1592219641948-0f6332845ae2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=934&q=80'
-          }
+          src={insta1}
           style={{
             objectFit: 'cover',
             width: '100%',
@@ -36,13 +38,11 @@ const InstagramFeed = () => (
         />
       </a>
     </Col>
-    <Col xs="12" md="2">
+    <Col xs="6" md="2" className="insta">
       <a href={`${nodeURL}`} target="_blank" rel="noreferrer">
         <img
           alt="instagram profile"
-          src={
-            'https://images.unsplash.com/photo-1592219641948-0f6332845ae2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=934&q=80'
-          }
+          src={insta2}
           style={{
             objectFit: 'cover',
             width: '100%',
@@ -53,34 +53,23 @@ const InstagramFeed = () => (
       </a>
     </Col>
     <Col xs="12" md="4">
-      <p
-        style={{
-          textAlign: 'center',
-          fontSize: '3.5rem',
-          padding: '15px',
-          fontWeight: '100'
-        }}
-      >
-        Follow Along
-      </p>
       <h3 className="taCenter">
         <br />
         <a
           href="https://instagram.com/higginsdelaney"
           target="_blank"
           rel="noreferrer"
+          className="followAlong"
         >
-          @higginsdelaney
+          Follow Along
         </a>
       </h3>
     </Col>
-    <Col xs="12" md="2">
+    <Col xs="6" md="2" className="insta">
       <a href={`${nodeURL}`} target="_blank" rel="noreferrer">
         <img
           alt="instagram profile"
-          src={
-            'https://images.unsplash.com/photo-1592219641948-0f6332845ae2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=934&q=80'
-          }
+          src={insta3}
           style={{
             objectFit: 'cover',
             width: '100%',
@@ -90,13 +79,11 @@ const InstagramFeed = () => (
         />
       </a>
     </Col>
-    <Col xs="12" md="2">
+    <Col xs="6" md="2" className="insta">
       <a href={`${nodeURL}`} target="_blank" rel="noreferrer">
         <img
           alt="instagram profile"
-          src={
-            'https://images.unsplash.com/photo-1592219641948-0f6332845ae2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=934&q=80'
-          }
+          src={insta4}
           style={{
             objectFit: 'cover',
 

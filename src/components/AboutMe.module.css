@@ -7,13 +7,22 @@
   background-color: white;
   color: black;
   max-width: 500px;
-  text-align: center;
-  margin-top: 150px;
-  font-size: 1.2rem;
+  text-align: justify;
+  margin-top: 170px;
+  font-size: 1.8rem;
+}
+
+.idBio {
+  background-color: white;
+  color: black;
+  max-width: 500px;
+  text-align: justify;
+  margin-top: 320px;
+  font-size: 1.8rem;
 }
 
 .title {
-  font-size: 4rem;
+  font-size: 8rem;
   color: #898888;
   position: absolute;
   margin-left: -75px;
@@ -21,12 +30,14 @@
 
 .idTitle {
   position: absolute;
-  margin-left: 110px;
   z-index: 1;
-  word-break: break-all;
   width: 110%;
-  font-size: 4rem;
+  font-size: 8rem;
   color: #898888;
+}
+
+.button {
+  margin-left: 30%;
 }
 
 @media (max-width: 600px) {
@@ -39,12 +50,18 @@
   .idTitle {
     font-size: 3rem;
     position: relative;
-    margin-left: 0;
     width: 100%;
     word-break: break-word;
   }
 
-  .bio {
+  .bio,
+  .idBio {
     margin-top: 50px;
+    text-align: left;
+    padding: 10px;
+  }
+
+  .button {
+    margin-left: 0;
   }
 }

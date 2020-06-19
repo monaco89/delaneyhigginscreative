@@ -151,7 +151,7 @@ blockquote {
 
 .section {
   width: 100%;
-  padding: 5rem 0;
+  padding: 4em;
 }
 .section:last-child {
   border: 0;
@@ -270,9 +270,24 @@ blockquote {
   text-decoration: underline;
 }
 
+.exp {
+  padding-left: 40px !important;
+  padding-right: 40px !important;
+}
+
 .exp img {
-  max-height: 600px;
+  max-height: 500px;
   width: 100%;
+  background: black;
+  -webkit-transition: all 0.5s linear;
+  -moz-transition: all 0.5s linear;
+  -ms-transition: all 0.5s linear;
+  -o-transition: all 0.5s linear;
+  transition: all 0.5s linear;
+}
+
+.exp img:hover {
+  opacity: 0.7;
 }
 
 .exp a:hover {
@@ -289,3 +304,16 @@ blockquote {
   border-top: 2px solid black;
   padding-top: 15px;
 }
+
+.followAlong {
+  text-align: center;
+  font-size: 3.5rem;
+  padding: 15px;
+  color: black;
+  text-decoration: underline;
+  line-height: 3em;
+}
+
+/* .insta {
+
+} */

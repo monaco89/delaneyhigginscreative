@@ -58,6 +58,52 @@ collections: # A list of collections the CMS should be able to edit
                   required: false,
                 }
 
+      - file: 'content/pages/aboutme.md'
+        label: 'About Me'
+        name: 'about'
+        fields:
+          - {
+              label: Template,
+              name: template,
+              widget: hidden,
+              default: AboutMePage,
+            }
+          - { label: Slug, name: slug, widget: hidden, default: 'about' }
+          - { label: Title, name: title, widget: string }
+          - {
+              label: Featured Image,
+              name: featuredImage,
+              widget: image,
+              options:
+                { media_library: { config: { imageShrink: 2600x2600 } } },
+            }
+          - { label: Subtitle, name: subtitle, widget: markdown }
+          - { label: Bio, name: bio, widget: markdown }
+          - label: 'Meta'
+            required: false
+            name: 'meta'
+            widget: 'object'
+            fields:
+              - { label: Title, name: title, widget: string, required: false }
+              - {
+                  label: Description,
+                  name: description,
+                  widget: text,
+                  required: false,
+                }
+              - {
+                  label: Canonical Link,
+                  name: canonicalLink,
+                  widget: string,
+                  required: false,
+                }
+              - {
+                  label: Noindex,
+                  name: noindex,
+                  widget: boolean,
+                  required: false,
+                }
+
       - file: 'content/pages/blog.md'
         label: 'Blog Page'
         name: 'blog-page'

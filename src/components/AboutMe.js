@@ -11,8 +11,7 @@ const AboutMe = ({ subtitle }) => (
         <img src={DH} className={AboutMeStyle.dh} alt="delaney higgins" />
       </Col>
       <Col sm={{ size: 'auto', offset: 0 }} md="7">
-        {/* // TODO Move h2 on picture */}
-        <h1 className={AboutMeStyle.title}>About Me</h1>
+        <h2 className={AboutMeStyle.title}>About Me</h2>
         <div className={AboutMeStyle.bio}>{subtitle}</div>
       </Col>
     </Row>

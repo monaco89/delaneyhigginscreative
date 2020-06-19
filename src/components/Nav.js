@@ -111,13 +111,7 @@ export class Navigation extends Component {
             <Link to="/" onClick={this.handleLinkClick}>
               <Logo />
             </Link>
-            <a
-              href="https://instagram.com/higginsdelaney"
-              target="_blank"
-              className="NavLink"
-            >
-              Instagram
-            </a>
+            <NavLink to="/about/">About Me</NavLink>
             <NavLink to="/contact/">Contact</NavLink>
           </div>
           <button

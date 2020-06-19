@@ -1,6 +1,6 @@
 import React from 'react'
 import StyleImg from '../../static/images/style.jpeg'
-import { Row, Col } from 'reactstrap'
+import { Row, Col, Button } from 'reactstrap'
 import AboutMeStyle from './AboutMe.module.css'
 // import Content from '../components/Content'
 
@@ -11,9 +11,22 @@ const Style = () => (
         <img src={StyleImg} className={AboutMeStyle.dh} alt="delaney higgins" />
       </Col>
       <Col sm={{ size: 'auto', offset: 0 }} md="7">
-        {/* // TODO Move h2 on picture */}
         <h2 className={AboutMeStyle.title}>Styling</h2>
-        <div className={AboutMeStyle.bio}>Fashion is transformative. </div>
+        <div>
+          <p className={AboutMeStyle.bio}>
+            Fashion is transformative. It can give women the confidence they
+            want and power they deserve. I love helping people become the best
+            version of themselves, just by finding the right outfits.
+          </p>
+          <Button
+            href="/style"
+            color="secondary"
+            size="lg"
+            className={AboutMeStyle.button}
+          >
+            More To See
+          </Button>
+        </div>
       </Col>
     </Row>
   </section>
