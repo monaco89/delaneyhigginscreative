@@ -22,9 +22,6 @@ const GraphicDesign = () => (
         <Row>
           <Col sm={{ size: 'auto', offset: 0 }} md="5">
             <div className={ThingyStyle.list}>
-              <h2 style={{ color: '#898888', fontSize: '3rem' }}>
-                Graphic Design
-              </h2>
               <p>
                 My graphic design skills lend themselves to brands looking to
                 elevate their social, email, and site design. Additionally, I'm

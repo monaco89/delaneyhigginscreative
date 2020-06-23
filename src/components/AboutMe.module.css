@@ -25,43 +25,52 @@
   font-size: 8rem;
   color: #898888;
   position: absolute;
-  margin-left: -75px;
+  margin-left: 30%;
+  z-index: 1;
 }
 
 .idTitle {
-  position: absolute;
-  z-index: 1;
-  width: 110%;
   font-size: 8rem;
   color: #898888;
+  position: absolute;
+  margin-left: 15%;
+  z-index: 1;
 }
 
 .button {
-  margin-left: 30%;
+  margin-left: 20%;
 }
 
 @media (max-width: 600px) {
-  .title {
-    font-size: 3rem;
+  .title,
+  .idTitle {
+    font-size: 3.5rem;
     position: relative;
     margin-left: 0;
-  }
-
-  .idTitle {
-    font-size: 3rem;
-    position: relative;
-    width: 100%;
-    word-break: break-word;
+    text-align: center;
   }
 
   .bio,
   .idBio {
-    margin-top: 50px;
+    margin-top: 30px;
     text-align: left;
-    padding: 10px;
+    padding: 15px;
+    font-size: 1.5rem;
   }
 
   .button {
     margin-left: 0;
+  }
+  .description {
+    text-align: center;
+  }
+  /* .dh {
+    padding: 15px;
+    max-width: 550px;
+    width: 90%;
+  } */
+  .img {
+    padding-left: 40px !important;
+    padding-right: 40px !important;
   }
 }

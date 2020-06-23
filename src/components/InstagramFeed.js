@@ -10,7 +10,7 @@ import insta4 from '../../static/images/insta4.jpg'
 const nodeURL = 'https://instagram.com/higginsdelaney/'
 
 const InstagramFeed = () => (
-  <section className="section" style={{ marginTop: '50px' }}>
+  <section className="section">
     <Row>
       <Col xs="6" md="2" className="insta">
         <a href={`${nodeURL}`} target="_blank" rel="noreferrer">

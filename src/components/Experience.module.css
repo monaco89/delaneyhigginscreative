@@ -4,8 +4,9 @@
   text-align: center;
 }
 
-.exp img {
+.exp_img {
   max-height: 500px;
+  height: 40em;
   width: 100%;
   background: black;
   -webkit-transition: all 0.5s linear;
@@ -22,10 +23,17 @@
 .exp_title {
   margin-top: 15px;
   text-align: left;
+  min-height: 85px;
 }
 
 .exp_blurb {
   border-top: 2px solid black;
   padding-top: 15px;
   text-align: left;
+}
+
+@media (max-width: 600px) {
+  .exp {
+    margin-bottom: 50px;
+  }
 }

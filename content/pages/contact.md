@@ -3,7 +3,7 @@ template: ContactPage
 slug: contact
 title: Contact Page
 featuredImage: ''
-subtitle: I would love to hear from you.
+subtitle: 
 address: 'Washington, DC 20002'
 phone: 0987 123 456
 email: example@example.com

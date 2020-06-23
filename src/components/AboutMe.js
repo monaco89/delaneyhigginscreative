@@ -21,16 +21,35 @@ const AboutMe = ({ subtitle }) => (
     render={data => (
       <section className="section" style={{ marginTop: '1em' }}>
         <Row>
-          <Col sm={{ size: 'auto', offset: 1 }} md="4">
+          <Col>
+            <h2 className={AboutMeStyle.title}>About Me</h2>
+          </Col>
+        </Row>
+        <Row>
+          <Col
+            sm={{ size: 'auto', offset: 1 }}
+            md="4"
+            className={AboutMeStyle.img}
+          >
             <Img
               fluid={data.file.childImageSharp.fluid}
               className={AboutMeStyle.dh}
               alt="delaney higgins"
             />
           </Col>
-          <Col sm={{ size: 'auto', offset: 0 }} md="7">
-            <h2 className={AboutMeStyle.title}>About Me</h2>
-            <div className={AboutMeStyle.bio}>{subtitle}</div>
+          <Col
+            sm={{ size: 'auto', offset: 0 }}
+            md="7"
+            className={AboutMeStyle.description}
+          >
+            <p className={AboutMeStyle.bio}>{subtitle}</p>
+            <button
+              href="/about"
+              className="Button"
+              className={`Button ${AboutMeStyle.button}`}
+            >
+              More To Know
+            </button>
           </Col>
         </Row>
         {/* <div className="container">{<Content source={body} />}</div> */}
