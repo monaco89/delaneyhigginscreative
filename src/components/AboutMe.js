@@ -43,13 +43,9 @@ const AboutMe = ({ subtitle }) => (
             className={AboutMeStyle.description}
           >
             <p className={AboutMeStyle.bio}>{subtitle}</p>
-            <button
-              href="/about"
-              className="Button"
-              className={`Button ${AboutMeStyle.button}`}
-            >
+            <a href="/about" className={`Button ${AboutMeStyle.button}`}>
               More To Know
-            </button>
+            </a>
           </Col>
         </Row>
         {/* <div className="container">{<Content source={body} />}</div> */}

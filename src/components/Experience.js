@@ -46,13 +46,9 @@ const ThreeColumnInfo = () => {
               Utilizing a Canon Rebel T7i to capture flat lays, product shots,
               and travel imagery.
             </p>
-            <button
-              href="/photography"
-              className="Button"
-              className="Button-sm"
-            >
+            <a href="/photography" className="Button-sm">
               More To See
-            </button>
+            </a>
           </div>
         </Col>
         <Col sm={{ size: 'auto', offset: 0 }} md="4" className={Styles.exp}>
@@ -67,13 +63,9 @@ const ThreeColumnInfo = () => {
               Expertly skilled in merchandising/styling on-figure apparel and
               in-home rooms.
             </p>
-            <button
-              href="/visualmerchandising"
-              className="Button"
-              className="Button-sm"
-            >
+            <a href="/visualmerchandising" className="Button-sm">
               More To See
-            </button>
+            </a>
           </div>
         </Col>
         <Col sm={{ size: 'auto', offset: 0 }} md="4" className={Styles.exp}>
@@ -89,9 +81,9 @@ const ThreeColumnInfo = () => {
               unwanted clothes into fresh garments. Plus, I design some of my
               own apparel, so I'm constantly perfecting my skills.
             </p>
-            <button href="/sewing" className="Button" className="Button-sm">
+            <a href="/sewing" className="Button-sm">
               More To See
-            </button>
+            </a>
           </div>
         </Col>
       </Row>

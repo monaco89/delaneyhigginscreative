@@ -69,17 +69,17 @@ const StyePage = () => {
 
   return (
     <Layout
-      title="Style"
+      title="Styling"
       meta={{
         canonicalLink: '/style',
-        title: 'Style',
+        title: 'Styling',
         description: 'Styling photos by delaney higgins'
       }}
     >
       <section className="section">
         <div className="container">
           <div className="content">
-            <PageHeader title="Style" subtitle="" />
+            <PageHeader title="Styling" subtitle="" />
             {/* <div className={classes.root}>
               <GridList cellHeight={160} className={classes.gridList} cols={3}>
                 {images.map(

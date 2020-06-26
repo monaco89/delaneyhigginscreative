@@ -46,13 +46,9 @@ const Style = () => (
               want and power they deserve. I love helping people become the best
               version of themselves, just by finding the right outfits.
             </p>
-            <button
-              href="/style"
-              className="Button"
-              className={`Button ${AboutMeStyle.button}`}
-            >
+            <a href="/style" className={`Button ${AboutMeStyle.button}`}>
               More To See
-            </button>
+            </a>
           </Col>
         </Row>
       </section>

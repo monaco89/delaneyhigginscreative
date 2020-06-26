@@ -36,13 +36,12 @@ const InteriorDesign = () => (
               client from those looking for affordable decor to those outfitting
               their forever homes.
             </p>
-            <button
+            <a
               href="/interiordesign"
-              className="Button"
               className={`Button ${AboutMeStyle.button}`}
             >
               More To See
-            </button>
+            </a>
           </Col>
           <Col
             sm={{ size: 'auto', offset: 0 }}
