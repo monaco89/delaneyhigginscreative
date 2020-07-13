@@ -6,19 +6,22 @@
 .bio {
   background-color: white;
   color: black;
-  max-width: 500px;
+  max-width: 550px;
   text-align: justify;
   margin-top: 170px;
   font-size: 1.8rem;
+  font-family: oxtail;
 }
 
 .idBio {
   background-color: white;
   color: black;
-  max-width: 500px;
+  max-width: 550px;
   text-align: justify;
   margin-top: 320px;
   font-size: 1.8rem;
+  font-family: oxtail;
+  margin-left: 2em;
 }
 
 .title {
@@ -56,6 +59,7 @@
     text-align: left;
     padding: 15px;
     font-size: 1.5rem;
+    margin-left: 0em;
   }
 
   .button {

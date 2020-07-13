@@ -25,11 +25,7 @@ const Style = () => (
           </Col>
         </Row>
         <Row>
-          <Col
-            sm={{ size: 'auto', offset: 1 }}
-            md="4"
-            className={AboutMeStyle.img}
-          >
+          <Col sm={{ size: 'auto' }} md="5" className={AboutMeStyle.img}>
             <Img
               fluid={data.file.childImageSharp.fluid}
               className={AboutMeStyle.dh}

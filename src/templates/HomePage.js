@@ -13,14 +13,13 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 
 export const HomePageTemplate = ({
   // title,
-  subtitle,
   // featuredImage,
   body,
   childImageSharp
 }) => (
   <main className="Home">
     <HomeHero large backgroundImage={childImageSharp} />
-    <AboutMe body={body} subtitle={subtitle} />
+    <AboutMe body={body} />
     <Style />
     <SomeListThingy />
     <InteriorDesign />
@@ -51,7 +50,6 @@ export const pageQuery = graphql`
       html
       frontmatter {
         title
-        subtitle
         featuredImage
       }
     }

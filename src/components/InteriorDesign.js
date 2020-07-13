@@ -26,8 +26,8 @@ const InteriorDesign = () => (
         </Row>
         <Row>
           <Col
-            sm={{ size: 'auto', offset: 1 }}
-            md="6"
+            sm={{ size: 'auto' }}
+            md="7"
             className={AboutMeStyle.description}
           >
             <p className={AboutMeStyle.idBio}>
@@ -45,7 +45,7 @@ const InteriorDesign = () => (
           </Col>
           <Col
             sm={{ size: 'auto', offset: 0 }}
-            md="4"
+            md="5"
             className={AboutMeStyle.img}
           >
             <Img

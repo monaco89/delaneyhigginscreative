@@ -3,7 +3,6 @@ template: HomePage
 slug: ''
 title: Delaney Higgins
 featuredImage: 'https://res.cloudinary.com/nickmonaco/image/upload/v1590099560/delaney_home_cxtben.jpg'
-subtitle: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.'
 meta:
   description: delaney higgins creative portfolio, about me and interests
   title: Home

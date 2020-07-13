@@ -5,7 +5,7 @@ import { StaticQuery, graphql } from 'gatsby'
 import Img from 'gatsby-image'
 // import Content from '../components/Content'
 
-const AboutMe = ({ subtitle }) => (
+const AboutMe = () => (
   <StaticQuery
     query={graphql`
       query AboutMeQuery {
@@ -26,11 +26,7 @@ const AboutMe = ({ subtitle }) => (
           </Col>
         </Row>
         <Row>
-          <Col
-            sm={{ size: 'auto', offset: 1 }}
-            md="4"
-            className={AboutMeStyle.img}
-          >
+          <Col sm={{ size: 'auto' }} md="5" className={AboutMeStyle.img}>
             <Img
               fluid={data.file.childImageSharp.fluid}
               className={AboutMeStyle.dh}
@@ -42,7 +38,15 @@ const AboutMe = ({ subtitle }) => (
             md="7"
             className={AboutMeStyle.description}
           >
-            <p className={AboutMeStyle.bio}>{subtitle}</p>
+            <p className={AboutMeStyle.bio}>
+              Hi, I’m Delaney. I Specialize in graphic & apparel design,
+              photography, and visual merchandising. I've cultivated my skills
+              with Anthropologie over the past three and a half years. You'll
+              always find me surrounded by fresh flowers and music playing in
+              the background (On tuesdays it's my dad's radio show!) Basically,
+              I try to always surround myself with beautiful things and a lot of
+              dogs.
+            </p>
             <a href="/about" className={`Button ${AboutMeStyle.button}`}>
               More To Know
             </a>
