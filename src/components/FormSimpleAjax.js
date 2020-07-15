@@ -66,8 +66,7 @@ class Form extends React.Component {
           name={name}
           action={action}
           onSubmit={this.handleSubmit}
-          data-netlify=""
-          netlify-recaptcha=""
+          data-netlify="true"
         >
           {this.state.alert && (
             <div className="Form--Alert">{this.state.alert}</div>
@@ -104,20 +103,6 @@ class Form extends React.Component {
             />
             <span>Email address</span>
           </label>
-          {/* <label className="Form--Label has-arrow">
-            <select
-              className="Form--Input Form--Select"
-              name="type"
-              defaultValue="Type of Enquiry"
-              required
-            >
-              <option disabled hidden>
-                Type of Enquiry
-              </option>
-              <option>Need to know more</option>
-              <option>Want to say hello</option>
-            </select>
-          </label> */}
           <label className="Form--Label">
             <textarea
               className="Form--Input Form--Textarea Form--InputText"
@@ -130,7 +115,7 @@ class Form extends React.Component {
           </label>
           <div
             className="g-recaptcha"
-            data-sitekey="6LeG1aYZAAAAAN9teqvWLR2-95sTGcO5ffkMG5Pn"
+            data-sitekey={process.env.RECAPTCHA_KEY}
           />
           {!!subject && <input type="hidden" name="subject" value={subject} />}
           <input type="hidden" name="form-name" value={name} />
