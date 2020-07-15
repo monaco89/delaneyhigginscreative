@@ -1,7 +1,7 @@
 import React from 'react'
 import { MapPin, Smartphone, Mail } from 'react-feather'
 import { graphql } from 'gatsby'
-
+import ContactMe from '../../static/images/contact_me.jpg'
 import PageHeader from '../components/PageHeader'
 import FormSimpleAjax from '../components/FormSimpleAjax'
 import Content from '../components/Content'
@@ -19,15 +19,11 @@ export const ContactPageTemplate = ({
   email
 }) => (
   <main className="Contact">
-    <PageHeader
-      title={title}
-      subtitle={subtitle}
-      backgroundImage={featuredImage}
-    />
+    <PageHeader title={title} subtitle={subtitle} />
     <section className="section Contact--Section1">
       <div className="container Contact--Section1--Container">
         <div>
-          <Content source={body} />
+          <img src={ContactMe} style={{ width: '100%' }} />
           <div className="Contact--Details">
             {address && (
               <a
@@ -38,23 +34,26 @@ export const ContactPageTemplate = ({
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <MapPin /> {address}
+                <MapPin color="black" />
+                _____________________________ {address}
               </a>
             )}
             {phone && (
               <a className="Contact--Details--Item" href={`tel:${phone}`}>
-                <Smartphone /> {phone}
+                <Smartphone color="black" />
+                ____________________________________ {phone}
               </a>
             )}
             {email && (
               <a className="Contact--Details--Item" href={`mailto:${email}`}>
-                <Mail /> {email}
+                <Mail color="black" /> _______________________ {email}
               </a>
             )}
           </div>
         </div>
 
-        <div>
+        <div className="Contact--Copy">
+          <Content src={body} />
           <FormSimpleAjax name="Simple Form Ajax" />
         </div>
       </div>

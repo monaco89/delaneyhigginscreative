@@ -11,6 +11,7 @@
   margin-top: 170px;
   font-size: 1.8rem;
   font-family: oxtail;
+  line-height: 1.2;
 }
 
 .idBio {
@@ -22,6 +23,7 @@
   font-size: 1.8rem;
   font-family: oxtail;
   margin-left: 2em;
+  line-height: 1.2;
 }
 
 .title {

@@ -3,6 +3,8 @@ import { graphql } from 'gatsby'
 import PageHeader from '../components/PageHeader'
 import Content from '../components/Content'
 import Layout from '../components/Layout'
+import Img from 'gatsby-image'
+import { Row, Col } from 'reactstrap'
 import './ContactPage.css'
 
 // Export Template for use in CMS preview
@@ -10,7 +12,10 @@ export const AboutMePageTemplate = ({
   bio,
   title,
   subtitle,
-  featuredImage
+  featuredImage,
+  aboutme1,
+  aboutme2,
+  aboutme3
 }) => (
   <main className="Contact">
     <PageHeader
@@ -19,6 +24,19 @@ export const AboutMePageTemplate = ({
       backgroundImage={featuredImage}
     />
     <section className="section Contact--Section1">
+      <Row>
+        <Col sm={{ size: 'auto', offset: 0 }} md="4">
+          <Img fluid={aboutme1.childImageSharp.fluid} alt="about me" />
+        </Col>
+        <Col sm={{ size: 'auto', offset: 0 }} md="4">
+          <Img fluid={aboutme2.childImageSharp.fluid} alt="about me" />
+        </Col>
+
+        <Col sm={{ size: 'auto', offset: 0 }} md="4">
+          <Img fluid={aboutme3.childImageSharp.fluid} alt="about me" />
+        </Col>
+      </Row>
+      <br />
       <div className="container Contact--Section1--Container">
         <Content source={bio} />
       </div>
@@ -26,12 +44,18 @@ export const AboutMePageTemplate = ({
   </main>
 )
 
-const AboutMePage = ({ data: { page } }) => (
+const AboutMePage = ({ data: { page, aboutme1, aboutme2, aboutme3 } }) => (
   <Layout
     meta={page.frontmatter.meta || false}
     title={page.frontmatter.title || false}
   >
-    <AboutMePageTemplate {...page.frontmatter} body={page.html} />
+    <AboutMePageTemplate
+      {...page.frontmatter}
+      body={page.html}
+      aboutme1={aboutme1}
+      aboutme2={aboutme2}
+      aboutme3={aboutme3}
+    />
   </Layout>
 )
 
@@ -48,6 +72,27 @@ export const pageQuery = graphql`
         subtitle
         featuredImage
         bio
+      }
+    }
+    aboutme1: file(relativePath: { eq: "aboutme_1.jpg" }) {
+      childImageSharp {
+        fluid {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+    aboutme2: file(relativePath: { eq: "aboutme_2.jpg" }) {
+      childImageSharp {
+        fluid {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+    aboutme3: file(relativePath: { eq: "aboutme_3.jpg" }) {
+      childImageSharp {
+        fluid {
+          ...GatsbyImageSharpFluid
+        }
       }
     }
   }

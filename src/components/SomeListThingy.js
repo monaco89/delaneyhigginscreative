@@ -27,6 +27,9 @@ const GraphicDesign = () => (
                 elevate their social, email, and site design. Additionally, I'm
                 proficient at Photoshop and Lightroom.
               </p>
+              <a href="/about" className={`Button ${ThingyStyle.button}`}>
+                More To See
+              </a>
             </div>
           </Col>
           <Col sm={{ size: 'auto', offset: 1 }} md="6">

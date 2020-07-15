@@ -3,10 +3,10 @@ template: AboutMePage
 slug: about
 title: About Me
 subtitle: ''
-featuredImage: https://ucarecdn.com/e22a858a-b420-47af-99f6-ed54b6860333/
+featuredImage: ''
 bio: this is a bio
 meta:
-  description: This is a meta description.
+  description: Learn about me and what i do.
   title: About Me
 ---
 
