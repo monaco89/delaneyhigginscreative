@@ -1,9 +1,14 @@
 import React, { Fragment } from 'react'
-import Helmet from 'react-helmet'
+// import Helmet from 'react-helmet'
 import { stringify } from 'qs'
 import { serialize } from 'dom-form-serializer'
-
 import './Form.css'
+
+function encode(data) {
+  return Object.keys(data)
+    .map(key => encodeURIComponent(key) + '=' + encodeURIComponent(data[key]))
+    .join('&')
+}
 
 class Form extends React.Component {
   static defaultProps = {
@@ -26,17 +31,28 @@ class Form extends React.Component {
 
     const form = e.target
     const data = serialize(form)
-    this.setState({ disabled: true })
-    fetch(form.action + '?' + stringify(data), {
-      method: 'POST'
-    })
-      .then(res => {
-        if (res.ok) {
-          return res
-        } else {
-          throw new Error('Network error')
-        }
+    // this.setState({ disabled: true })
+    // fetch(form.action + '?' + stringify(data), {
+    //   method: 'POST'
+    // })
+    //   .then(res => {
+    //     if (res.ok) {
+    //       return res
+    //     } else {
+    //       throw new Error('Network error')
+    //     }
+    //   })
+
+    fetch('/', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/x-www-form-urlencoded'
+      },
+      body: encode({
+        'form-name': form.getAttribute('name'),
+        data
       })
+    })
       .then(() => {
         form.reset()
         this.setState({
@@ -54,19 +70,20 @@ class Form extends React.Component {
   }
 
   render() {
-    const { name, subject, action } = this.props
+    const { subject } = this.props
 
     return (
       <Fragment>
-        <Helmet>
+        {/* <Helmet>
           <script src="https://www.google.com/recaptcha/api.js" />
-        </Helmet>
+        </Helmet> */}
         <form
           className="Form"
-          name={name}
-          action={action}
           onSubmit={this.handleSubmit}
+          name="contact"
+          method="post"
           data-netlify="true"
+          data-netlify-honeypot="bot-field"
         >
           {this.state.alert && (
             <div className="Form--Alert">{this.state.alert}</div>
@@ -113,12 +130,12 @@ class Form extends React.Component {
             />
             <span>Message</span>
           </label>
-          <div
+          {/* <div
             className="g-recaptcha"
             data-sitekey={process.env.RECAPTCHA_KEY}
-          />
+          /> */}
           {!!subject && <input type="hidden" name="subject" value={subject} />}
-          <input type="hidden" name="form-name" value={name} />
+          <input type="hidden" name="form-name" value="contact" />
           <input
             className="Button Form--SubmitButton"
             type="submit"
