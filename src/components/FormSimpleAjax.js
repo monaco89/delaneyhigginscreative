@@ -31,18 +31,6 @@ class Form extends React.Component {
 
     const form = e.target
     const data = serialize(form)
-    // this.setState({ disabled: true })
-    // fetch(form.action + '?' + stringify(data), {
-    //   method: 'POST'
-    // })
-    //   .then(res => {
-    //     if (res.ok) {
-    //       return res
-    //     } else {
-    //       throw new Error('Network error')
-    //     }
-    //   })
-
     fetch('/', {
       method: 'POST',
       headers: {
