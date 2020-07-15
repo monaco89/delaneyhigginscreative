@@ -6,10 +6,11 @@ import Layout from '../components/Layout'
 import Img from 'gatsby-image'
 import { Row, Col } from 'reactstrap'
 import './ContactPage.css'
+import Styles from './AboutMe.module.css'
 
 // Export Template for use in CMS preview
 export const AboutMePageTemplate = ({
-  bio,
+  body,
   title,
   subtitle,
   featuredImage,
@@ -25,20 +26,32 @@ export const AboutMePageTemplate = ({
     />
     <section className="section Contact--Section1">
       <Row>
-        <Col sm={{ size: 'auto', offset: 0 }} md="4">
-          <Img fluid={aboutme1.childImageSharp.fluid} alt="about me" />
+        <Col sm={{ size: 'auto', offset: 0 }} md="4" className={Styles.col}>
+          <Img
+            fluid={aboutme1.childImageSharp.fluid}
+            alt="about me"
+            className={Styles.exp}
+          />
         </Col>
-        <Col sm={{ size: 'auto', offset: 0 }} md="4">
-          <Img fluid={aboutme2.childImageSharp.fluid} alt="about me" />
+        <Col sm={{ size: 'auto', offset: 0 }} md="4" className={Styles.col}>
+          <Img
+            fluid={aboutme2.childImageSharp.fluid}
+            alt="about me"
+            className={Styles.exp}
+          />
         </Col>
 
-        <Col sm={{ size: 'auto', offset: 0 }} md="4">
-          <Img fluid={aboutme3.childImageSharp.fluid} alt="about me" />
+        <Col sm={{ size: 'auto', offset: 0 }} md="4" className={Styles.col}>
+          <Img
+            fluid={aboutme3.childImageSharp.fluid}
+            alt="about me"
+            className={Styles.exp}
+          />
         </Col>
       </Row>
       <br />
-      <div className="container Contact--Section1--Container">
-        <Content source={bio} />
+      <div className="container">
+        <Content source={body} />
       </div>
     </section>
   </main>
@@ -71,7 +84,6 @@ export const pageQuery = graphql`
         template
         subtitle
         featuredImage
-        bio
       }
     }
     aboutme1: file(relativePath: { eq: "aboutme_1.jpg" }) {
