@@ -26,14 +26,14 @@ export const AboutMePageTemplate = ({
     />
     <section className="section Contact--Section1">
       <Row>
-        <Col sm={{ size: 'auto', offset: 0 }} md="4" className={Styles.col}>
+        <Col xs={{ size: '4', offset: 0 }} md="4" className={Styles.col}>
           <Img
             fluid={aboutme1.childImageSharp.fluid}
             alt="about me"
             className={Styles.exp}
           />
         </Col>
-        <Col sm={{ size: 'auto', offset: 0 }} md="4" className={Styles.col}>
+        <Col xs={{ size: '4', offset: 0 }} md="4" className={Styles.col}>
           <Img
             fluid={aboutme2.childImageSharp.fluid}
             alt="about me"
@@ -41,7 +41,7 @@ export const AboutMePageTemplate = ({
           />
         </Col>
 
-        <Col sm={{ size: 'auto', offset: 0 }} md="4" className={Styles.col}>
+        <Col xs={{ size: '4', offset: 0 }} md="4" className={Styles.col}>
           <Img
             fluid={aboutme3.childImageSharp.fluid}
             alt="about me"

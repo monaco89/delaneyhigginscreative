@@ -7,3 +7,12 @@
   /* padding-top: 0; */
   text-align: center;
 }
+
+@media (max-width: 600px) {
+  .exp {
+    width: 100%;
+  }
+  .col {
+    margin-bottom: 5px;
+  }
+}

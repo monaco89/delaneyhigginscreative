@@ -41,7 +41,7 @@ export const ContactPageTemplate = ({
             {phone && (
               <a className="Contact--Details--Item" href={`tel:${phone}`}>
                 <Smartphone color="black" />
-                ____________________________________ {phone}
+                _________________________________ {phone}
               </a>
             )}
             {email && (
