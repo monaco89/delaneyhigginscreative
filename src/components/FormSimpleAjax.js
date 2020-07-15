@@ -12,9 +12,9 @@ function encode(data) {
 
 class Form extends React.Component {
   static defaultProps = {
-    name: 'Contact Form',
+    name: 'contact',
     subject: '', // optional subject of the notification email
-    action: '',
+    action: '/',
     successMessage: 'Thanks for your enquiry, we will get back to you soon',
     errorMessage:
       'There is a problem, your message has not been sent, please try contacting me via email'
@@ -50,7 +50,7 @@ class Form extends React.Component {
       },
       body: encode({
         'form-name': form.getAttribute('name'),
-        data
+        ...data
       })
     })
       .then(() => {
@@ -70,7 +70,7 @@ class Form extends React.Component {
   }
 
   render() {
-    const { subject } = this.props
+    const { subject, name, action } = this.props
 
     return (
       <Fragment>
@@ -80,7 +80,7 @@ class Form extends React.Component {
         <form
           className="Form"
           onSubmit={this.handleSubmit}
-          name="contact"
+          name={name}
           method="post"
           data-netlify="true"
           data-netlify-honeypot="bot-field"
