@@ -46,6 +46,10 @@
   margin-left: 20%;
 }
 
+.mb20 {
+  margin-bottom: 20px;
+}
+
 @media (max-width: 600px) {
   .title,
   .idTitle {

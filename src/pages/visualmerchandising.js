@@ -3,7 +3,6 @@ import Layout from '../components/Layout'
 import InfiniteScroll from 'react-infinite-scroll-component'
 import axios from 'axios'
 import PageHeader from '../components/PageHeader'
-// import { CloudinaryContext, Transformation, Image } from 'cloudinary-react'
 
 const ImageTile = ({ url }) => (
   <div className="image-item">

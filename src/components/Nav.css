@@ -113,7 +113,15 @@
   width: 15rem;
 }
 
+.mobileLogo {
+  display: none;
+}
+
 @media (max-width: 600px) {
+  .mobileLogo {
+    display: block;
+  }
+
   .Nav--Container {
     display: flex;
   }

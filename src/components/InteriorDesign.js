@@ -38,7 +38,7 @@ const InteriorDesign = () => (
             </p>
             <a
               href="/interiordesign"
-              className={`Button ${AboutMeStyle.button}`}
+              className={`Button ${AboutMeStyle.button} ${AboutMeStyle.mb20}`}
             >
               More To See
             </a>
