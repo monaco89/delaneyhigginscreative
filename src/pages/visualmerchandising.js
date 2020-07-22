@@ -1,14 +1,8 @@
 import React, { useState } from 'react'
 import Layout from '../components/Layout'
-import InfiniteScroll from 'react-infinite-scroll-component'
 import axios from 'axios'
 import PageHeader from '../components/PageHeader'
-
-const ImageTile = ({ url }) => (
-  <div className="image-item">
-    <img src={url} alt="visual merchandising by delaney" />
-  </div>
-)
+import ImageGallery from '../components/ImageGallery'
 
 const StyePage = () => {
   const [images, setImages] = useState([])
@@ -30,30 +24,13 @@ const StyePage = () => {
       })
   }
 
-  // TODO Make into own component
   return (
     <Layout>
       <section className="section">
         <div className="container">
           <div className="content">
             <PageHeader title="Visual Merchandising" subtitle="" />
-            <InfiniteScroll
-              dataLength={images}
-              next={() => fetchImages(5)}
-              hasMore={true}
-              loader={!loaded && !images && <p>loading...</p>}
-            >
-              <div className="image-grid" style={{ marginTop: '30px' }}>
-                {loaded
-                  ? images.map((data, i) => (
-                      <ImageTile
-                        url={`https://res.cloudinary.com/nickmonaco/image/upload/${data.public_id}.jpg`}
-                        key={i}
-                      />
-                    ))
-                  : 'No Photos'}
-              </div>
-            </InfiniteScroll>
+            {loaded ? <ImageGallery gallery={images} /> : 'Loading...'}
           </div>
         </div>
       </section>

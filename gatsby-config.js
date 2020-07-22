@@ -102,6 +102,14 @@ module.exports = {
       }
     },
     {
+      resolve: 'gatsby-plugin-styletron',
+      options: {
+        // You can pass options to Styletron.
+        // Prefix all generated classNames:
+        prefix: '_'
+      }
+    },
+    {
       resolve: `gatsby-plugin-postcss`,
       options: {
         postCssPlugins: [

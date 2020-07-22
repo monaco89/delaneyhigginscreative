@@ -11,6 +11,7 @@
     "@material-ui/core": "^4.10.2",
     "@reach/router": "^1.2.1",
     "axios": "^0.19.2",
+    "baseui": "^9.87.1",
     "bootstrap": "^4.5.0",
     "dom-form-serializer": "^1.0.7",
     "gatsby": "^2.17.7",
@@ -27,6 +28,7 @@
     "gatsby-plugin-sass": "^2.1.20",
     "gatsby-plugin-sharp": "^2.2.36",
     "gatsby-plugin-sitemap": "^2.2.19",
+    "gatsby-plugin-styletron": "^5.0.9",
     "gatsby-remark-images": "^3.1.28",
     "gatsby-remark-relative-images": "^0.2.3",
     "gatsby-remark-responsive-iframe": "^2.2.25",
@@ -44,9 +46,10 @@
     "react-dom": "^16.11.0",
     "react-feather": "^2.0.3",
     "react-helmet": "^5.2.1",
-    "react-infinite-scroll-component": "^5.0.4",
     "react-markdown": "^4.2.2",
-    "reactstrap": "^8.4.1"
+    "reactstrap": "^8.4.1",
+    "styletron-engine-atomic": "^1.4.6",
+    "styletron-react": "^5.2.7"
   },
   "keywords": [
     "gatsby"
