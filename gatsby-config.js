@@ -89,18 +89,6 @@ module.exports = {
         ]
       }
     },
-
-    // css (replace with gatsby-plugin-sass for v2)
-    {
-      resolve: `gatsby-plugin-sass`,
-      options: {
-        postCssPlugins: [
-          postcssPresetEnv({
-            browsers: '> 0.5%, last 2 versions, ie 11'
-          })
-        ]
-      }
-    },
     {
       resolve: 'gatsby-plugin-styletron',
       options: {
