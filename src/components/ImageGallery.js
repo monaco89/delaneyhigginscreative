@@ -3,7 +3,7 @@ import { FlexGrid, FlexGridItem } from 'baseui/flex-grid'
 import * as React from 'react'
 
 const Image = styled('img', {
-  objectFit: 'cover',
+  objectFit: 'contain',
   objectPosition: '100% 0',
   width: '100%',
   height: '100%'
