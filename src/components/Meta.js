@@ -88,13 +88,6 @@ export default class Meta extends Component {
             'https://res.cloudinary.com/nickmonaco/image/upload/v1590099560/delaney_home_cxtben.jpg'
           }
         />
-
-        {/* {googleTrackingId && (
-          <script
-            async
-            src={`https://www.googletagmanager.com/gtag/js?id=${googleTrackingId}`}
-          />
-        )} */}
       </Helmet>
     )
   }

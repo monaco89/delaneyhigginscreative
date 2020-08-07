@@ -23,7 +23,11 @@ export const ContactPageTemplate = ({
     <section className="section Contact--Section1">
       <div className="container Contact--Section1--Container">
         <div>
-          <img src={ContactMe} style={{ width: '100%' }} />
+          <img
+            src={ContactMe}
+            style={{ width: '100%' }}
+            alt="computer and notepad"
+          />
           <div className="Contact--Details">
             {address && (
               <a

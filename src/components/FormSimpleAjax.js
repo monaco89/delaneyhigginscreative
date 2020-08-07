@@ -1,6 +1,4 @@
 import React, { Fragment } from 'react'
-// import Helmet from 'react-helmet'
-import { stringify } from 'qs'
 import { serialize } from 'dom-form-serializer'
 import './Form.css'
 
@@ -14,7 +12,6 @@ class Form extends React.Component {
   static defaultProps = {
     name: 'contact',
     subject: '', // optional subject of the notification email
-    action: '/',
     successMessage: 'Thanks for your enquiry, we will get back to you soon',
     errorMessage:
       'There is a problem, your message has not been sent, please try contacting me via email'
@@ -58,13 +55,10 @@ class Form extends React.Component {
   }
 
   render() {
-    const { subject, name, action } = this.props
+    const { subject, name } = this.props
 
     return (
       <Fragment>
-        {/* <Helmet>
-          <script src="https://www.google.com/recaptcha/api.js" />
-        </Helmet> */}
         <form
           className="Form"
           onSubmit={this.handleSubmit}
@@ -118,10 +112,6 @@ class Form extends React.Component {
             />
             <span>Message</span>
           </label>
-          {/* <div
-            className="g-recaptcha"
-            data-sitekey={process.env.RECAPTCHA_KEY}
-          /> */}
           {!!subject && <input type="hidden" name="subject" value={subject} />}
           <input type="hidden" name="form-name" value="contact" />
           <input
