@@ -10,8 +10,6 @@
   "dependencies": {
     "@material-ui/core": "^4.10.2",
     "@reach/router": "^1.2.1",
-    "axios": "^0.19.2",
-    "baseui": "^9.87.1",
     "bootstrap": "^4.5.0",
     "dom-form-serializer": "^1.0.7",
     "dotenv": "^8.2.0",
@@ -46,9 +44,7 @@
     "react-feather": "^2.0.3",
     "react-helmet": "^5.2.1",
     "react-markdown": "^4.2.2",
-    "reactstrap": "^8.4.1",
-    "styletron-engine-atomic": "^1.4.6",
-    "styletron-react": "^5.2.7"
+    "reactstrap": "^8.4.1"
   },
   "keywords": [
     "gatsby"

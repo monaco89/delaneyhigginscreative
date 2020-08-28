@@ -1,36 +1,38 @@
-import React, { useState } from 'react'
+import React from 'react'
 import Layout from '../components/Layout'
-import axios from 'axios'
+import { useStaticQuery, graphql } from 'gatsby'
 import PageHeader from '../components/PageHeader'
 import ImageGallery from '../components/ImageGallery'
 
 const StyePage = () => {
-  const [images, setImages] = useState([])
-  const [loaded, setIsLoaded] = useState(false)
-
-  React.useEffect(() => {
-    fetchImages()
-  }, [])
-
-  const fetchImages = (count = 7) => {
-    axios
-      .get(
-        'https://res.cloudinary.com/nickmonaco/image/list/visualmerchandising.json'
-      )
-      .then(res => {
-        // console.log(res.data.resources)
-        setImages(res.data.resources)
-        setIsLoaded(true)
-      })
-  }
+  const data = useStaticQuery(graphql`
+    query VMCloudinaryImage {
+      allCloudinaryMedia {
+        edges {
+          node {
+            secure_url
+            tags
+          }
+        }
+      }
+    }
+  `)
+  const clImages = data?.allCloudinaryMedia?.edges
 
   return (
-    <Layout>
+    <Layout
+      title="Visual Merchandising"
+      meta={{
+        canonicalLink: '/visualmerchandising',
+        title: 'Visual Merchandising',
+        description: 'Visual Merchandising photos by delaney higgins'
+      }}
+    >
       <section className="section">
         <div className="container">
           <div className="content">
             <PageHeader title="Visual Merchandising" subtitle="" />
-            {loaded ? <ImageGallery gallery={images} /> : 'Loading...'}
+            <ImageGallery images={clImages} tag="visualmerchandising" />
           </div>
         </div>
       </section>

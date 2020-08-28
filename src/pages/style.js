@@ -1,6 +1,5 @@
-import React, { useState } from 'react'
+import React from 'react'
 import Layout from '../components/Layout'
-import axios from 'axios'
 import PageHeader from '../components/PageHeader'
 import ImageGallery from '../components/ImageGallery'
 import { useStaticQuery, graphql } from 'gatsby'
@@ -8,7 +7,7 @@ import '../components/gallery.css'
 
 const StyePage = () => {
   const data = useStaticQuery(graphql`
-    query CloudinaryImage {
+    query StyleCloudinaryImage {
       allCloudinaryMedia {
         edges {
           node {
@@ -19,24 +18,7 @@ const StyePage = () => {
       }
     }
   `)
-  const clImages = data.allCloudinaryMedia.edges
-  console.log(data)
-  // const [images, setImages] = useState([])
-  // const [loaded, setIsLoaded] = useState(false)
-
-  // React.useEffect(() => {
-  //   fetchImages()
-  // }, [])
-
-  // const fetchImages = (count = 7) => {
-  //   axios
-  //     .get('https://res.cloudinary.com/nickmonaco/image/list/style.json')
-  //     .then(res => {
-  //       // console.log(res.data.resources)
-  //       setImages(res.data.resources)
-  //       setIsLoaded(true)
-  //     })
-  // }
+  const clImages = data?.allCloudinaryMedia?.edges
 
   return (
     <Layout
@@ -51,18 +33,7 @@ const StyePage = () => {
         <div className="container">
           <div className="content">
             <PageHeader title="Styling" subtitle="" />
-            {/* {loaded ? <ImageGallery gallery={images} /> : 'Loading...'} */}
-            <div>
-              <div className="image-grid">
-                {clImages
-                  .filter(image => image.node.tags.includes('style'))
-                  .map((image, index) => (
-                    <div className="image-item" key={`${index}-cl`}>
-                      <img src={image.node.secure_url} alt={'no alt :('} />
-                    </div>
-                  ))}
-              </div>
-            </div>
+            <ImageGallery images={clImages} tag="style" />
           </div>
         </div>
       </section>

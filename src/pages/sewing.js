@@ -1,26 +1,23 @@
-import React, { useState } from 'react'
+import React from 'react'
 import Layout from '../components/Layout'
-import axios from 'axios'
+import { useStaticQuery, graphql } from 'gatsby'
 import PageHeader from '../components/PageHeader'
 import ImageGallery from '../components/ImageGallery'
 
 const StyePage = () => {
-  const [images, setImages] = useState([])
-  const [loaded, setIsLoaded] = useState(false)
-
-  React.useEffect(() => {
-    fetchImages()
-  }, [])
-
-  const fetchImages = (count = 7) => {
-    axios
-      .get('https://res.cloudinary.com/nickmonaco/image/list/sewing.json')
-      .then(res => {
-        // console.log(res.data.resources)
-        setImages(res.data.resources)
-        setIsLoaded(true)
-      })
-  }
+  const data = useStaticQuery(graphql`
+    query SewingCloudinaryImage {
+      allCloudinaryMedia {
+        edges {
+          node {
+            secure_url
+            tags
+          }
+        }
+      }
+    }
+  `)
+  const clImages = data?.allCloudinaryMedia?.edges
 
   return (
     <Layout
@@ -34,7 +31,7 @@ const StyePage = () => {
         <div className="container">
           <div className="content">
             <PageHeader title="Sewing and Alterations" subtitle="" />
-            {loaded ? <ImageGallery gallery={images} /> : 'Loading...'}
+            <ImageGallery images={clImages} tag="sewing" />
           </div>
         </div>
       </section>
