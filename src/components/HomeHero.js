@@ -1,7 +1,6 @@
 import React from 'react'
 import Image from './Image'
 import Logo from '../../static/images/logo.png'
-import Banner from '../../static/images/delaney_home.jpg'
 import './HomeHero.css'
 
 const HomeHero = ({ backgroundImage, large, className = '' }) => {
@@ -12,7 +11,7 @@ const HomeHero = ({ backgroundImage, large, className = '' }) => {
         <Image
           background
           resolutions="large"
-          src={Banner}
+          src={backgroundImage.fluid.src}
           alt="delaney higgins"
           size="cover"
         />
