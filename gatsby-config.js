@@ -106,6 +106,14 @@ module.exports = {
       }
     },
     {
+      resolve: 'gatsby-plugin-web-font-loader',
+      options: {
+        typekit: {
+          id: 'raz1yzb'
+        }
+      }
+    },
+    {
       resolve: 'gatsby-plugin-nprogress',
       options: {
         // Setting a color is optional.

@@ -1,5 +1,4 @@
 import React, { Fragment } from 'react'
-
 import './Image.css'
 
 class Image extends React.Component {
@@ -8,40 +7,8 @@ class Image extends React.Component {
     this.ref = React.createRef()
   }
 
-  imageSizes = [
-    '320',
-    '450',
-    '640',
-    '750',
-    '800',
-    '900',
-    '1000',
-    '1200',
-    '1500',
-    '1600',
-    '2000'
-  ] // image sizes used for image source sets
-
   state = {
     isIntersecting: false
-  }
-
-  handleIntersection = e => {
-    if (e.isIntersecting) {
-      this.setState({ isIntersecting: true })
-    }
-  }
-
-  getResolutionString(res) {
-    /* add resolutions options for inline images */
-    if (res === 'small') {
-      res = '800x'
-    } else if (res === 'medium') {
-      res = '1000x'
-    } else if (res === 'large') {
-      res = '2000x'
-    }
-    return res
   }
 
   render() {

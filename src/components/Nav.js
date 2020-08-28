@@ -29,8 +29,8 @@ export class Navigation extends Component {
   render() {
     const { active } = this.state,
       NavLink = ({ to, className, children, ...props }) => (
-        <Link
-          to={to}
+        <a
+          href={to}
           className={`NavLink ${
             to === this.state.currentPath ? 'active' : ''
           } ${className}`}
@@ -38,15 +38,15 @@ export class Navigation extends Component {
           {...props}
         >
           {children}
-        </Link>
+        </a>
       )
 
     return (
       <nav className={`Nav ${active ? 'Nav-active' : ''}`}>
         <div className="Nav--Container container">
-          <Link to="/" onClick={this.handleLinkClick} className="mobileLogo">
+          <a href="/" onClick={this.handleLinkClick} className="mobileLogo">
             <Logo />
-          </Link>
+          </a>
           <div className="Nav--Links">
             <div
               className={`Nav--Group ${
@@ -54,6 +54,7 @@ export class Navigation extends Component {
               }`}
             >
               <span
+                role="navigation"
                 className={`NavLink ${
                   this.props.location.pathname.includes('style') ||
                   this.props.location.pathname.includes('interiordesign')
@@ -79,6 +80,7 @@ export class Navigation extends Component {
               }`}
             >
               <span
+                role="navigation"
                 className={`NavLink ${
                   this.props.location.pathname.includes('photography') ||
                   this.props.location.pathname.includes(
@@ -111,9 +113,9 @@ export class Navigation extends Component {
                 </div>
               </span>
             </div>
-            <Link to="/" onClick={this.handleLinkClick}>
+            <a href="/" onClick={this.handleLinkClick}>
               <Logo />
-            </Link>
+            </a>
             <NavLink to="/about/">About Me</NavLink>
             <NavLink to="/contact/">Contact</NavLink>
           </div>
