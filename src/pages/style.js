@@ -3,7 +3,6 @@ import Layout from '../components/Layout'
 import PageHeader from '../components/PageHeader'
 import ImageGallery from '../components/ImageGallery'
 import { useStaticQuery, graphql } from 'gatsby'
-import '../components/gallery.css'
 
 const StyePage = () => {
   const data = useStaticQuery(graphql`
