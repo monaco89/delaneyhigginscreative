@@ -7,7 +7,6 @@ import Footer from './Footer'
 
 import 'modern-normalize/modern-normalize.css'
 import './globalStyles.css'
-import './gallery.css'
 
 export default ({ children, meta, title }) => (
   <StaticQuery
