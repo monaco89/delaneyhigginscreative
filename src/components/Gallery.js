@@ -1,8 +1,8 @@
 import React, { useState } from 'react'
-import Layout from '../components/Layout'
+import Layout from './Layout'
 import axios from 'axios'
-import PageHeader from '../components/PageHeader'
-import ImageGallery from '../components/ImageGallery'
+import PageHeader from './PageHeader'
+import ImageGallery from './ImageGallery'
 // import { useStaticQuery, graphql } from 'gatsby'
 import './gallery.css'
 
