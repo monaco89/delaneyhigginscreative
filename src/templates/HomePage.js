@@ -57,7 +57,7 @@ export const pageQuery = graphql`
     file: file(relativePath: { eq: "delaney_home.jpg" }) {
       childImageSharp {
         # Specify the image processing specifications right in the query.
-        fluid {
+        fluid(maxWidth: 1200, quality: 90) {
           ...GatsbyImageSharpFluid
         }
       }
