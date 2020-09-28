@@ -37,6 +37,7 @@
 .Nav .Logo {
   /* margin-right: 3rem; */
   position: relative;
+  background-size: 70%;
 }
 
 .Nav--MenuButton {
@@ -120,7 +121,14 @@
   display: none;
 }
 
+.desktopLogo {
+  display: block;
+}
+
 @media (max-width: 600px) {
+  .desktopLogo {
+    display: none;
+  }
   .mobileLogo {
     display: block;
   }

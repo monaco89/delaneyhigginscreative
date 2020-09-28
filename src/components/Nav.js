@@ -45,10 +45,13 @@ export class Navigation extends Component {
     return (
       <nav className={`Nav ${active ? 'Nav-active' : ''}`}>
         <div className="Nav--Container container">
-          <a href="/" onClick={this.handleLinkClick}>
+          <a href="/" onClick={this.handleLinkClick} className="mobileLogo">
             <Logo />
           </a>
           <div className="Nav--Links">
+            <a href="/" onClick={this.handleLinkClick} className="desktopLogo">
+              <Logo />
+            </a>
             <div
               className={`Nav--Group ${
                 this.state.activeSubNav === 'exp' ? 'active' : ''
