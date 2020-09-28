@@ -1,44 +1,44 @@
 .dh {
-  max-width: 550px;
+  max-width: 500px;
   width: 100%;
 }
 
 .bio {
   background-color: white;
   color: black;
-  max-width: 550px;
+  max-width: 600px;
   text-align: justify;
   margin-top: 170px;
-  font-size: 1.8rem;
-  font-family: oxtail;
+  font-size: 1.6rem;
+  font-family: adobe-garamond-pro;
   line-height: 1.2;
 }
 
 .idBio {
   background-color: white;
   color: black;
-  max-width: 550px;
+  max-width: 600px;
   text-align: justify;
   margin-top: 320px;
-  font-size: 1.8rem;
-  font-family: oxtail;
+  font-size: 1.6rem;
+  font-family: adobe-garamond-pro;
   margin-left: 3em;
   line-height: 1.2;
 }
 
 .title {
-  font-size: 7rem;
+  font-size: 5.5rem;
   color: #898888;
-  position: absolute;
+  /* position: absolute;
   margin-left: 20%;
-  z-index: 1;
+  z-index: 1; */
 }
 
 .idTitle {
-  font-size: 7rem;
+  font-size: 5.5rem;
   color: #898888;
-  position: absolute;
-  z-index: 1;
+  /* position: absolute;
+  z-index: 1; */
 }
 
 .button {

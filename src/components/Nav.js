@@ -1,7 +1,8 @@
 import React, { Component } from 'react'
 import { Location } from '@reach/router'
-import { Link } from 'gatsby'
-import { Menu, X } from 'react-feather'
+import { Menu, X, Mail } from 'react-feather'
+import { FaPinterest, FaInstagram } from 'react-icons/fa'
+import { FiMail } from 'react-icons/fi'
 import Logo from './Logo'
 
 import './Nav.css'
@@ -44,7 +45,7 @@ export class Navigation extends Component {
     return (
       <nav className={`Nav ${active ? 'Nav-active' : ''}`}>
         <div className="Nav--Container container">
-          <a href="/" onClick={this.handleLinkClick} className="mobileLogo">
+          <a href="/" onClick={this.handleLinkClick}>
             <Logo />
           </a>
           <div className="Nav--Links">
@@ -113,11 +114,19 @@ export class Navigation extends Component {
                 </div>
               </span>
             </div>
-            <a href="/" onClick={this.handleLinkClick}>
-              <Logo />
-            </a>
             <NavLink to="/about/">About Me</NavLink>
-            <NavLink to="/contact/">Contact</NavLink>
+            <NavLink to="https://instagram.com/higginsdelaney" target="_blank">
+              <FaInstagram />
+            </NavLink>
+            <NavLink
+              to="https://www.pinterest.com/delaneyhigginscreative"
+              target="_blank"
+            >
+              <FaPinterest />
+            </NavLink>
+            <NavLink to="/contact/">
+              <FiMail />
+            </NavLink>
           </div>
           <button
             className="Button-blank Nav--MenuButton"

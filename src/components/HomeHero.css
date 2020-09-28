@@ -19,7 +19,9 @@
 }
 
 .HomeHero .logo {
-  width: 40%;
+  width: 100%;
+  margin-top: 80px;
+  /* max-height: 800px; */
 }
 
 @media (max-width: 600px) {

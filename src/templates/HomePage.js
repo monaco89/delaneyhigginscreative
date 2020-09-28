@@ -10,12 +10,6 @@ import Layout from '../components/Layout'
 import Experience from '../components/Experience'
 import { Container } from 'reactstrap'
 import 'bootstrap/dist/css/bootstrap.min.css'
-// const HomeHero = lazy(() => import('../components/HomeHero'))
-// const AboutMe = lazy(() => import('../components/AboutMe'))
-// const SomeListThingy = lazy(() => import('../components/SomeListThingy'))
-// const InteriorDesign = lazy(() => import('../components/InteriorDesign'))
-// const InstagramFeed = lazy(() => import('../components/InstagramFeed'))
-// const Style = lazy(() => import('../components/Style'))
 
 export const HomePageTemplate = ({ body, childImageSharp }) => (
   <main className="Home">
@@ -35,7 +29,7 @@ const HomePage = ({ data: { page, file } }) => (
       <HomePageTemplate
         {...page}
         {...file}
-        {...page.frontmatter}
+        // {...page.frontmatter}
         body={page.html}
       />
     </Container>
@@ -54,7 +48,7 @@ export const pageQuery = graphql`
         featuredImage
       }
     }
-    file: file(relativePath: { eq: "delaney_home.jpg" }) {
+    file: file(relativePath: { eq: "header.jpg" }) {
       childImageSharp {
         # Specify the image processing specifications right in the query.
         fluid(maxWidth: 1200, quality: 90) {

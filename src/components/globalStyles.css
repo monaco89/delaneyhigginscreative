@@ -5,7 +5,7 @@
   --midGrey: #cacaca;
   --darkGrey: #272727;
   --danger: #ff3d3d;
-  --font-primary: 'oxtail', sans-serif;
+  --font-primary: 'adobe-garamond-pro', sans-serif;
   --font-system: system-ui; /* postcssPresetEnv */
   --borderRadius: 3px;
 }

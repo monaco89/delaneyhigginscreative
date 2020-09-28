@@ -1,6 +1,7 @@
 .footer {
   padding: 2rem 0;
   background: var(--lightGrey);
+  font-family: adobe-garamond-pro;
 }
 
 .footer a {
