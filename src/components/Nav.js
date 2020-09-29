@@ -54,65 +54,102 @@ export class Navigation extends Component {
             </a>
             <div
               className={`Nav--Group ${
-                this.state.activeSubNav === 'exp' ? 'active' : ''
+                this.state.activeSubNav === 'styling' ? 'active' : ''
               }`}
             >
               <span
                 role="navigation"
                 className={`NavLink ${
-                  this.props.location.pathname.includes('style') ||
-                  this.props.location.pathname.includes('interiordesign')
+                  this.props.location.pathname.includes('prop') ||
+                  this.props.location.pathname.includes('interiordesign') ||
+                  this.props.location.pathname.includes('tabletop') ||
+                  this.props.location.pathname.includes('fashion') ||
+                  this.props.location.pathname.includes('holiday')
                     ? 'active'
                     : ''
                 }`}
-                onClick={() => this.toggleSubNav('exp')}
+                onClick={() => this.toggleSubNav('styling')}
               >
-                Experience
+                Styling
                 <div className="Nav--GroupLinks">
-                  <NavLink to="/style" className="Nav--GroupLink">
-                    Styling
+                  <NavLink to="/prop" className="Nav--GroupLink">
+                    Prop
                   </NavLink>
                   <NavLink to="/interiordesign" className="Nav--GroupLink">
-                    Interior Design
+                    Interior
+                  </NavLink>
+                  <NavLink to="/tabletop" className="Nav--GroupLink">
+                    TableTop
+                  </NavLink>
+                  <NavLink to="/fashion" className="Nav--GroupLink">
+                    Fashion
+                  </NavLink>
+                  <NavLink to="/holiday" className="Nav--GroupLink">
+                    Holiday
                   </NavLink>
                 </div>
               </span>
             </div>
             <div
               className={`Nav--Group ${
-                this.state.activeSubNav === 'skills' ? 'active' : ''
+                this.state.activeSubNav === 'photography' ? 'active' : ''
               }`}
             >
               <span
                 role="navigation"
                 className={`NavLink ${
-                  this.props.location.pathname.includes('photography') ||
-                  this.props.location.pathname.includes(
-                    'visualmerchandising'
-                  ) ||
-                  this.props.location.pathname.includes('graphicdesign') ||
-                  this.props.location.pathname.includes('sewing')
+                  this.props.location.pathname.includes('people') ||
+                  this.props.location.pathname.includes('places') ||
+                  this.props.location.pathname.includes('treats') ||
+                  this.props.location.pathname.includes('things') ||
+                  this.props.location.pathname.includes('interiors')
                     ? 'active'
                     : ''
                 }`}
-                onClick={() => this.toggleSubNav('skills')}
+                onClick={() => this.toggleSubNav('photography')}
               >
-                Skills
+                Photography
                 <div className="Nav--GroupLinks">
-                  <NavLink to="/photography/" className="Nav--GroupLink">
-                    Photography
+                  <NavLink to="/people" className="Nav--GroupLink">
+                    People
                   </NavLink>
-                  <NavLink
-                    to="/visualmerchandising/"
-                    className="Nav--GroupLink"
-                  >
-                    Visual Merchandising
+                  <NavLink to="/places" className="Nav--GroupLink">
+                    Places
                   </NavLink>
-                  <NavLink to="/graphicdesign/" className="Nav--GroupLink">
-                    Graphic Design
+                  <NavLink to="/treats" className="Nav--GroupLink">
+                    Treats
                   </NavLink>
-                  <NavLink to="/sewing/" className="Nav--GroupLink">
-                    Sewing and Alterations
+                  <NavLink to="/things" className="Nav--GroupLink">
+                    Things
+                  </NavLink>
+                  <NavLink to="/interiors" className="Nav--GroupLink">
+                    Interiors
+                  </NavLink>
+                </div>
+              </span>
+            </div>
+            <div
+              className={`Nav--Group ${
+                this.state.activeSubNav === 'graphicdesign' ? 'active' : ''
+              }`}
+            >
+              <span
+                role="navigation"
+                className={`NavLink ${
+                  this.props.location.pathname.includes('logos') ||
+                  this.props.location.pathname.includes('socialmedia')
+                    ? 'active'
+                    : ''
+                }`}
+                onClick={() => this.toggleSubNav('graphicdesign')}
+              >
+                Graphic Design
+                <div className="Nav--GroupLinks">
+                  <NavLink to="/logos" className="Nav--GroupLink">
+                    Logos
+                  </NavLink>
+                  <NavLink to="/socialmedia" className="Nav--GroupLink">
+                    Social Media
                   </NavLink>
                 </div>
               </span>

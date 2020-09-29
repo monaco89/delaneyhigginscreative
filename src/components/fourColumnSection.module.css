@@ -1,0 +1,44 @@
+.title {
+  font-size: 5.5rem;
+  color: #898888;
+  margin-bottom: 0;
+  padding-top: 1em;
+  padding-left: 1em;
+}
+
+.img {
+  width: 100%;
+}
+
+.line {
+  height: 5px;
+  background: black;
+  width: 70%;
+  float: right;
+  margin-bottom: 70px;
+  margin-top: -5px;
+}
+
+/* .link {
+    
+} */
+
+.subTitle {
+  margin-top: 15px;
+  font-size: 4rem;
+  font-family: orpheuspro;
+  font-weight: 400;
+}
+
+@media (max-width: 600px) {
+  .title {
+    font-size: 3.5rem;
+    position: relative;
+    margin-left: 0;
+    text-align: center;
+  }
+  .img {
+    padding-left: 40px !important;
+    padding-right: 40px !important;
+  }
+}

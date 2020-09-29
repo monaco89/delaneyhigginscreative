@@ -2,22 +2,20 @@ import React from 'react'
 import { graphql } from 'gatsby'
 import HomeHero from '../components/HomeHero'
 import AboutMe from '../components/AboutMe'
-import SomeListThingy from '../components/SomeListThingy'
-import Style from '../components/Style'
-import InteriorDesign from '../components/InteriorDesign'
+import GraphicDesign from '../components/GraphicDesign'
 import InstagramFeed from '../components/InstagramFeed'
 import Layout from '../components/Layout'
 import Experience from '../components/Experience'
+import Photography from '../components/Photography'
 import { Container } from 'reactstrap'
 import 'bootstrap/dist/css/bootstrap.min.css'
 
 export const HomePageTemplate = ({ body, childImageSharp }) => (
   <main className="Home">
     <HomeHero large backgroundImage={childImageSharp} />
+    <Photography />
+    <GraphicDesign />
     <AboutMe body={body} />
-    <Style />
-    <SomeListThingy />
-    <InteriorDesign />
     <Experience />
     <InstagramFeed />
   </main>
@@ -26,12 +24,7 @@ export const HomePageTemplate = ({ body, childImageSharp }) => (
 const HomePage = ({ data: { page, file } }) => (
   <Layout meta={page.frontmatter.meta || false}>
     <Container fluid={true}>
-      <HomePageTemplate
-        {...page}
-        {...file}
-        // {...page.frontmatter}
-        body={page.html}
-      />
+      <HomePageTemplate {...page} {...file} body={page.html} />
     </Container>
   </Layout>
 )

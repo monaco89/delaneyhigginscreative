@@ -14,52 +14,23 @@
   line-height: 1.2;
 }
 
-.idBio {
-  background-color: white;
-  color: black;
-  max-width: 600px;
-  text-align: justify;
-  margin-top: 320px;
-  font-size: 1.6rem;
-  font-family: adobe-garamond-pro;
-  margin-left: 3em;
-  line-height: 1.2;
-}
-
 .title {
   font-size: 5.5rem;
   color: #898888;
-  /* position: absolute;
-  margin-left: 20%;
-  z-index: 1; */
 }
-
-.idTitle {
-  font-size: 5.5rem;
-  color: #898888;
-  /* position: absolute;
-  z-index: 1; */
-}
-
-.button {
-  margin-left: 20%;
-}
-
 .mb20 {
   margin-bottom: 20px;
 }
 
 @media (max-width: 600px) {
-  .title,
-  .idTitle {
+  .title {
     font-size: 3.5rem;
     position: relative;
     margin-left: 0;
     text-align: center;
   }
 
-  .bio,
-  .idBio {
+  .bio {
     margin-top: 30px;
     text-align: left;
     padding: 15px;
@@ -67,9 +38,6 @@
     margin-left: 0em;
   }
 
-  .button {
-    margin-left: 0;
-  }
   .description {
     text-align: center;
   }
