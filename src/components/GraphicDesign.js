@@ -22,11 +22,23 @@ const GraphicDesign = () => (
         <Row>
           <Col sm={{ size: 'auto', offset: 0 }} md="5">
             <div className={GDStyle.body}>
-              <p>
-                My graphic design skills lend themselves to brands looking to
-                elevate their social, email, and site design. Additionally, I'm
-                proficient at Photoshop and Lightroom.
-              </p>
+              <Row>
+                <Col>
+                  <p>
+                    My graphic design skills lend themselves to brands looking
+                    to elevate their social, email, and site design.
+                    Additionally, I'm proficient at Photoshop and Lightroom.
+                  </p>
+                </Col>
+              </Row>
+              <Row className={GDStyle.links}>
+                <Col>
+                  <a href="/logos">Logos</a>
+                </Col>
+                <Col>
+                  <a href="/socialmedia">Social Media</a>
+                </Col>
+              </Row>
             </div>
           </Col>
           <Col sm={{ size: 'auto', offset: 1 }} md="6">

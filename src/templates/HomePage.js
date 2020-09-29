@@ -5,8 +5,8 @@ import AboutMe from '../components/AboutMe'
 import GraphicDesign from '../components/GraphicDesign'
 import InstagramFeed from '../components/InstagramFeed'
 import Layout from '../components/Layout'
-import Experience from '../components/Experience'
 import Photography from '../components/Photography'
+import Styling from '../components/Styling'
 import { Container } from 'reactstrap'
 import 'bootstrap/dist/css/bootstrap.min.css'
 
@@ -15,8 +15,8 @@ export const HomePageTemplate = ({ body, childImageSharp }) => (
     <HomeHero large backgroundImage={childImageSharp} />
     <Photography />
     <GraphicDesign />
+    <Styling />
     <AboutMe body={body} />
-    <Experience />
     <InstagramFeed />
   </main>
 )

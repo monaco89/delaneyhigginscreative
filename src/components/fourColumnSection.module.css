@@ -1,5 +1,5 @@
 .title {
-  font-size: 5.5rem;
+  font-size: 4.5rem;
   color: #898888;
   margin-bottom: 0;
   padding-top: 1em;
@@ -16,16 +16,18 @@
   width: 70%;
   float: right;
   margin-bottom: 70px;
-  margin-top: -5px;
+  margin-top: 0px;
 }
 
-/* .link {
-    
-} */
+.link:visited,
+.link,
+.link:hover {
+  color: black !important;
+}
 
 .subTitle {
   margin-top: 15px;
-  font-size: 4rem;
+  font-size: 2rem;
   font-family: orpheuspro;
   font-weight: 400;
 }

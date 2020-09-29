@@ -79,7 +79,7 @@ export class Navigation extends Component {
                     Interior
                   </NavLink>
                   <NavLink to="/tabletop" className="Nav--GroupLink">
-                    TableTop
+                    Tabletop
                   </NavLink>
                   <NavLink to="/fashion" className="Nav--GroupLink">
                     Fashion
