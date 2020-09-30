@@ -8,7 +8,28 @@ const Styling = () => (
   <StaticQuery
     query={graphql`
       query StylingHomeQuery {
-        file(relativePath: { eq: "dh.jpg" }) {
+        interior: file(relativePath: { eq: "interior.jpeg" }) {
+          childImageSharp {
+            fluid {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
+        prop: file(relativePath: { eq: "prop.jpg" }) {
+          childImageSharp {
+            fluid {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
+        fashion: file(relativePath: { eq: "fashion.jpeg" }) {
+          childImageSharp {
+            fluid {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
+        tabletop: file(relativePath: { eq: "tabletop.jpg" }) {
           childImageSharp {
             fluid {
               ...GatsbyImageSharpFluid
@@ -26,12 +47,12 @@ const Styling = () => (
             <hr className={SectionStyle.line} />
           </Col>
         </Row>
-        <section className="section" style={{ paddingTop: '0' }}>
+        <section className={SectionStyle.section}>
           <Row>
             <Col xs="12" md="3">
               <a href="/interiordesign" className={SectionStyle.link}>
                 <Img
-                  fluid={data.file.childImageSharp.fluid}
+                  fluid={data.interior.childImageSharp.fluid}
                   className={SectionStyle.img}
                   alt="Interior"
                 />
@@ -41,7 +62,7 @@ const Styling = () => (
             <Col xs="12" md="3">
               <a href="/prop" className={SectionStyle.link}>
                 <Img
-                  fluid={data.file.childImageSharp.fluid}
+                  fluid={data.prop.childImageSharp.fluid}
                   className={SectionStyle.img}
                   alt="Prop"
                 />
@@ -51,7 +72,7 @@ const Styling = () => (
             <Col xs="12" md="3">
               <a href="/fashion" className={SectionStyle.link}>
                 <Img
-                  fluid={data.file.childImageSharp.fluid}
+                  fluid={data.fashion.childImageSharp.fluid}
                   className={SectionStyle.img}
                   alt="Fashion"
                 />
@@ -61,7 +82,7 @@ const Styling = () => (
             <Col xs="12" md="3">
               <a href="/tabletop" className={SectionStyle.link}>
                 <Img
-                  fluid={data.file.childImageSharp.fluid}
+                  fluid={data.tabletop.childImageSharp.fluid}
                   className={SectionStyle.img}
                   alt="Tabletop"
                 />

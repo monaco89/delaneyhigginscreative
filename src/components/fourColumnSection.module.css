@@ -6,8 +6,15 @@
   padding-left: 1em;
 }
 
-.img {
+.section {
   width: 100%;
+  padding: 0em 4em 8em 4em;
+  /* padding-top: 0em; */
+}
+
+.img {
+  width: 100% !important;
+  height: 100% !important;
 }
 
 .line {
@@ -17,6 +24,10 @@
   float: right;
   margin-bottom: 70px;
   margin-top: 0px;
+}
+
+.link {
+  min-height: 300px;
 }
 
 .link:visited,
@@ -34,13 +45,10 @@
 
 @media (max-width: 600px) {
   .title {
-    font-size: 3.5rem;
-    position: relative;
-    margin-left: 0;
-    text-align: center;
+    font-size: 2rem;
   }
-  .img {
+  /* .img {
     padding-left: 40px !important;
     padding-right: 40px !important;
-  }
+  } */
 }

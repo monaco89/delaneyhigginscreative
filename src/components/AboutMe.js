@@ -9,7 +9,7 @@ const AboutMe = () => (
   <StaticQuery
     query={graphql`
       query AboutMeQuery {
-        file(relativePath: { eq: "dh.jpg" }) {
+        file(relativePath: { eq: "fashion.jpeg" }) {
           childImageSharp {
             fluid {
               ...GatsbyImageSharpFluid
@@ -47,9 +47,6 @@ const AboutMe = () => (
               I try to always surround myself with beautiful things and a lot of
               dogs.
             </p>
-            <a href="/about" className={`Button ${AboutMeStyle.button}`}>
-              More To Know
-            </a>
           </Col>
         </Row>
         {/* <div className="container">{<Content source={body} />}</div> */}

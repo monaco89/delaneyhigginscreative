@@ -8,7 +8,28 @@ const Photography = () => (
   <StaticQuery
     query={graphql`
       query PhotographyHomeQuery {
-        file(relativePath: { eq: "dh.jpg" }) {
+        people: file(relativePath: { eq: "people.jpg" }) {
+          childImageSharp {
+            fluid {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
+        treats: file(relativePath: { eq: "treats.jpg" }) {
+          childImageSharp {
+            fluid {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
+        places: file(relativePath: { eq: "places.jpg" }) {
+          childImageSharp {
+            fluid {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
+        things: file(relativePath: { eq: "things.jpg" }) {
           childImageSharp {
             fluid {
               ...GatsbyImageSharpFluid
@@ -26,12 +47,12 @@ const Photography = () => (
             <hr className={SectionStyle.line} />
           </Col>
         </Row>
-        <section className="section" style={{ paddingTop: '0' }}>
+        <section className={SectionStyle.section}>
           <Row>
             <Col xs="12" md="3">
               <a href="/people" className={SectionStyle.link}>
                 <Img
-                  fluid={data.file.childImageSharp.fluid}
+                  fluid={data.people.childImageSharp.fluid}
                   className={SectionStyle.img}
                   alt="People"
                 />
@@ -41,7 +62,7 @@ const Photography = () => (
             <Col xs="12" md="3">
               <a href="/treats" className={SectionStyle.link}>
                 <Img
-                  fluid={data.file.childImageSharp.fluid}
+                  fluid={data.treats.childImageSharp.fluid}
                   className={SectionStyle.img}
                   alt="Treats"
                 />
@@ -51,7 +72,7 @@ const Photography = () => (
             <Col xs="12" md="3">
               <a href="/places" className={SectionStyle.link}>
                 <Img
-                  fluid={data.file.childImageSharp.fluid}
+                  fluid={data.places.childImageSharp.fluid}
                   className={SectionStyle.img}
                   alt="Places"
                 />
@@ -61,7 +82,7 @@ const Photography = () => (
             <Col xs="12" md="3">
               <a href="/things" className={SectionStyle.link}>
                 <Img
-                  fluid={data.file.childImageSharp.fluid}
+                  fluid={data.things.childImageSharp.fluid}
                   className={SectionStyle.img}
                   alt="Things"
                 />
