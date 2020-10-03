@@ -97,14 +97,6 @@ module.exports = {
         trackingId: process.env.GOOGLE_ID || 'none'
       }
     },
-    {
-      resolve: 'gatsby-plugin-web-font-loader',
-      options: {
-        typekit: {
-          id: 'raz1yzb'
-        }
-      }
-    },
     // {
     //   resolve: `gatsby-source-cloudinary`,
     //   options: {

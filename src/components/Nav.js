@@ -75,7 +75,7 @@ export class Navigation extends Component {
                   <NavLink to="/prop" className="Nav--GroupLink">
                     Prop
                   </NavLink>
-                  <NavLink to="/interiordesign" className="Nav--GroupLink">
+                  <NavLink to="/interior" className="Nav--GroupLink">
                     Interior
                   </NavLink>
                   <NavLink to="/tabletop" className="Nav--GroupLink">
