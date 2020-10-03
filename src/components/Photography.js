@@ -39,7 +39,7 @@ const Photography = () => (
       }
     `}
   >
-    {data => (
+    {(data) => (
       <>
         <Row>
           <Col>
@@ -49,44 +49,60 @@ const Photography = () => (
         </Row>
         <section className={SectionStyle.section}>
           <Row>
-            <Col xs="12" md="3">
-              <a href="/people" className={SectionStyle.link}>
-                <Img
-                  fluid={data.people.childImageSharp.fluid}
-                  className={SectionStyle.img}
-                  alt="People"
-                />
-                <h2 className={SectionStyle.subTitle}>People</h2>
+            <Col xs="12" md="3" className={SectionStyle.link}>
+              <a href="/people">
+                <Row className={SectionStyle.picture}>
+                  <Img
+                    fluid={data.people.childImageSharp.fluid}
+                    className={SectionStyle.img}
+                    alt="People"
+                  />
+                </Row>
+                <Row>
+                  <h2 className={SectionStyle.subTitle}>People</h2>
+                </Row>
               </a>
             </Col>
-            <Col xs="12" md="3">
-              <a href="/treats" className={SectionStyle.link}>
-                <Img
-                  fluid={data.treats.childImageSharp.fluid}
-                  className={SectionStyle.img}
-                  alt="Treats"
-                />
-                <h2 className={SectionStyle.subTitle}>Treats</h2>
+            <Col xs="12" md="3" className={SectionStyle.link}>
+              <a href="/treats">
+                <Row className={SectionStyle.picture}>
+                  <Img
+                    fluid={data.treats.childImageSharp.fluid}
+                    className={SectionStyle.img}
+                    alt="Treats"
+                  />
+                </Row>
+                <Row>
+                  <h2 className={SectionStyle.subTitle}>Treats</h2>
+                </Row>
               </a>
             </Col>
-            <Col xs="12" md="3">
-              <a href="/places" className={SectionStyle.link}>
-                <Img
-                  fluid={data.places.childImageSharp.fluid}
-                  className={SectionStyle.img}
-                  alt="Places"
-                />
-                <h2 className={SectionStyle.subTitle}>Places</h2>
+            <Col xs="12" md="3" className={SectionStyle.link}>
+              <a href="/places">
+                <Row className={SectionStyle.picture}>
+                  <Img
+                    fluid={data.places.childImageSharp.fluid}
+                    className={SectionStyle.img}
+                    alt="Places"
+                  />
+                </Row>
+                <Row>
+                  <h2 className={SectionStyle.subTitle}>Places</h2>
+                </Row>
               </a>
             </Col>
-            <Col xs="12" md="3">
-              <a href="/things" className={SectionStyle.link}>
-                <Img
-                  fluid={data.things.childImageSharp.fluid}
-                  className={SectionStyle.img}
-                  alt="Things"
-                />
-                <h2 className={SectionStyle.subTitle}>Things</h2>
+            <Col xs="12" md="3" className={SectionStyle.link}>
+              <a href="/things">
+                <Row className={SectionStyle.picture}>
+                  <Img
+                    fluid={data.things.childImageSharp.fluid}
+                    className={SectionStyle.img}
+                    alt="Things"
+                  />
+                </Row>
+                <Row>
+                  <h2 className={SectionStyle.subTitle}>Things</h2>
+                </Row>
               </a>
             </Col>
           </Row>

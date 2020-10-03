@@ -39,7 +39,7 @@ const Styling = () => (
       }
     `}
   >
-    {data => (
+    {(data) => (
       <>
         <Row>
           <Col>
@@ -49,44 +49,60 @@ const Styling = () => (
         </Row>
         <section className={SectionStyle.section}>
           <Row>
-            <Col xs="12" md="3">
-              <a href="/interiordesign" className={SectionStyle.link}>
-                <Img
-                  fluid={data.interior.childImageSharp.fluid}
-                  className={SectionStyle.img}
-                  alt="Interior"
-                />
-                <h2 className={SectionStyle.subTitle}>Interior</h2>
+            <Col xs="12" md="3" className={SectionStyle.link}>
+              <a href="/interiordesign">
+                <Row className={SectionStyle.picture}>
+                  <Img
+                    fluid={data.interior.childImageSharp.fluid}
+                    className={SectionStyle.img}
+                    alt="Interior"
+                  />
+                </Row>
+                <Row>
+                  <h2 className={SectionStyle.subTitle}>Interior</h2>
+                </Row>
               </a>
             </Col>
-            <Col xs="12" md="3">
-              <a href="/prop" className={SectionStyle.link}>
-                <Img
-                  fluid={data.prop.childImageSharp.fluid}
-                  className={SectionStyle.img}
-                  alt="Prop"
-                />
-                <h2 className={SectionStyle.subTitle}>Prop</h2>
+            <Col xs="12" md="3" className={SectionStyle.link}>
+              <a href="/prop">
+                <Row className={SectionStyle.picture}>
+                  <Img
+                    fluid={data.prop.childImageSharp.fluid}
+                    className={SectionStyle.img}
+                    alt="Prop"
+                  />
+                </Row>
+                <Row>
+                  <h2 className={SectionStyle.subTitle}>Prop</h2>
+                </Row>
               </a>
             </Col>
-            <Col xs="12" md="3">
-              <a href="/fashion" className={SectionStyle.link}>
-                <Img
-                  fluid={data.fashion.childImageSharp.fluid}
-                  className={SectionStyle.img}
-                  alt="Fashion"
-                />
-                <h2 className={SectionStyle.subTitle}>Fashion</h2>
+            <Col xs="12" md="3" className={SectionStyle.link}>
+              <a href="/fashion">
+                <Row className={SectionStyle.picture}>
+                  <Img
+                    fluid={data.fashion.childImageSharp.fluid}
+                    className={SectionStyle.img}
+                    alt="Fashion"
+                  />
+                </Row>
+                <Row>
+                  <h2 className={SectionStyle.subTitle}>Fashion</h2>
+                </Row>
               </a>
             </Col>
-            <Col xs="12" md="3">
-              <a href="/tabletop" className={SectionStyle.link}>
-                <Img
-                  fluid={data.tabletop.childImageSharp.fluid}
-                  className={SectionStyle.img}
-                  alt="Tabletop"
-                />
-                <h2 className={SectionStyle.subTitle}>Tabletop</h2>
+            <Col xs="12" md="3" className={SectionStyle.link}>
+              <a href="/tabletop">
+                <Row className={SectionStyle.picture}>
+                  <Img
+                    fluid={data.tabletop.childImageSharp.fluid}
+                    className={SectionStyle.img}
+                    alt="Tabletop"
+                  />
+                </Row>
+                <Row>
+                  <h2 className={SectionStyle.subTitle}>Tabletop</h2>
+                </Row>
               </a>
             </Col>
           </Row>

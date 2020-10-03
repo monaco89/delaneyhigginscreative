@@ -27,6 +27,7 @@
 @media (max-width: 600px) {
   .HomeHero {
     padding: 7rem 0;
+    height: auto;
   }
   .HomeHero-large {
     padding: 2rem 0;

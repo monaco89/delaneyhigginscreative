@@ -30,7 +30,7 @@ const Gallery = ({ tag, url, title }) => {
   const fetchImages = (count = 7) => {
     axios
       .get(`https://res.cloudinary.com/nickmonaco/image/list/${tag}.json`)
-      .then(res => {
+      .then((res) => {
         // console.log(res.data.resources)
         setImages(res.data.resources)
         setIsLoaded(true)
@@ -49,7 +49,15 @@ const Gallery = ({ tag, url, title }) => {
         <div className="container">
           <div className="content">
             <PageHeader title={title} subtitle="" />
-            {loaded ? <ImageGallery images={images} /> : 'Loading...'}
+            {loaded ? (
+              images ? (
+                <ImageGallery images={images} />
+              ) : (
+                'No Pictures Available'
+              )
+            ) : (
+              'Loading...'
+            )}
           </div>
         </div>
       </section>

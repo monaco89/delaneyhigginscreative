@@ -18,14 +18,15 @@
 
 .section {
   background-color: lightgray;
-  padding: 4em;
+  padding: 2em;
   padding-top: 8em;
   padding-bottom: 8em;
 }
 @media (max-width: 600px) {
   .section {
     padding: 2em;
-    padding-top: 4em;
-    padding-bottom: 4em;
+  }
+  .body {
+    padding: 1em;
   }
 }

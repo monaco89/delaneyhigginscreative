@@ -188,6 +188,9 @@ blockquote {
   .section.thin {
     padding: 1.5rem 0;
   }
+  .followAlong {
+    margin-top: 0px !important;
+  }
 }
 
 .container {
@@ -238,9 +241,7 @@ blockquote {
 .Button:hover,
 .Button:focus,
 .Button-sm:hover,
-.Button-sm:focus,
-.followAlong:hover,
-.followAlong:focus {
+.Button-sm:focus {
   opacity: 0.95;
   outline: none;
   /* border: 2px solid black;
@@ -267,19 +268,11 @@ blockquote {
 
 /* insta feed */
 .followAlong {
-  color: #7c4847;
-  text-transform: uppercase;
-  text-decoration: none;
-  font-weight: 700;
+  font-weight: 400;
   letter-spacing: 0.05em;
-  font-size: 1.6rem;
+  font-size: 1.8rem;
   display: inline-block;
   padding: 1.4rem 3rem;
-  border: 2px solid #7c4847;
-  transition: all 0.2s ease;
-  cursor: pointer;
-  border-radius: var(--borderRadius);
-  background-color: white;
   margin-top: 10%;
   margin-bottom: 10%;
 }
