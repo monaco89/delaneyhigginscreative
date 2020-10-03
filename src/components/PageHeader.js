@@ -1,7 +1,7 @@
 import React from 'react'
 // import Image from './Image'
 import Content from './Content'
-import './PageHeader.css'
+import '../style/PageHeader.css'
 
 const PageHeader = ({
   title,

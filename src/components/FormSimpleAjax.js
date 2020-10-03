@@ -1,10 +1,10 @@
-import React, { Fragment } from 'react'
+import React from 'react'
 import { serialize } from 'dom-form-serializer'
-import './Form.css'
+import '../style/Form.css'
 
 function encode(data) {
   return Object.keys(data)
-    .map(key => encodeURIComponent(key) + '=' + encodeURIComponent(data[key]))
+    .map((key) => encodeURIComponent(key) + '=' + encodeURIComponent(data[key]))
     .join('&')
 }
 
@@ -22,7 +22,7 @@ class Form extends React.Component {
     disabled: false
   }
 
-  handleSubmit = e => {
+  handleSubmit = (e) => {
     e.preventDefault()
     if (this.state.disabled) return
 
@@ -45,7 +45,7 @@ class Form extends React.Component {
           disabled: false
         })
       })
-      .catch(err => {
+      .catch((err) => {
         console.error(err)
         this.setState({
           disabled: false,
@@ -58,7 +58,7 @@ class Form extends React.Component {
     const { subject, name } = this.props
 
     return (
-      <Fragment>
+      <>
         <form
           className="Form"
           onSubmit={this.handleSubmit}
@@ -121,7 +121,7 @@ class Form extends React.Component {
             disabled={this.state.disabled}
           />
         </form>
-      </Fragment>
+      </>
     )
   }
 }

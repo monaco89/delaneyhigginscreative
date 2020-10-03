@@ -22,6 +22,25 @@
   margin-bottom: 20px;
 }
 
+.exp {
+  width: 80%;
+}
+
+.col {
+  /* padding: 10em; */
+  /* padding-top: 0; */
+  text-align: center;
+}
+
+@media (max-width: 600px) {
+  .exp {
+    width: 100%;
+  }
+  .col {
+    margin-bottom: 5px;
+  }
+}
+
 @media (max-width: 600px) {
   .title {
     font-size: 3.5rem;

@@ -1,13 +1,13 @@
-.image-grid {
+.imageGrid {
   display: grid;
   grid-gap: 10px;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   grid-auto-rows: minmax(50px, auto);
 }
-.image-grid .image-item:nth-child(5n) {
+.imageGrid .imageItem:nth-child(5n) {
   grid-column-end: span 2;
 }
-.image-grid img {
+.imageGrid img {
   display: flex;
   width: 100%;
   height: 100%;
@@ -16,7 +16,7 @@
 }
 
 @media only screen and (max-width: 768px) {
-  .image-grid {
+  .imageGrid {
     grid-template-columns: repeat(auto-fill, minmax(100%, 1fr));
   }
 }

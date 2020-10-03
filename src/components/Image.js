@@ -1,6 +1,5 @@
-import React, { Fragment } from 'react'
-import './Image.css'
-
+import React from 'react'
+import ImageStyle from '../style/Image.module.css'
 class Image extends React.Component {
   constructor(props) {
     super(props)
@@ -39,27 +38,26 @@ class Image extends React.Component {
     }
 
     return (
-      <Fragment>
-        <Fragment>
-          {background && (
-            <div
-              className={`BackgroundImage absolute ${className}`}
-              style={style}
-            />
-          )}
-          {!background && (
-            <img
-              className={`${className}`}
-              src={fullSrc}
-              srcSet={secSet}
-              sizes={'100vw'}
-              onClick={onClick}
-              title={title}
-              alt={alt}
-            />
-          )}
-        </Fragment>
-      </Fragment>
+      <>
+        {background && (
+          <div
+            className={`${ImageStyle.BackgroundImage} absolute ${ImageStyle.BackgroundImage}.${className}`}
+            style={style}
+          />
+        )}
+        {!background && (
+          <img
+            className={`${ImageStyle.BackgroundImage}.${className}`}
+            src={fullSrc}
+            srcSet={secSet}
+            sizes={'100vw'}
+            onClick={onClick}
+            onKeyDown={onClick}
+            title={title}
+            alt={alt}
+          />
+        )}
+      </>
     )
   }
 }

@@ -1,6 +1,6 @@
 import React from 'react'
 import { Row, Col } from 'reactstrap'
-import SectionStyle from './fourColumnSection.module.css'
+import SectionStyle from '../style/fourColumnSection.module.css'
 import { StaticQuery, graphql } from 'gatsby'
 import Img from 'gatsby-image'
 

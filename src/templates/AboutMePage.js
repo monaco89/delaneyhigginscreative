@@ -5,8 +5,8 @@ import Content from '../components/Content'
 import Layout from '../components/Layout'
 import Img from 'gatsby-image'
 import { Row, Col } from 'reactstrap'
-import './ContactPage.css'
-import Styles from './AboutMe.module.css'
+import '../style/ContactPage.css'
+import Styles from '../style/AboutMe.module.css'
 
 // Export Template for use in CMS preview
 export const AboutMePageTemplate = ({

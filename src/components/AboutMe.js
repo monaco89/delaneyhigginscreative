@@ -1,6 +1,6 @@
 import React from 'react'
 import { Row, Col } from 'reactstrap'
-import AboutMeStyle from './AboutMe.module.css'
+import AboutMeStyle from '../style/AboutMe.module.css'
 import { StaticQuery, graphql } from 'gatsby'
 import Img from 'gatsby-image'
 // import Content from '../components/Content'
@@ -18,7 +18,7 @@ const AboutMe = () => (
         }
       }
     `}
-    render={data => (
+    render={(data) => (
       <section className="section" style={{ marginTop: '1em' }}>
         <Row>
           <Col>

@@ -1,6 +1,6 @@
 import React from 'react'
 import { Row, Col } from 'reactstrap'
-import GDStyle from './GraphicDesign.module.css'
+import GDStyle from '../style/GraphicDesign.module.css'
 import { StaticQuery, graphql } from 'gatsby'
 import Img from 'gatsby-image'
 
@@ -17,7 +17,7 @@ const GraphicDesign = () => (
         }
       }
     `}
-    render={data => (
+    render={(data) => (
       <section className={GDStyle.section} style={{ marginTop: '1em' }}>
         <Row>
           <Col sm={{ size: 'auto', offset: 0 }} md="5">

@@ -6,7 +6,7 @@ import Nav from './Nav'
 import Footer from './Footer'
 
 import 'modern-normalize/modern-normalize.css'
-import './globalStyles.css'
+import '../style/globalStyles.css'
 
 export default ({ children, meta, title }) => (
   <StaticQuery
@@ -21,7 +21,7 @@ export default ({ children, meta, title }) => (
         }
       }
     `}
-    render={data => {
+    render={(data) => {
       const { siteTitle, socialMediaCard } = data.settingsYaml || {}
 
       return (

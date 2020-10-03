@@ -1,11 +1,11 @@
 import React, { Component } from 'react'
 import { Location } from '@reach/router'
-import { Menu, X, Mail } from 'react-feather'
+import { Menu, X } from 'react-feather'
 import { FaPinterest, FaInstagram } from 'react-icons/fa'
 import { FiMail } from 'react-icons/fi'
 import Logo from './Logo'
 
-import './Nav.css'
+import '../style/Nav.css'
 
 export class Navigation extends Component {
   state = {
@@ -22,7 +22,7 @@ export class Navigation extends Component {
   // Only close nav if it is open
   handleLinkClick = () => this.state.active && this.handleMenuToggle()
 
-  toggleSubNav = subNav =>
+  toggleSubNav = (subNav) =>
     this.setState({
       activeSubNav: this.state.activeSubNav === subNav ? false : subNav
     })
@@ -36,6 +36,7 @@ export class Navigation extends Component {
             to === this.state.currentPath ? 'active' : ''
           } ${className}`}
           onClick={this.handleLinkClick}
+          onKeyDown={this.handleLinkClick}
           {...props}
         >
           {children}
@@ -69,6 +70,7 @@ export class Navigation extends Component {
                     : ''
                 }`}
                 onClick={() => this.toggleSubNav('styling')}
+                onKeyDown={() => this.toggleSubNav('styling')}
               >
                 Styling
                 <div className="Nav--GroupLinks">
@@ -107,6 +109,7 @@ export class Navigation extends Component {
                     : ''
                 }`}
                 onClick={() => this.toggleSubNav('photography')}
+                onKeyDown={() => this.toggleSubNav('photography')}
               >
                 Photography
                 <div className="Nav--GroupLinks">
@@ -142,6 +145,7 @@ export class Navigation extends Component {
                     : ''
                 }`}
                 onClick={() => this.toggleSubNav('graphicdesign')}
+                onKeyDown={() => this.toggleSubNav('graphicdesign')}
               >
                 Graphic Design
                 <div className="Nav--GroupLinks">
@@ -171,6 +175,7 @@ export class Navigation extends Component {
           <button
             className="Button-blank Nav--MenuButton"
             onClick={this.handleMenuToggle}
+            onKeyDown={this.handleMenuToggle}
           >
             {active ? <X /> : <Menu />}
           </button>
@@ -180,4 +185,4 @@ export class Navigation extends Component {
   }
 }
 
-export default () => <Location>{route => <Navigation {...route} />}</Location>
+export default () => <Location>{(route) => <Navigation {...route} />}</Location>

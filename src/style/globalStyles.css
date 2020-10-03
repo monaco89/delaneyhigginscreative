@@ -276,3 +276,25 @@ blockquote {
   margin-top: 10%;
   margin-bottom: 10%;
 }
+
+.Logo {
+  display: flex;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 4rem;
+  width: 4rem;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer {
+  padding: 2rem 0;
+  background: var(--lightGrey);
+  font-family: adobe-garamond-pro;
+}
+
+.footer a {
+  color: black;
+  text-decoration: none;
+}

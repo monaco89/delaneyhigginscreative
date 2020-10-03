@@ -1,7 +1,7 @@
 import React from 'react'
 import Image from './Image'
 import Logo from '../../static/images/name.png'
-import './HomeHero.css'
+import '../style/HomeHero.css'
 
 const HomeHero = ({ backgroundImage, large, className = '' }) => {
   if (large) className += ' HomeHero-large'

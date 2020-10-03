@@ -3,7 +3,7 @@ import ReactDOMServer from 'react-dom/server'
 import Marked from 'react-markdown'
 import Image from './Image'
 
-import './Content.css'
+import '../style/Content.css'
 
 const encodeMarkdownURIs = (source = '') => {
   const markdownLinkRegex = /\[(.+)\]\((.+)(".+)\)/g
@@ -15,7 +15,7 @@ const encodeMarkdownURIs = (source = '') => {
   })
 }
 
-const withContentImages = source => {
+const withContentImages = (source) => {
   const images = source.match(/<img(.*?)\\?>/gim)
 
   for (let i in images) {
