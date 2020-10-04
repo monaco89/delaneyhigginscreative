@@ -1,15 +1,20 @@
 .title {
-  font-size: 4.5rem;
+  /* font-size: calc(1.44vw + 1rem); */
+  font-size: calc(3.6vw + 1rem);
   color: #898888;
   margin-bottom: 0;
-  padding-top: 1em;
-  padding-left: 1em;
+  padding-top: 3.3vmax;
+  padding-right: 7vw;
+  padding-left: 7vw;
 }
 
 .section {
   width: 100%;
-  padding: 0em 4em 4em 4em;
-  /* padding-top: 0em; */
+  /* padding-top: 3.3vmax; */
+  padding-bottom: 3.3vmax;
+  padding-right: 7vw;
+  padding-left: 7vw;
+  margin: 0 auto;
 }
 
 .img {
@@ -18,7 +23,7 @@
 }
 
 .line {
-  height: 5px;
+  height: 3px;
   background: black;
   width: 70%;
   float: right;
@@ -42,7 +47,7 @@
 
 .subTitle {
   margin-top: 15px;
-  font-size: 2rem;
+  font-size: calc(1.3vw + 1rem);
   font-family: orpheuspro;
   font-weight: 400;
 }
@@ -54,12 +59,7 @@
   .picture {
     height: 80%;
   }
-  .section {
-    padding: 0em 2em 2em 2em;
+  .line {
+    height: 1px;
   }
-
-  /* .img {
-    padding-left: 40px !important;
-    padding-right: 40px !important;
-  } */
 }

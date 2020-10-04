@@ -12,7 +12,8 @@
 }
 
 .PageHeader--Title {
-  font-size: 4rem;
+  /* font-size: 4rem; */
+  font-size: calc(3.6vw + 1rem);
   margin-bottom: 0;
   /* word-wrap: break-word; */
   font-family: adorn-garland, sans-serif;
