@@ -40,13 +40,13 @@ const AboutMe = () => (
               className={AboutMeStyle.description}
             >
               <p className={AboutMeStyle.bio}>
-                Hi, I’m Delaney. I Specialize in graphic & apparel design,
-                photography, and visual merchandising. I've cultivated my skills
-                with Anthropologie over the past three and a half years. You'll
-                always find me surrounded by fresh flowers and music playing in
-                the background (On tuesdays it's my dad's radio show!)
-                Basically, I try to always surround myself with beautiful things
-                and a lot of dogs.
+                Delaney specializes in styling, photography, and graphic design.
+                She has cultivated her skills with Anthropologie over the past
+                three and a half years excelling in Visual Merchandising. She is
+                currently conquering Interior Design at Anna Kemper Atelier.
+                You'll always find her with a camera in her hand and music
+                playing in the background (On tuesdays it's my dad's radio
+                show!)
               </p>
               <hr className={AboutMeStyle.line} />
             </Col>
