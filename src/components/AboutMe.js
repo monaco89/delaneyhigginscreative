@@ -9,7 +9,7 @@ const AboutMe = () => (
   <StaticQuery
     query={graphql`
       query AboutMeQuery {
-        file(relativePath: { eq: "fashion.jpeg" }) {
+        file(relativePath: { eq: "dh.jpg" }) {
           childImageSharp {
             fluid {
               ...GatsbyImageSharpFluid
@@ -28,11 +28,13 @@ const AboutMe = () => (
         <section className={AboutMeStyle.section}>
           <Row>
             <Col sm={{ size: 'auto' }} md="5" className={AboutMeStyle.img}>
-              <Img
-                fluid={data.file.childImageSharp.fluid}
-                className={AboutMeStyle.dh}
-                alt="delaney higgins"
-              />
+              <a href="/about">
+                <Img
+                  fluid={data.file.childImageSharp.fluid}
+                  className={AboutMeStyle.dh}
+                  alt="delaney higgins"
+                />
+              </a>
             </Col>
             <Col
               sm={{ size: 'auto', offset: 0 }}

@@ -19,6 +19,15 @@
   font-family: adorn-garland, sans-serif;
 }
 
+.PageHeader--Line {
+  height: 3px;
+  background: black;
+  width: 80%;
+  float: right;
+  text-align: right;
+  margin-top: 0px;
+}
+
 .PageHeader--Subtitle {
   font-weight: 400;
   font-size: 1.8rem;
