@@ -5,8 +5,9 @@ import Content from '../components/Content'
 import Layout from '../components/Layout'
 import Img from 'gatsby-image'
 import { Row, Col } from 'reactstrap'
-import '../style/ContactPage.css'
 import Styles from '../style/AboutMe.module.css'
+
+import '../style/ContactPage.css'
 
 // Export Template for use in CMS preview
 export const AboutMePageTemplate = ({
@@ -14,9 +15,7 @@ export const AboutMePageTemplate = ({
   title,
   subtitle,
   featuredImage,
-  aboutme1,
-  aboutme2,
-  aboutme3
+  aboutMePic
 }) => (
   <main className="Contact">
     <PageHeader
@@ -28,36 +27,20 @@ export const AboutMePageTemplate = ({
       <Row>
         <Col xs={{ size: '4', offset: 0 }} md="4" className={Styles.col}>
           <Img
-            fluid={aboutme1.childImageSharp.fluid}
+            fluid={aboutMePic.childImageSharp.fluid}
             alt="about me"
-            className={Styles.exp}
           />
         </Col>
-        <Col xs={{ size: '4', offset: 0 }} md="4" className={Styles.col}>
-          <Img
-            fluid={aboutme2.childImageSharp.fluid}
-            alt="about me"
-            className={Styles.exp}
-          />
-        </Col>
-
-        <Col xs={{ size: '4', offset: 0 }} md="4" className={Styles.col}>
-          <Img
-            fluid={aboutme3.childImageSharp.fluid}
-            alt="about me"
-            className={Styles.exp}
-          />
-        </Col>
+       <Col>
+        <Content source={body} />
+      </Col>
       </Row>
       <br />
-      <div className="container">
-        <Content source={body} />
-      </div>
     </section>
   </main>
 )
 
-const AboutMePage = ({ data: { page, aboutme1, aboutme2, aboutme3 } }) => (
+const AboutMePage = ({ data: { page, aboutMePic } }) => (
   <Layout
     meta={page.frontmatter.meta || false}
     title={page.frontmatter.title || false}
@@ -65,9 +48,7 @@ const AboutMePage = ({ data: { page, aboutme1, aboutme2, aboutme3 } }) => (
     <AboutMePageTemplate
       {...page.frontmatter}
       body={page.html}
-      aboutme1={aboutme1}
-      aboutme2={aboutme2}
-      aboutme3={aboutme3}
+      aboutMePic={aboutMePic}
     />
   </Layout>
 )
@@ -86,21 +67,7 @@ export const pageQuery = graphql`
         featuredImage
       }
     }
-    aboutme1: file(relativePath: { eq: "aboutme_1.jpg" }) {
-      childImageSharp {
-        fluid {
-          ...GatsbyImageSharpFluid
-        }
-      }
-    }
-    aboutme2: file(relativePath: { eq: "aboutme_2.jpg" }) {
-      childImageSharp {
-        fluid {
-          ...GatsbyImageSharpFluid
-        }
-      }
-    }
-    aboutme3: file(relativePath: { eq: "aboutme_3.jpg" }) {
+    aboutMePic: file(relativePath: { eq: "aboutme.jpg" }) {
       childImageSharp {
         fluid {
           ...GatsbyImageSharpFluid
