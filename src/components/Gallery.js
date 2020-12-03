@@ -29,7 +29,7 @@ const Gallery = ({ tag, url, title }) => {
         description: `${title} images by delaney higgins`
       }}
     >
-      <section className="section">
+      <section className="section" style={{ backgroundColor: title === "Social Media" ? "lightgray" : "white"}}>
         <div className="container">
           <div className="content">
             <PageHeader title={title} subtitle="" />
