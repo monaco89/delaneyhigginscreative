@@ -80,9 +80,9 @@ export class Navigation extends Component {
                   <NavLink to="/interior" className="Nav--GroupLink">
                     Interior
                   </NavLink>
-                  <NavLink to="/tabletop" className="Nav--GroupLink">
+                  {/* <NavLink to="/tabletop" className="Nav--GroupLink">
                     Tabletop
-                  </NavLink>
+                  </NavLink> */}
                   <NavLink to="/fashion" className="Nav--GroupLink">
                     Fashion
                   </NavLink>
@@ -125,9 +125,9 @@ export class Navigation extends Component {
                   <NavLink to="/things" className="Nav--GroupLink">
                     Things
                   </NavLink>
-                  <NavLink to="/interiors" className="Nav--GroupLink">
+                  {/* <NavLink to="/interiors" className="Nav--GroupLink">
                     Interiors
-                  </NavLink>
+                  </NavLink> */}
                 </div>
               </span>
             </div>
