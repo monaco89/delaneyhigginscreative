@@ -29,13 +29,13 @@ const Styling = () => (
             }
           }
         }
-        tabletop: file(relativePath: { eq: "tabletop.jpg" }) {
-          childImageSharp {
-            fluid {
-              ...GatsbyImageSharpFluid
-            }
-          }
-        }
+        # tabletop: file(relativePath: { eq: "tabletop.jpg" }) {
+        #   childImageSharp {
+        #     fluid {
+        #       ...GatsbyImageSharpFluid
+        #     }
+        #   }
+        # }
       }
     `}
   >
@@ -47,9 +47,12 @@ const Styling = () => (
             <hr className={SectionStyle.line} />
           </Col>
         </Row>
-        <section className={SectionStyle.section}>
+        <section
+          className={SectionStyle.section}
+          style={{ paddingLeft: '10vw', paddingRight: '10vw' }}
+        >
           <Row>
-            <Col xs="12" md="3" className={SectionStyle.link}>
+            <Col xs="12" md="4" className={SectionStyle.link}>
               <a href="/interiordesign">
                 <Row className={SectionStyle.picture}>
                   <Img
@@ -63,7 +66,7 @@ const Styling = () => (
                 </Row>
               </a>
             </Col>
-            <Col xs="12" md="3" className={SectionStyle.link}>
+            <Col xs="12" md="4" className={SectionStyle.link}>
               <a href="/prop">
                 <Row className={SectionStyle.picture}>
                   <Img
@@ -77,7 +80,7 @@ const Styling = () => (
                 </Row>
               </a>
             </Col>
-            <Col xs="12" md="3" className={SectionStyle.link}>
+            <Col xs="12" md="4" className={SectionStyle.link}>
               <a href="/fashion">
                 <Row className={SectionStyle.picture}>
                   <Img
@@ -91,7 +94,7 @@ const Styling = () => (
                 </Row>
               </a>
             </Col>
-            <Col xs="12" md="3" className={SectionStyle.link}>
+            {/* <Col xs="12" md="3" className={SectionStyle.link}>
               <a href="/tabletop">
                 <Row className={SectionStyle.picture}>
                   <Img
@@ -104,7 +107,7 @@ const Styling = () => (
                   <h2 className={SectionStyle.subTitle}>Tabletop</h2>
                 </Row>
               </a>
-            </Col>
+            </Col> */}
           </Row>
         </section>
       </>
