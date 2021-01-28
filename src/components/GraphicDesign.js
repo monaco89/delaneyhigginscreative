@@ -33,7 +33,7 @@ const GraphicDesign = () => (
               </Row>
               <Row className={GDStyle.links}>
                 <Col>
-                  <a href="/logos">Logos</a>
+                  <a href="/marketing">Marketing</a>
                 </Col>
                 <Col>
                   <a href="/socialmedia">Social Media</a>

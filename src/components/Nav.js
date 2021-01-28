@@ -139,7 +139,7 @@ export class Navigation extends Component {
               <span
                 role="navigation"
                 className={`NavLink ${
-                  this.props.location.pathname.includes('logos') ||
+                  this.props.location.pathname.includes('marketing') ||
                   this.props.location.pathname.includes('socialmedia')
                     ? 'active'
                     : ''
@@ -149,8 +149,8 @@ export class Navigation extends Component {
               >
                 Graphic Design
                 <div className="Nav--GroupLinks">
-                  <NavLink to="/logos" className="Nav--GroupLink">
-                    Logos
+                  <NavLink to="/marketing" className="Nav--GroupLink">
+                    Marketing
                   </NavLink>
                   <NavLink to="/socialmedia" className="Nav--GroupLink">
                     Social Media
