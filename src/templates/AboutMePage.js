@@ -23,17 +23,14 @@ export const AboutMePageTemplate = ({
       subtitle={subtitle}
       backgroundImage={featuredImage}
     />
-    <section className="section Contact--Section1">
+    <section className={`${Styles.pageSection} section Contact--Section1`}>
       <Row>
-        <Col xs={{ size: '4', offset: 0 }} md="4" className={Styles.col}>
-          <Img
-            fluid={aboutMePic.childImageSharp.fluid}
-            alt="about me"
-          />
+        <Col xs="12" md="4" className={Styles.col}>
+          <Img fluid={aboutMePic.childImageSharp.fluid} alt="about me" />
         </Col>
-       <Col>
-        <Content source={body} />
-      </Col>
+        <Col>
+          <Content source={body} />
+        </Col>
       </Row>
       <br />
     </section>

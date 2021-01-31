@@ -54,6 +54,10 @@
     padding-top: 3.3vmax;
   }
 
+  .pageSection {
+    padding: 1rem;
+  }
+
   .section {
     padding-top: 3.3vmax;
     padding-bottom: 3.3vmax;

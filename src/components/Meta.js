@@ -63,7 +63,7 @@ export default class Meta extends Component {
           name="twitter:image"
           content={
             absoluteImageUrl ||
-            'https://res.cloudinary.com/nickmonaco/image/upload/v1590099560/delaney_home_cxtben.jpg'
+            'https://res.cloudinary.com/nickmonaco/image/upload/BE241D3A-5C5D-45D0-8420-477E939B4D66_a8qxyt.jpg'
           }
         />
         <meta property="og:type" content="website" />
@@ -71,21 +71,21 @@ export default class Meta extends Component {
           property="og:image:secure_url"
           content={
             absoluteImageUrl ||
-            'https://res.cloudinary.com/nickmonaco/image/upload/v1590099560/delaney_home_cxtben.jpg'
+            'https://res.cloudinary.com/nickmonaco/image/upload/BE241D3A-5C5D-45D0-8420-477E939B4D66_a8qxyt.jpg'
           }
         />
         <meta
           property="og:image"
           content={
             absoluteImageUrl ||
-            'https://res.cloudinary.com/nickmonaco/image/upload/v1590099560/delaney_home_cxtben.jpg'
+            'https://res.cloudinary.com/nickmonaco/image/upload/BE241D3A-5C5D-45D0-8420-477E939B4D66_a8qxyt.jpg'
           }
         />
         <meta
           name="twitter:card"
           content={
             absoluteImageUrl ||
-            'https://res.cloudinary.com/nickmonaco/image/upload/v1590099560/delaney_home_cxtben.jpg'
+            'https://res.cloudinary.com/nickmonaco/image/upload/BE241D3A-5C5D-45D0-8420-477E939B4D66_a8qxyt.jpg'
           }
         />
       </Helmet>
