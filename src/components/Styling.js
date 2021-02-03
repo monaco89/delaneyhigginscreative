@@ -29,13 +29,13 @@ const Styling = () => (
             }
           }
         }
-        # tabletop: file(relativePath: { eq: "tabletop.jpg" }) {
-        #   childImageSharp {
-        #     fluid {
-        #       ...GatsbyImageSharpFluid
-        #     }
-        #   }
-        # }
+        holiday: file(relativePath: { eq: "holiday.jpg" }) {
+          childImageSharp {
+            fluid {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
       }
     `}
   >
@@ -49,10 +49,10 @@ const Styling = () => (
         </Row>
         <section
           className={SectionStyle.section}
-          style={{ paddingLeft: '10vw', paddingRight: '10vw' }}
+          // style={{ paddingLeft: '10vw', paddingRight: '10vw' }}
         >
           <Row>
-            <Col xs="12" md="4" className={SectionStyle.link}>
+            <Col xs="12" md="3" className={SectionStyle.link}>
               <a href="/interiordesign">
                 <Row className={SectionStyle.picture}>
                   <Img
@@ -66,7 +66,7 @@ const Styling = () => (
                 </Row>
               </a>
             </Col>
-            <Col xs="12" md="4" className={SectionStyle.link}>
+            <Col xs="12" md="3" className={SectionStyle.link}>
               <a href="/prop">
                 <Row className={SectionStyle.picture}>
                   <Img
@@ -80,7 +80,7 @@ const Styling = () => (
                 </Row>
               </a>
             </Col>
-            <Col xs="12" md="4" className={SectionStyle.link}>
+            <Col xs="12" md="3" className={SectionStyle.link}>
               <a href="/fashion">
                 <Row className={SectionStyle.picture}>
                   <Img
@@ -94,20 +94,20 @@ const Styling = () => (
                 </Row>
               </a>
             </Col>
-            {/* <Col xs="12" md="3" className={SectionStyle.link}>
-              <a href="/tabletop">
+            <Col xs="12" md="3" className={SectionStyle.link}>
+              <a href="/holiday">
                 <Row className={SectionStyle.picture}>
                   <Img
-                    fluid={data.tabletop.childImageSharp.fluid}
+                    fluid={data.holiday.childImageSharp.fluid}
                     className={SectionStyle.img}
-                    alt="Tabletop"
+                    alt="Holiday"
                   />
                 </Row>
                 <Row>
-                  <h2 className={SectionStyle.subTitle}>Tabletop</h2>
+                  <h2 className={SectionStyle.subTitle}>Holiday</h2>
                 </Row>
               </a>
-            </Col> */}
+            </Col>
           </Row>
         </section>
       </>

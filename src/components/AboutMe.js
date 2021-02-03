@@ -23,11 +23,12 @@ const AboutMe = () => (
         <Row>
           <Col>
             <h2 className={AboutMeStyle.title}>About Me</h2>
+            <hr className={AboutMeStyle.line} />
           </Col>
         </Row>
         <section className={AboutMeStyle.section}>
-          <Row>
-            <Col sm={{ size: 'auto' }} md="5" className={AboutMeStyle.img}>
+          <Row style={{ alignItems: 'center' }}>
+            <Col sm="12" md="5" className={AboutMeStyle.img}>
               <a href="/about">
                 <Img
                   fluid={data.file.childImageSharp.fluid}
@@ -37,8 +38,8 @@ const AboutMe = () => (
               </a>
             </Col>
             <Col
-              sm={{ size: 'auto', offset: 0 }}
-              md="7"
+              sm="12"
+              md={{ size: '5', offset: '1' }}
               className={AboutMeStyle.description}
             >
               <p className={AboutMeStyle.bio}>
@@ -50,7 +51,6 @@ const AboutMe = () => (
                 playing in the background (On tuesdays it's my dad's radio
                 show!)
               </p>
-              <hr className={AboutMeStyle.line} />
             </Col>
           </Row>
         </section>

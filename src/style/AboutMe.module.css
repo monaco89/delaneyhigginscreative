@@ -6,14 +6,16 @@
 .bio {
   background-color: white;
   color: black;
-  font-size: calc(1.44vw + 1rem);
-  font-weight: 400;
+  font-size: calc(0.8vw + 1rem);
+  /* font-weight: 400; */
   font-family: adobe-garamond-pro;
   line-height: 1.2;
+  text-align: center;
+  /* padding-top: 50px; */
 }
 
 .section {
-  padding-top: 3.3vmax;
+  /* padding-top: 3.3vmax; */
   padding-bottom: 3.3vmax;
   padding-right: 2vw;
   padding-left: 14vw;
@@ -22,9 +24,10 @@
 .line {
   height: 3px;
   background: black;
-  width: 80%;
+  width: 70%;
   float: right;
-  margin-top: -10px;
+  margin-bottom: 70px;
+  margin-top: 0px;
 }
 
 .title {

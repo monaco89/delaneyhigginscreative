@@ -12,7 +12,7 @@
   min-height: 100%;
   padding: 2em;
   font-family: adobe-garamond-pro;
-  font-size: 1.5em;
+  font-size: calc(0.8vw + 1rem);
   line-height: 1.2;
 }
 
