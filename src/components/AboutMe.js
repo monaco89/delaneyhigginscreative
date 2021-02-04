@@ -19,7 +19,7 @@ const AboutMe = () => (
       }
     `}
     render={(data) => (
-      <section className="section" className={AboutMeStyle.homeSection}>
+      <section className={`${AboutMeStyle.homeSection} section`}>
         <Row>
           <Col>
             <h2 className={AboutMeStyle.title}>About Me</h2>

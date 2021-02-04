@@ -1,6 +1,6 @@
-const _ = require('lodash')
+const { groupBy, get, kebabCase, each } = require('lodash')
 const path = require('path')
-const { createFilePath } = require('gatsby-source-filesystem')
+// const { createFilePath } = require('gatsby-source-filesystem')
 
 exports.createPages = ({ actions, graphql }) => {
   const { createPage } = actions
@@ -23,20 +23,20 @@ exports.createPages = ({ actions, graphql }) => {
         }
       }
     }
-  `).then(result => {
+  `).then((result) => {
     if (result.errors) {
-      result.errors.forEach(e => console.error(e.toString()))
+      result.errors.forEach((e) => console.error(e.toString()))
       return Promise.reject(result.errors)
     }
 
     const mdFiles = result.data.allMarkdownRemark.edges
 
-    const contentTypes = _.groupBy(mdFiles, 'node.fields.contentType')
+    const contentTypes = groupBy(mdFiles, 'node.fields.contentType')
 
-    _.each(contentTypes, (pages, contentType) => {
-      const pagesToCreate = pages.filter(page =>
+    each(contentTypes, (pages, contentType) => {
+      const pagesToCreate = pages.filter((page) =>
         // get pages with template field
-        _.get(page, `node.frontmatter.template`)
+        get(page, `node.frontmatter.template`)
       )
       if (!pagesToCreate.length) return console.log(`Skipping ${contentType}`)
 
@@ -70,7 +70,7 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
     const fileNode = getNode(node.parent)
     const parsedFilePath = path.parse(fileNode.relativePath)
 
-    if (_.get(node, 'frontmatter.slug')) {
+    if (get(node, 'frontmatter.slug')) {
       slug = `/${node.frontmatter.slug.toLowerCase()}/`
     } else if (
       // home page gets root slug
@@ -78,8 +78,8 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
       parsedFilePath.dir === 'pages'
     ) {
       slug = `/`
-    } else if (_.get(node, 'frontmatter.title')) {
-      slug = `/${_.kebabCase(parsedFilePath.dir)}/${_.kebabCase(
+    } else if (get(node, 'frontmatter.title')) {
+      slug = `/${kebabCase(parsedFilePath.dir)}/${kebabCase(
         node.frontmatter.title
       )}/`
     } else if (parsedFilePath.dir === '') {

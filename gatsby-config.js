@@ -82,7 +82,7 @@ module.exports = {
       }
     },
     {
-      resolve: `gatsby-plugin-postcss`,
+      resolve: `gatsby-plugin-postcss`
     },
     {
       resolve: `gatsby-plugin-google-analytics`,
@@ -106,7 +106,7 @@ module.exports = {
       resolve: 'gatsby-plugin-nprogress',
       options: {
         // Setting a color is optional.
-        color: 'white',
+        color: 'black',
         // Disable the loading spinner.
         showSpinner: false
       }
