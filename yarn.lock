@@ -743,6 +743,14 @@
   dependencies:
     "@babel/helper-plugin-utils" "^7.12.13"
 
+"@babel/plugin-transform-spread@7.12.1":
+  version "7.12.1"
+  resolved "https://registry.yarnpkg.com/@babel/plugin-transform-spread/-/plugin-transform-spread-7.12.1.tgz#527f9f311be4ec7fdc2b79bb89f7bf884b3e1e1e"
+  integrity sha512-vuLp8CP0BE18zVYjsEBZ5xoCecMK6LBMMxYzJnh01rxQRvhNhH1csMMmBfNo5tGpGO+NhdSNW2mzIvBu3K1fng==
+  dependencies:
+    "@babel/helper-plugin-utils" "^7.10.4"
+    "@babel/helper-skip-transparent-expression-wrappers" "^7.12.1"
+
 "@babel/plugin-transform-spread@^7.12.1", "@babel/plugin-transform-spread@^7.12.13":
   version "7.12.13"
   resolved "https://registry.yarnpkg.com/@babel/plugin-transform-spread/-/plugin-transform-spread-7.12.13.tgz#ca0d5645abbd560719c354451b849f14df4a7949"
@@ -1296,11 +1304,6 @@
   version "2.2.5"
   resolved "https://registry.yarnpkg.com/@iarna/toml/-/toml-2.2.5.tgz#b32366c89b43c6f8cefbdefac778b9c828e3ba8c"
   integrity sha512-trnsAYxU3xnS1gPHPyU961coFyLkh4gAD/0zQ5mymY4yOZ+CYvsPqUbOFSw0aDM4y0tV7tiFxL/1XfXPNC6IPg==
-
-"@icons/material@^0.2.4":
-  version "0.2.4"
-  resolved "https://registry.yarnpkg.com/@icons/material/-/material-0.2.4.tgz#e90c9f71768b3736e76d7dd6783fc6c2afa88bc8"
-  integrity sha512-QPcGmICAPbGLGb6F/yNf/KzKqvFx8z5qx3D1yFqVAjoFmXK35EgyW+cJ57Te3CNsmzblwtzakLGFqHPqrfb4Tw==
 
 "@jest/types@^25.5.0":
   version "25.5.0"
@@ -6729,7 +6732,7 @@ gatsby-graphiql-explorer@^0.11.0:
   dependencies:
     "@babel/runtime" "^7.12.5"
 
-gatsby-image@^2.2.30:
+gatsby-image@^2.4.20:
   version "2.11.0"
   resolved "https://registry.yarnpkg.com/gatsby-image/-/gatsby-image-2.11.0.tgz#5bbd02c3dcf78291131de26da061b4180bb67e6e"
   integrity sha512-H1va64RgXizYXONhoqB3rAdSqALZi0hkBYqEsc0peVEYzb2maRhEwOchg65hKvp3HT/ahnfrik59epRguYvi/g==
@@ -6768,7 +6771,7 @@ gatsby-page-utils@^0.9.0:
     lodash "^4.17.20"
     micromatch "^4.0.2"
 
-gatsby-plugin-google-analytics@^2.3.2:
+gatsby-plugin-google-analytics@^2.3.15:
   version "2.11.0"
   resolved "https://registry.yarnpkg.com/gatsby-plugin-google-analytics/-/gatsby-plugin-google-analytics-2.11.0.tgz#8d74bd3c100706f03bbccf7b130a758fce9994ad"
   integrity sha512-aVFmzoozd0ifn5HJJY0W8R7DHkyTEvj/ueRyJJNlQMadQagIAYq+7efKon4gJzd4NZkLcoDb6moiAR066FwIIg==
@@ -6776,7 +6779,7 @@ gatsby-plugin-google-analytics@^2.3.2:
     "@babel/runtime" "^7.12.5"
     minimatch "3.0.4"
 
-gatsby-plugin-manifest@^2.2.26:
+gatsby-plugin-manifest@^2.4.33:
   version "2.12.0"
   resolved "https://registry.yarnpkg.com/gatsby-plugin-manifest/-/gatsby-plugin-manifest-2.12.0.tgz#107bcffaf236fa3b8d2c0ee830bd617bc903273b"
   integrity sha512-I+zkLQgR66n7kFfwEwOB2BEIIvCcO+jBUg5WNzKB9N8Hn20ebowU9G/wj01EcZ9A3N2qoe1yVeU+Lo0+kXR5pQ==
@@ -6787,10 +6790,10 @@ gatsby-plugin-manifest@^2.2.26:
     semver "^7.3.2"
     sharp "^0.27.0"
 
-gatsby-plugin-netlify-cms@^4.1.26:
-  version "4.10.0"
-  resolved "https://registry.yarnpkg.com/gatsby-plugin-netlify-cms/-/gatsby-plugin-netlify-cms-4.10.0.tgz#d404356f6fd4aef9a7511327948089cb6d33aab1"
-  integrity sha512-gymm4oObtyOBl3oKGb15KeiB0U/K4k5NQG06X2HLaM8XhToMDu6QYL/Y2Y0JsE5+WOnLQjCF4lNbTJijK41PwQ==
+gatsby-plugin-netlify-cms@4.3.15:
+  version "4.3.15"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-netlify-cms/-/gatsby-plugin-netlify-cms-4.3.15.tgz#d6750c91cd902665b15572e87096568d4953ebb4"
+  integrity sha512-rMKz7HgIuOahHmXf0AOZ59DAoxWffdv3/FNR51+9QCLBPigEPneiYZnW88UStA+Zf413F70MDz6kVYhHIhUMPQ==
   dependencies:
     "@pieh/friendly-errors-webpack-plugin" "1.7.0-chalk-2"
     copy-webpack-plugin "^5.1.2"
@@ -6798,22 +6801,22 @@ gatsby-plugin-netlify-cms@^4.1.26:
     html-webpack-plugin "^3.2.0"
     html-webpack-tags-plugin "^2.0.17"
     lodash "^4.17.20"
-    mini-css-extract-plugin "^0.12.0"
+    mini-css-extract-plugin "^0.11.2"
     netlify-identity-widget "^1.9.1"
-    webpack "^4.46.0"
+    webpack "^4.44.2"
 
-gatsby-plugin-netlify@^2.1.23:
-  version "2.11.0"
-  resolved "https://registry.yarnpkg.com/gatsby-plugin-netlify/-/gatsby-plugin-netlify-2.11.0.tgz#ad51b3e53df732266ee766bcaea69bd451f81670"
-  integrity sha512-L84m9sVZ7ZyF05QnuTPAfnr7tUS8lqg5PWN2hqXGSnf1g+9UFlIO3vxsGedQKqgkhjsnn8zVrmvvAtISZXT+bQ==
+gatsby-plugin-netlify@2.3.16:
+  version "2.3.16"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-netlify/-/gatsby-plugin-netlify-2.3.16.tgz#bf886aaa1540ff804909dcc1069ba5ca79f20194"
+  integrity sha512-xgwH+8IUr7Cy66zqyGR1jWq4VRhGU7kDUllr8LokPoYHy8/yaepCqEE2CXM5Hm4OCLZBGxRT6EwK8ZQuRcpY9A==
   dependencies:
-    "@babel/runtime" "^7.12.5"
+    "@babel/runtime" "^7.11.2"
     fs-extra "^8.1.0"
     kebab-hash "^0.1.2"
     lodash "^4.17.20"
     webpack-assets-manifest "^3.1.1"
 
-gatsby-plugin-nprogress@^2.1.12:
+gatsby-plugin-nprogress@^2.3.12:
   version "2.10.0"
   resolved "https://registry.yarnpkg.com/gatsby-plugin-nprogress/-/gatsby-plugin-nprogress-2.10.0.tgz#93c3413bf23fda7db16bd84d1550c16438f0bd5e"
   integrity sha512-V2sJ3qcE59ui0IFvkXnMRdp5PmF6vYAtaE/8v4as9i+lLCmeroP25pCZCdiSNFY8avbX1JLIFAshOw4Iw9y6vg==
@@ -6821,7 +6824,7 @@ gatsby-plugin-nprogress@^2.1.12:
     "@babel/runtime" "^7.12.5"
     nprogress "^0.2.0"
 
-gatsby-plugin-offline@^3.0.17:
+gatsby-plugin-offline@^3.2.30:
   version "3.10.0"
   resolved "https://registry.yarnpkg.com/gatsby-plugin-offline/-/gatsby-plugin-offline-3.10.0.tgz#b860ff5d630122b1603d7477f7962161622e0bc4"
   integrity sha512-+Rsyw/N5MhpkuMc7G5BlD27KnhcuzBOrBw/bjSjE+VsnrKP4byQjGVB2bwH326Sdt3Ci15lMY1sQAi0IMEo9/w==
@@ -6856,14 +6859,14 @@ gatsby-plugin-postcss@^3.0.0:
     "@babel/runtime" "^7.12.5"
     postcss-loader "^4.1.0"
 
-gatsby-plugin-react-helmet@^3.1.13:
+gatsby-plugin-react-helmet@^3.3.12:
   version "3.10.0"
   resolved "https://registry.yarnpkg.com/gatsby-plugin-react-helmet/-/gatsby-plugin-react-helmet-3.10.0.tgz#421bbee87157c351d19031d62145c2ab6c00ef94"
   integrity sha512-TktmUysb7wDwYOKowNcpXxLJfQiwQ7cSQ8ALH3pJrW63wBaCoBXvAHg3OhgHVR74CrqN2Tb89tr3GXa4JhO4Qw==
   dependencies:
     "@babel/runtime" "^7.12.5"
 
-gatsby-plugin-sharp@^2.2.36:
+gatsby-plugin-sharp@^2.6.38:
   version "2.14.0"
   resolved "https://registry.yarnpkg.com/gatsby-plugin-sharp/-/gatsby-plugin-sharp-2.14.0.tgz#763600d1339b5d9197371aa7e1cca7a614ebd269"
   integrity sha512-399SJ83vuqP2gkf0PdC1CXALNebPfaTxzuE3uF1LalemeXuBlR0YvVo5QG84AxhnEzTfg5hWKk36F5A36xX9ow==
@@ -6889,7 +6892,7 @@ gatsby-plugin-sharp@^2.2.36:
     svgo "1.3.2"
     uuid "3.4.0"
 
-gatsby-plugin-sitemap@^2.2.19:
+gatsby-plugin-sitemap@^2.4.14:
   version "2.12.0"
   resolved "https://registry.yarnpkg.com/gatsby-plugin-sitemap/-/gatsby-plugin-sitemap-2.12.0.tgz#bd3dc88d59ee9a94b0131a28623d79eb738dc375"
   integrity sha512-oY0SzFl7xDVfIp3f4dhsKuGknc6tLsZIdNWPB9jv3HEDIFpyohFjJ4tcH2rHG8Wm8ceW34XjgSW0fcyu/QQYxQ==
@@ -6991,7 +6994,7 @@ gatsby-recipes@^0.9.1:
     xstate "^4.9.1"
     yoga-layout-prebuilt "^1.9.6"
 
-gatsby-remark-images@^3.1.28:
+gatsby-remark-images@^3.3.32:
   version "3.11.0"
   resolved "https://registry.yarnpkg.com/gatsby-remark-images/-/gatsby-remark-images-3.11.0.tgz#e7cdf205c8c60f534292453e1a01dbb9c754936b"
   integrity sha512-IjttA5Z3A5DG2rusdRqwGL6tfGoe7KO+Hu4izLcKfCXyh5aNpSPMD+L7lNuRLefL8cLA9C1w981PGGiRxiw0iw==
@@ -7019,7 +7022,7 @@ gatsby-remark-relative-images@^2.0.2:
     traverse "0.6.6"
     unist-util-select "3.0.1"
 
-gatsby-remark-responsive-iframe@^2.2.25:
+gatsby-remark-responsive-iframe@^2.4.16:
   version "2.11.0"
   resolved "https://registry.yarnpkg.com/gatsby-remark-responsive-iframe/-/gatsby-remark-responsive-iframe-2.11.0.tgz#c5b68f06324138a31f85fdb5da5503ab812b5446"
   integrity sha512-qqrYfUb4+9VhndBeEaKrhiyyKIReAK4BHL3/8ZCtFDem5ZQQd5pUdgYhExRLcoGxzwJrqVxI6+dtT/RoXLqC/g==
@@ -7030,7 +7033,7 @@ gatsby-remark-responsive-iframe@^2.2.25:
     lodash "^4.17.20"
     unist-util-visit "^1.4.1"
 
-gatsby-source-filesystem@^2.1.35:
+gatsby-source-filesystem@^2.3.32:
   version "2.11.0"
   resolved "https://registry.yarnpkg.com/gatsby-source-filesystem/-/gatsby-source-filesystem-2.11.0.tgz#3fff5398796b17eb960e83d0eaa99e578b6e4ef1"
   integrity sha512-SLKksyfRvdMHyF0kb3YCr4ME6RW4Pje9zo1RVAJ1sqaBFDch0YUZzTE51QO586JSkrN00UeE8lU++ODXlm425g==
@@ -7069,7 +7072,7 @@ gatsby-telemetry@^1.10.0:
     node-fetch "^2.6.1"
     uuid "3.4.0"
 
-gatsby-transformer-remark@^2.6.32:
+gatsby-transformer-remark@^2.8.37:
   version "2.16.0"
   resolved "https://registry.yarnpkg.com/gatsby-transformer-remark/-/gatsby-transformer-remark-2.16.0.tgz#dd9ef9d6b0a9154c7ab9c7f7a189f8e1dc645b7c"
   integrity sha512-zphmbrW1HOAgAjZdmyEZQDfbrVeQT+Q6BKaF+x76Vwk7KV2TGqhGfwyU4wg7Kv3tOGMDSwr73hxQvKqtrAqZPw==
@@ -7096,7 +7099,7 @@ gatsby-transformer-remark@^2.6.32:
     unist-util-select "^1.5.0"
     unist-util-visit "^1.4.1"
 
-gatsby-transformer-sharp@^2.3.2:
+gatsby-transformer-sharp@^2.5.16:
   version "2.12.0"
   resolved "https://registry.yarnpkg.com/gatsby-transformer-sharp/-/gatsby-transformer-sharp-2.12.0.tgz#c33a92788e8b432f01960f4de2745c105cea4784"
   integrity sha512-3rtukdy9+QZL5ioMs+q2IjevJFOz0ORJzoGbnM/ups5C5ZtRQKRZNQ0920BP/eqpLQLI4lkQuyp+GCxfSQLkCQ==
@@ -7109,7 +7112,7 @@ gatsby-transformer-sharp@^2.3.2:
     semver "^7.3.4"
     sharp "^0.27.0"
 
-gatsby-transformer-yaml@^2.2.15:
+gatsby-transformer-yaml@^2.4.13:
   version "2.11.0"
   resolved "https://registry.yarnpkg.com/gatsby-transformer-yaml/-/gatsby-transformer-yaml-2.11.0.tgz#b99377e2feaec20df4c1a90cce6cb28aa7c929fb"
   integrity sha512-+PTsnXdmKUbqqZH1cE3SnrDHKxE0ElNRGBDoDQjuz/ip5EnIcxHRj/nnzUA6RkcZ/a9UB4e2xaNOZAJbwDyqKg==
@@ -7119,7 +7122,7 @@ gatsby-transformer-yaml@^2.2.15:
     lodash "^4.17.20"
     unist-util-select "^1.5.0"
 
-gatsby@2.32.2:
+gatsby@^2.26.0:
   version "2.32.2"
   resolved "https://registry.yarnpkg.com/gatsby/-/gatsby-2.32.2.tgz#f285a4447bd136c68e58eb476611b11ed219e04c"
   integrity sha512-XqncpfCgx9hqIh/rEqKVEvM9oB7pNBZbkJV4z29r4E02qzxs/sDyi26QQe+qMelZwN6fpyiVyzhfx6Rds72P9A==
@@ -9662,11 +9665,6 @@ lock@^1.0.0:
   resolved "https://registry.yarnpkg.com/lock/-/lock-1.1.0.tgz#53157499d1653b136ca66451071fca615703fa55"
   integrity sha1-UxV0mdFlOxNspmRRBx/KYVcD+lU=
 
-lodash-es@^4.17.15:
-  version "4.17.20"
-  resolved "https://registry.yarnpkg.com/lodash-es/-/lodash-es-4.17.20.tgz#29f6332eefc60e849f869c264bc71126ad61e8f7"
-  integrity sha512-JD1COMZsq8maT6mnuz1UMV0jvYD0E0aUsSOdrr1/nAG3dhqQXwRRgeW0cSqH1U43INKcqxaiVIQNOUDld7gRDA==
-
 lodash._reinterpolate@^3.0.0:
   version "3.0.0"
   resolved "https://registry.yarnpkg.com/lodash._reinterpolate/-/lodash._reinterpolate-3.0.0.tgz#0ccf2d89166af03b3663c796538b75ac6e114d9d"
@@ -9767,7 +9765,7 @@ lodash.without@^4.4.0:
   resolved "https://registry.yarnpkg.com/lodash.without/-/lodash.without-4.4.0.tgz#3cd4574a00b67bae373a94b748772640507b7aac"
   integrity sha1-PNRXSgC2e643OpS3SHcmQFB7eqw=
 
-lodash@4.17.20, lodash@^4.0.1, lodash@^4.1.1, lodash@^4.15.0, lodash@^4.17.10, lodash@^4.17.11, lodash@^4.17.14, lodash@^4.17.15, lodash@^4.17.19, lodash@^4.17.20, lodash@^4.17.3, lodash@^4.17.4, lodash@^4.17.5, lodash@^4.3.0:
+lodash@4.17.20, lodash@^4.1.1, lodash@^4.15.0, lodash@^4.17.10, lodash@^4.17.11, lodash@^4.17.14, lodash@^4.17.15, lodash@^4.17.19, lodash@^4.17.20, lodash@^4.17.3, lodash@^4.17.4, lodash@^4.17.5, lodash@^4.3.0:
   version "4.17.20"
   resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.20.tgz#b44a9b6297bcb698f1c51a3545a2b3b368d59c52"
   integrity sha512-PlhdFcillOINfeV7Ni6oF1TAEayyZBoZ8bcshTHqOYJYlrqzRK5hagpagky5o4HfCzzd1TRkXPMFq6cKk9rGmA==
@@ -9954,11 +9952,6 @@ matches-selector@^1.0.0:
   version "1.2.0"
   resolved "https://registry.yarnpkg.com/matches-selector/-/matches-selector-1.2.0.tgz#d1814e7e8f43e69d22ac33c9af727dc884ecf12a"
   integrity sha512-c4vLwYWyl+Ji+U43eU/G5FwxWd4ZH0ePUsFs5y0uwD9HUEFBXUQ1zUUan+78IpRD+y4pUfG0nAzNM292K7ItvA==
-
-material-colors@^1.2.1:
-  version "1.2.6"
-  resolved "https://registry.yarnpkg.com/material-colors/-/material-colors-1.2.6.tgz#6d1958871126992ceecc72f4bcc4d8f010865f46"
-  integrity sha512-6qE4B9deFBIa9YSpOc9O0Sgc43zTeVYbgDT5veRKSlB2+ZuHNoVVxA1L/ckMUayV9Ay9y7Z/SZCLcGteW9i7bg==
 
 md5-file@^5.0.0:
   version "5.0.0"
@@ -10330,16 +10323,6 @@ mini-css-extract-plugin@^0.11.2:
     schema-utils "^1.0.0"
     webpack-sources "^1.1.0"
 
-mini-css-extract-plugin@^0.12.0:
-  version "0.12.0"
-  resolved "https://registry.yarnpkg.com/mini-css-extract-plugin/-/mini-css-extract-plugin-0.12.0.tgz#ddeb74fd6304ca9f99c1db74acc7d5b507705454"
-  integrity sha512-z6PQCe9rd1XUwZ8gMaEVwwRyZlrYy8Ba1gRjFP5HcV51HkXX+XlwZ+a1iAYTjSYwgNBXoNR7mhx79mDpOn5fdw==
-  dependencies:
-    loader-utils "^1.1.0"
-    normalize-url "1.9.1"
-    schema-utils "^1.0.0"
-    webpack-sources "^1.1.0"
-
 mini-svg-data-uri@^1.2.3:
   version "1.2.3"
   resolved "https://registry.yarnpkg.com/mini-svg-data-uri/-/mini-svg-data-uri-1.2.3.tgz#e16baa92ad55ddaa1c2c135759129f41910bc39f"
@@ -10594,55 +10577,45 @@ neo-async@^2.5.0, neo-async@^2.6.1:
   resolved "https://registry.yarnpkg.com/neo-async/-/neo-async-2.6.2.tgz#b4aafb93e3aeb2d8174ca53cf163ab7d7308305f"
   integrity sha512-Yd3UES5mWCSqR+qNT93S3UoYUkqAZ9lLg8a7g9rimsWmYGK8cVToA4/sF3RrshdyV3sAGMXVUmpMYOw+dLpOuw==
 
-netlify-cms-app@^2.9.7:
-  version "2.14.18"
-  resolved "https://registry.yarnpkg.com/netlify-cms-app/-/netlify-cms-app-2.14.18.tgz#224b6bdac1bccd919f958a8566d138c86a2def2f"
-  integrity sha512-08fwQlXGOdGe3ayFTc28mta33+SPJc+kPkPUaycZgVIW6E3wuH4Xva6MR6zHX4aLnVcYjqssEBQ6eYNYZYXtzQ==
+netlify-cms-app@2.12.25:
+  version "2.12.25"
+  resolved "https://registry.yarnpkg.com/netlify-cms-app/-/netlify-cms-app-2.12.25.tgz#0e2ab71f40fe78ce56f21e35eb08d95178786a46"
+  integrity sha512-wQcPFopz1g+GaZhYmGTNi59aZmIAN2WB2R6EIwRBlpQJ1Xr1ozRmNaZ+FagbMCFhbmadoY4MXC4Hbq0iC+P7yQ==
   dependencies:
     "@emotion/core" "^10.0.35"
     "@emotion/styled" "^10.0.27"
     immutable "^3.7.6"
     lodash "^4.17.11"
     moment "^2.24.0"
-    netlify-cms-backend-azure "^1.1.0"
     netlify-cms-backend-bitbucket "^2.12.5"
-    netlify-cms-backend-git-gateway "^2.11.8"
-    netlify-cms-backend-github "^2.11.7"
-    netlify-cms-backend-gitlab "^2.9.7"
+    netlify-cms-backend-git-gateway "^2.11.5"
+    netlify-cms-backend-github "^2.11.6"
+    netlify-cms-backend-gitlab "^2.9.5"
     netlify-cms-backend-test "^2.10.5"
-    netlify-cms-core "^2.37.0"
-    netlify-cms-editor-component-image "^2.6.7"
-    netlify-cms-lib-auth "^2.3.0"
-    netlify-cms-lib-util "^2.12.2"
-    netlify-cms-locales "^1.25.0"
-    netlify-cms-ui-default "^2.12.0"
+    netlify-cms-core "^2.31.0"
+    netlify-cms-editor-component-image "^2.6.6"
+    netlify-cms-lib-auth "^2.2.12"
+    netlify-cms-lib-util "^2.11.5"
+    netlify-cms-locales "^1.18.1"
+    netlify-cms-ui-default "^2.11.6"
     netlify-cms-widget-boolean "^2.3.4"
-    netlify-cms-widget-code "^1.2.5"
-    netlify-cms-widget-colorstring "^1.0.0"
+    netlify-cms-widget-code "^1.2.4"
     netlify-cms-widget-date "^2.5.5"
     netlify-cms-widget-datetime "^2.6.5"
-    netlify-cms-widget-file "^2.9.0"
+    netlify-cms-widget-file "^2.7.4"
     netlify-cms-widget-image "^2.7.4"
-    netlify-cms-widget-list "^2.8.1"
+    netlify-cms-widget-list "^2.6.6"
     netlify-cms-widget-map "^1.4.4"
-    netlify-cms-widget-markdown "^2.12.9"
+    netlify-cms-widget-markdown "^2.12.6"
     netlify-cms-widget-number "^2.4.5"
-    netlify-cms-widget-object "^2.6.0"
+    netlify-cms-widget-object "^2.5.6"
     netlify-cms-widget-relation "^2.8.7"
-    netlify-cms-widget-select "^2.7.2"
-    netlify-cms-widget-string "^2.2.8"
+    netlify-cms-widget-select "^2.6.4"
+    netlify-cms-widget-string "^2.2.7"
     netlify-cms-widget-text "^2.3.4"
     prop-types "^15.7.2"
     react-immutable-proptypes "^2.1.0"
     uuid "^3.3.2"
-
-netlify-cms-backend-azure@^1.1.0:
-  version "1.1.0"
-  resolved "https://registry.yarnpkg.com/netlify-cms-backend-azure/-/netlify-cms-backend-azure-1.1.0.tgz#c05d9646b9d57a99cee492bc334d494c12f3c48b"
-  integrity sha512-5VZufuopvUMX8MBT8CLaLEYptJVVm4xC0wiNB2Itm21EMlSjqYvH9nS/IY/EJCpDh+Ny19BK/07uxVc0QsL0UA==
-  dependencies:
-    js-base64 "^3.0.0"
-    semaphore "^1.1.0"
 
 netlify-cms-backend-bitbucket@^2.12.5:
   version "2.12.5"
@@ -10654,7 +10627,7 @@ netlify-cms-backend-bitbucket@^2.12.5:
     semaphore "^1.1.0"
     what-the-diff "^0.6.0"
 
-netlify-cms-backend-git-gateway@^2.11.8:
+netlify-cms-backend-git-gateway@^2.11.5:
   version "2.11.8"
   resolved "https://registry.yarnpkg.com/netlify-cms-backend-git-gateway/-/netlify-cms-backend-git-gateway-2.11.8.tgz#37e3de5fe00727a55627b89886da9e7fc48bbe66"
   integrity sha512-YaLpg8oQC3vi4KZpPFTvh3Fnw7v5R0sLiAZ4SpS5xBXxBdCPCvcSMNvnJECcv79+2tTm83ErigN3VlXJ5ff/Pw==
@@ -10664,7 +10637,7 @@ netlify-cms-backend-git-gateway@^2.11.8:
     jwt-decode "^3.0.0"
     minimatch "^3.0.4"
 
-netlify-cms-backend-github@^2.11.7:
+netlify-cms-backend-github@^2.11.6:
   version "2.11.7"
   resolved "https://registry.yarnpkg.com/netlify-cms-backend-github/-/netlify-cms-backend-github-2.11.7.tgz#39cfeff3f0227eaf5d4f651bf5b00b0de8c6c01a"
   integrity sha512-71garo3lZ7RywZAfs32lngc0glxCdYE5zHhO+s+/B2B8fBKFaKSkK7Fmq8TLTXm4hnR+qc8pNFjxsx9wJEfPjQ==
@@ -10679,7 +10652,7 @@ netlify-cms-backend-github@^2.11.7:
     js-base64 "^3.0.0"
     semaphore "^1.1.0"
 
-netlify-cms-backend-gitlab@^2.9.7:
+netlify-cms-backend-gitlab@^2.9.5:
   version "2.9.7"
   resolved "https://registry.yarnpkg.com/netlify-cms-backend-gitlab/-/netlify-cms-backend-gitlab-2.9.7.tgz#f25d276ee60f8b8d368926ae94e215aa259b2515"
   integrity sha512-gyMkTrtbQAlvcVXx9D7QggTMb6KxVbOL/36Cc+l3QudSOnI/FmToR9qQXH4jixVxKNJ2JLvdDjhzTFWtiPaoMA==
@@ -10692,7 +10665,7 @@ netlify-cms-backend-test@^2.10.5:
   resolved "https://registry.yarnpkg.com/netlify-cms-backend-test/-/netlify-cms-backend-test-2.10.5.tgz#b06cf3adc425841d89689c1bf0c0658949fc48c9"
   integrity sha512-YHuMfAuzmDKd89YvMNfZh4F0DhGYGJVBVEV5H/MgOkPQcREG9SdLNjDyBcr/Y7mpjlu6MwR3s71BgMWIlFGpJg==
 
-netlify-cms-core@^2.37.0:
+netlify-cms-core@^2.31.0:
   version "2.37.0"
   resolved "https://registry.yarnpkg.com/netlify-cms-core/-/netlify-cms-core-2.37.0.tgz#74c2e4c8b9b80711f8cdbcb1ecd05a320a4944c1"
   integrity sha512-vV8NEMPHtguNufAeO1QLHSsiatrEfo7b3yA+6T4VQlYHBIbPiaZwBVi5OaP6edSD5iZPDF6pS8zABGdasi+kEQ==
@@ -10744,17 +10717,17 @@ netlify-cms-core@^2.37.0:
     what-input "^5.1.4"
     yaml "^1.8.3"
 
-netlify-cms-editor-component-image@^2.6.7:
+netlify-cms-editor-component-image@^2.6.6:
   version "2.6.7"
   resolved "https://registry.yarnpkg.com/netlify-cms-editor-component-image/-/netlify-cms-editor-component-image-2.6.7.tgz#471ce32302e27ab22f5204515cbe4b05b1c3ddb1"
   integrity sha512-aUkueCG+rLXcvY5Lfc77pllREpA0oY2V9v8Q+AXu08CvW61kigVTa/AKFTd1oGN8CDpoIr0uO8580tYskzjIRw==
 
-netlify-cms-lib-auth@^2.3.0:
+netlify-cms-lib-auth@^2.2.12:
   version "2.3.0"
   resolved "https://registry.yarnpkg.com/netlify-cms-lib-auth/-/netlify-cms-lib-auth-2.3.0.tgz#0bf539bb1988721195b08e2df645e8d8851347ea"
   integrity sha512-+428eI/EkRSchRslhtWagjgtbgN+CZhhHMUXTDmpjqPiRVCYeIfKDubDI2yUa2PVIATGFr0Z/v7tJQSdKDop5w==
 
-netlify-cms-lib-util@^2.12.2:
+netlify-cms-lib-util@^2.11.5:
   version "2.12.2"
   resolved "https://registry.yarnpkg.com/netlify-cms-lib-util/-/netlify-cms-lib-util-2.12.2.tgz#35dfbe8b6c1753c0007035f53ab1c841173668aa"
   integrity sha512-ehmFTYXT7DwM5lm66J4fR5y0JKic4qw6ZlYtBqBpPp76sCyMDgpGKPaOmizECEm8rNLG/X5480jGn9cH3UJdoQ==
@@ -10763,12 +10736,12 @@ netlify-cms-lib-util@^2.12.2:
     localforage "^1.7.3"
     semaphore "^1.1.0"
 
-netlify-cms-locales@^1.25.0:
+netlify-cms-locales@^1.18.1:
   version "1.25.0"
   resolved "https://registry.yarnpkg.com/netlify-cms-locales/-/netlify-cms-locales-1.25.0.tgz#1efe229ac3e977b601f6d240dca29b73c17918c3"
   integrity sha512-xUO0IkPQoeWBwTBZiJ+VUX1WxmjWH4bKJfjtJxmTy7s1xTSIgHQaIoBvJ7DLnLGiF+7nQ2rZWVDT42XgRFT4og==
 
-netlify-cms-ui-default@^2.12.0:
+netlify-cms-ui-default@^2.11.6:
   version "2.12.0"
   resolved "https://registry.yarnpkg.com/netlify-cms-ui-default/-/netlify-cms-ui-default-2.12.0.tgz#f401b257dfcd9806ad3abb37d43dc3e94a153824"
   integrity sha512-ljtqQHBwazFjyIcwvv4Iiab9ArDlvuLnTER9K2is/oMQBa//E+zZfM7AkGavZzq2As2hGCpo7uu0UevombLAag==
@@ -10782,21 +10755,13 @@ netlify-cms-widget-boolean@^2.3.4:
   resolved "https://registry.yarnpkg.com/netlify-cms-widget-boolean/-/netlify-cms-widget-boolean-2.3.4.tgz#cedf587360cbded4b5783e0c8d04ab80b8c06a15"
   integrity sha512-vQKuJcE6sGxfByEQ0ZGLx1ieJ55EeBLLbFV1KCPe8or/RfgZSUYoJumaF88W5XjAHDLs+34VgzUwyu5UbSmYtw==
 
-netlify-cms-widget-code@^1.2.5:
+netlify-cms-widget-code@^1.2.4:
   version "1.2.5"
   resolved "https://registry.yarnpkg.com/netlify-cms-widget-code/-/netlify-cms-widget-code-1.2.5.tgz#d7767d24e34202622eb5d00494c8fcc906cda79d"
   integrity sha512-YaBEKcQMqvcwUKKa9n3Sz0EFUoLDRRF/RhXC9Jh9Z3mEkDzsBW02Xw3UFBISA6xldivW8qkCB6XN7chGtU0c8g==
   dependencies:
     react-codemirror2 "^7.0.0"
     react-select "^2.4.3"
-
-netlify-cms-widget-colorstring@^1.0.0:
-  version "1.0.1"
-  resolved "https://registry.yarnpkg.com/netlify-cms-widget-colorstring/-/netlify-cms-widget-colorstring-1.0.1.tgz#3285fb2da21e0fb5741ee437b7798c643e9d9343"
-  integrity sha512-qkhBtl7nRYT/yM1SDdlQ7ueVj+vP7dLoAuBl9O2V1jgAomThUV9OEs5xLI5TNdvF7Yp8SR4NHnVSteqyYetIDQ==
-  dependencies:
-    react-color "^2.18.1"
-    validate-color "^2.1.0"
 
 netlify-cms-widget-date@^2.5.5:
   version "2.5.5"
@@ -10810,7 +10775,7 @@ netlify-cms-widget-datetime@^2.6.5:
   resolved "https://registry.yarnpkg.com/netlify-cms-widget-datetime/-/netlify-cms-widget-datetime-2.6.5.tgz#53d63561763b1495548da14a383b4177141b014e"
   integrity sha512-n43/5yBsN+lJVZIn7hXQlI1AZEmWfeb3uGs7Bm4kO/I54NUCFR4E77MhMjOAtoguLL0WHeQSTg4X1RUZ8V2ZPg==
 
-netlify-cms-widget-file@^2.9.0:
+netlify-cms-widget-file@^2.7.4:
   version "2.9.0"
   resolved "https://registry.yarnpkg.com/netlify-cms-widget-file/-/netlify-cms-widget-file-2.9.0.tgz#33ff298b55163d12a418ed073c346f50b97811da"
   integrity sha512-57fOzqfR3G1Qgk4TD9QStD6oRSdzH0KhFKgQlnRotgjLtCaxTyvCRnoCCpZMHlVaiYyRCCECIFMUFOByiUJ3Wg==
@@ -10824,7 +10789,7 @@ netlify-cms-widget-image@^2.7.4:
   resolved "https://registry.yarnpkg.com/netlify-cms-widget-image/-/netlify-cms-widget-image-2.7.4.tgz#ea0051e72be5169b5b983595bab3ee6dd635c5be"
   integrity sha512-3qbA/2y/hAXcO/Spi99lVGlKXeRJI/mLxJpDYsJc2+YwInWjrscIjVFuzCKgOqLi5cC1EW50t9KWgjO5/nonng==
 
-netlify-cms-widget-list@^2.8.1:
+netlify-cms-widget-list@^2.6.6:
   version "2.8.1"
   resolved "https://registry.yarnpkg.com/netlify-cms-widget-list/-/netlify-cms-widget-list-2.8.1.tgz#5b1dadeb095e280cc40249ace6e9b7d566047fa2"
   integrity sha512-cTBYqY9C7M7Wt9nPikbANWomeZTHEttyEu04KlNFt1Has5VUE3OZSalx1uJbN+zgE8V38mjTp1IaaEEX5OjYog==
@@ -10838,7 +10803,7 @@ netlify-cms-widget-map@^1.4.4:
   dependencies:
     ol "^5.3.1"
 
-netlify-cms-widget-markdown@^2.12.9:
+netlify-cms-widget-markdown@^2.12.6:
   version "2.12.9"
   resolved "https://registry.yarnpkg.com/netlify-cms-widget-markdown/-/netlify-cms-widget-markdown-2.12.9.tgz#18f8395b2b32875719c7b958c0a37d7f247b0334"
   integrity sha512-HyO1HcKrf4FTkfCaKo66MqgJfVlPecePdqmL9WZ/arfNewvmVyu6lFC/D9t7mL2KRB1cDHwJP9r/2ZDd804fAA==
@@ -10868,7 +10833,7 @@ netlify-cms-widget-number@^2.4.5:
   resolved "https://registry.yarnpkg.com/netlify-cms-widget-number/-/netlify-cms-widget-number-2.4.5.tgz#7c331f0d8139ddabaf2f6efd4f299d7d865a4fc8"
   integrity sha512-dWHcwZik77NEwbONPeaso0SUcRtMH+VqQwX+sSbcu7ciVsbvov7ch3CZuEDsXW7IjUB5wvAwp9dFpK7Ka3B5IQ==
 
-netlify-cms-widget-object@^2.6.0:
+netlify-cms-widget-object@^2.5.6:
   version "2.6.0"
   resolved "https://registry.yarnpkg.com/netlify-cms-widget-object/-/netlify-cms-widget-object-2.6.0.tgz#96019fae99427f21c7f89e72bc07835ca5b19c80"
   integrity sha512-xHV7E9VS28lam7hGjXouRKFYCrqvI1KB1vLL184lKgPCAgCoS/8QzffiGOqNYgD+XemuC+Ao5ulcLgbN3wdSAw==
@@ -10881,14 +10846,14 @@ netlify-cms-widget-relation@^2.8.7:
     react-select "^2.4.2"
     react-window "^1.8.5"
 
-netlify-cms-widget-select@^2.7.2:
+netlify-cms-widget-select@^2.6.4:
   version "2.7.2"
   resolved "https://registry.yarnpkg.com/netlify-cms-widget-select/-/netlify-cms-widget-select-2.7.2.tgz#24052f876fcba4c1c865389e4115392b125c24b1"
   integrity sha512-Oj2II6BqetNihJm7MV+eog4zmfWj4Ed9PehoPjsz3bWvrSFr4UQ12rKZPX8oFNortj7K5oNDdHeRh/Yz3xZcIQ==
   dependencies:
     react-select "^2.4.2"
 
-netlify-cms-widget-string@^2.2.8:
+netlify-cms-widget-string@^2.2.7:
   version "2.2.8"
   resolved "https://registry.yarnpkg.com/netlify-cms-widget-string/-/netlify-cms-widget-string-2.2.8.tgz#037dcdd4d8dc74e5a87000166f2bb75bcda2c479"
   integrity sha512-aQl+1NcxGKzPmrFo8zjtFF60K4wGDFKNrdJarAFuV0kjP1o+x95stnnT/Dxq6Z3X61hMotQsnmvwqkIN+XVcXA==
@@ -13120,19 +13085,6 @@ react-codemirror2@^7.0.0:
   resolved "https://registry.yarnpkg.com/react-codemirror2/-/react-codemirror2-7.2.1.tgz#38dab492fcbe5fb8ebf5630e5bb7922db8d3a10c"
   integrity sha512-t7YFmz1AXdlImgHXA9Ja0T6AWuopilub24jRaQdPVbzUJVNKIYuy3uCFZYa7CE5S3UW6SrSa5nAqVQvtzRF9gw==
 
-react-color@^2.18.1:
-  version "2.19.3"
-  resolved "https://registry.yarnpkg.com/react-color/-/react-color-2.19.3.tgz#ec6c6b4568312a3c6a18420ab0472e146aa5683d"
-  integrity sha512-LEeGE/ZzNLIsFWa1TMe8y5VYqr7bibneWmvJwm1pCn/eNmrabWDh659JSPn9BuaMpEfU83WTOJfnCcjDZwNQTA==
-  dependencies:
-    "@icons/material" "^0.2.4"
-    lodash "^4.17.15"
-    lodash-es "^4.17.15"
-    material-colors "^1.2.1"
-    prop-types "^15.5.10"
-    reactcss "^1.2.0"
-    tinycolor2 "^1.4.1"
-
 react-datetime@^2.16.3:
   version "2.16.3"
   resolved "https://registry.yarnpkg.com/react-datetime/-/react-datetime-2.16.3.tgz#7f9ac7d4014a939c11c761d0c22d1fb506cb505e"
@@ -13521,13 +13473,6 @@ react@^17.0.1:
   dependencies:
     loose-envify "^1.1.0"
     object-assign "^4.1.1"
-
-reactcss@^1.2.0:
-  version "1.2.3"
-  resolved "https://registry.yarnpkg.com/reactcss/-/reactcss-1.2.3.tgz#c00013875e557b1cf0dfd9a368a1c3dab3b548dd"
-  integrity sha512-KiwVUcFu1RErkI97ywr8nvx8dNOpT03rbnma0SSalTYjkrPYaEajR4a/MRt6DZ46K6arDRbWMNHF+xH7G7n/8A==
-  dependencies:
-    lodash "^4.0.1"
 
 reactstrap@^8.4.1:
   version "8.9.0"
@@ -16498,11 +16443,6 @@ valid-url@1.0.9, valid-url@^1.0.9:
   resolved "https://registry.yarnpkg.com/valid-url/-/valid-url-1.0.9.tgz#1c14479b40f1397a75782f115e4086447433a200"
   integrity sha1-HBRHm0DxOXp1eC8RXkCGRHQzogA=
 
-validate-color@^2.1.0:
-  version "2.1.1"
-  resolved "https://registry.yarnpkg.com/validate-color/-/validate-color-2.1.1.tgz#1330bd71d340ed3420a08fa63b61acbba95e958c"
-  integrity sha512-hKG4b7TdXtqom+Uby8LyyxaGK8gEpk60T0stdKXdPSHW+sPOBjJX6B9mFUa9gwQKkNCxvz6e1nxmohZmBWlnBg==
-
 validate-npm-package-license@^3.0.1:
   version "3.0.4"
   resolved "https://registry.yarnpkg.com/validate-npm-package-license/-/validate-npm-package-license-3.0.4.tgz#fc91f6b9c7ba15c857f4cb2c5defeec39d4f410a"
@@ -16733,7 +16673,7 @@ webpack-virtual-modules@^0.2.2:
   dependencies:
     debug "^3.0.0"
 
-webpack@^4.44.1, webpack@^4.46.0:
+webpack@^4.44.1, webpack@^4.44.2:
   version "4.46.0"
   resolved "https://registry.yarnpkg.com/webpack/-/webpack-4.46.0.tgz#bf9b4404ea20a073605e0a011d188d77cb6ad542"
   integrity sha512-6jJuJjg8znb/xRItk7bkT0+Q7AHCYjjFnvKIWQPkNIOyRqoCGvkOs0ipeQzrqz4l5FtN5ZI/ukEHroeX/o1/5Q==
