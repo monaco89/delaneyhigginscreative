@@ -19,7 +19,7 @@ const GraphicDesign = () => (
     `}
     render={(data) => (
       <section className={GDStyle.section} style={{ marginTop: '1em' }}>
-        <Row>
+        <Row style={{ alignItems: 'center' }}>
           <Col sm={{ size: 'auto', offset: 0 }} md="5">
             <div className={GDStyle.body}>
               <Row>
@@ -31,14 +31,6 @@ const GraphicDesign = () => (
                   </p>
                 </Col>
               </Row>
-              <Row className={GDStyle.links}>
-                <Col>
-                  <a href="/marketing">Marketing</a>
-                </Col>
-                <Col>
-                  <a href="/socialmedia">Social Media</a>
-                </Col>
-              </Row>
             </div>
           </Col>
           <Col sm={{ size: 'auto', offset: 1 }} md="6">
@@ -47,6 +39,12 @@ const GraphicDesign = () => (
               className={GDStyle.img}
               alt="Graphic art spelling 'stories'"
             />
+          </Col>
+        </Row>
+        <Row className={GDStyle.links}>
+          <Col>
+            <a href="/marketing">Marketing</a> |{' '}
+            <a href="/socialmedia">Social Media</a>
           </Col>
         </Row>
       </section>

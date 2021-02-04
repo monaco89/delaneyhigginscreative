@@ -4,7 +4,6 @@
 }
 
 .bio {
-  background-color: white;
   color: black;
   font-size: calc(0.8vw + 1rem);
   /* font-weight: 400; */
@@ -19,6 +18,10 @@
   padding-bottom: 3.3vmax;
   padding-right: 2vw;
   padding-left: 14vw;
+}
+
+.homeSection {
+  background-color: lightgray;
 }
 
 .line {

@@ -19,7 +19,7 @@ const AboutMe = () => (
       }
     `}
     render={(data) => (
-      <section className="section">
+      <section className="section" className={AboutMeStyle.homeSection}>
         <Row>
           <Col>
             <h2 className={AboutMeStyle.title}>About Me</h2>
@@ -48,7 +48,7 @@ const AboutMe = () => (
                 three and a half years excelling in Visual Merchandising. She is
                 currently conquering Interior Design at Anna Kemper Atelier.
                 You'll always find her with a camera in her hand and music
-                playing in the background (On tuesdays it's my dad's radio
+                playing in the background (On tuesdays it's her dad's radio
                 show!)
               </p>
             </Col>

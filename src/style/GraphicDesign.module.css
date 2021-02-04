@@ -4,16 +4,23 @@
 
 .links {
   margin-top: 40px;
+  text-align: center;
+  font-size: calc(1.3vw + 1rem);
+  font-family: orpheuspro;
+  font-weight: 400;
+}
+
+.links a:hover {
   text-decoration: underline;
 }
 
 .body {
-  background-color: white;
   min-height: 100%;
-  padding: 2em;
+  padding: 1em;
   font-family: adobe-garamond-pro;
   font-size: calc(0.8vw + 1rem);
   line-height: 1.2;
+  text-align: center;
 }
 
 .section {

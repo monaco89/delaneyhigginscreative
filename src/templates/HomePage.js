@@ -14,9 +14,9 @@ export const HomePageTemplate = ({ body, childImageSharp }) => (
   <main className="Home">
     <HomeHero large backgroundImage={childImageSharp} />
     <Photography />
-    <GraphicDesign />
-    <Styling />
     <AboutMe body={body} />
+    <Styling />
+    <GraphicDesign />
     <InstagramFeed />
   </main>
 )
