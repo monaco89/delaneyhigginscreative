@@ -62,7 +62,7 @@ export class Navigation extends Component {
                 role="navigation"
                 className={`NavLink ${
                   this.props.location.pathname.includes('prop') ||
-                  this.props.location.pathname.includes('interiordesign') ||
+                  this.props.location.pathname.includes('interior') ||
                   this.props.location.pathname.includes('tabletop') ||
                   this.props.location.pathname.includes('fashion') ||
                   this.props.location.pathname.includes('holiday')

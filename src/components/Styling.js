@@ -53,7 +53,7 @@ const Styling = () => (
         >
           <Row>
             <Col xs="12" md="3" className={SectionStyle.link}>
-              <a href="/interiordesign">
+              <a href="/interior">
                 <Row className={SectionStyle.picture}>
                   <Img
                     fluid={data.interior.childImageSharp.fluid}
