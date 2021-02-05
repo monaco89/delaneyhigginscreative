@@ -3,11 +3,13 @@
 }
 
 .links {
-  margin-top: 40px;
+  margin-top: 0px;
   text-align: center;
   font-size: calc(1.3vw + 1rem);
   font-family: orpheuspro;
   font-weight: 400;
+  padding: 1em 0em 3em 0em;
+  background-color: lightgray;
 }
 
 .links a:hover {
@@ -25,13 +27,18 @@
 
 .section {
   background-color: lightgray;
-  padding: 2em;
-  padding-top: 8em;
-  padding-bottom: 8em;
+  padding-top: 8vmax;
+  padding-bottom: 3.3vmax;
+  padding-right: 2vw;
+  padding-left: 14vw;
 }
+
 @media (max-width: 600px) {
   .section {
-    padding: 2em;
+    padding-top: 3.3vmax;
+    padding-bottom: 3.3vmax;
+    padding-right: 7vw;
+    padding-left: 7vw;
   }
   .body {
     padding: 1em;

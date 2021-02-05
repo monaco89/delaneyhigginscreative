@@ -18,36 +18,38 @@ const GraphicDesign = () => (
       }
     `}
     render={(data) => (
-      <section className={GDStyle.section} style={{ marginTop: '1em' }}>
-        <Row style={{ alignItems: 'center' }}>
-          <Col sm={{ size: 'auto', offset: 0 }} md="5">
-            <div className={GDStyle.body}>
-              <Row>
-                <Col>
-                  <p>
-                    My graphic design skills lend themselves to brands looking
-                    to elevate their social, email, and site design.
-                    Additionally, I'm proficient at Photoshop and Lightroom.
-                  </p>
-                </Col>
-              </Row>
-            </div>
-          </Col>
-          <Col sm={{ size: 'auto', offset: 1 }} md="6">
-            <Img
-              fluid={data.file.childImageSharp.fluid}
-              className={GDStyle.img}
-              alt="Graphic art spelling 'stories'"
-            />
-          </Col>
-        </Row>
+      <>
+        <section className={GDStyle.section} style={{ marginTop: '1em' }}>
+          <Row style={{ alignItems: 'center' }}>
+            <Col sm="12" md="5">
+              <div className={GDStyle.body}>
+                <Row>
+                  <Col>
+                    <p>
+                      My graphic design skills lend themselves to brands looking
+                      to elevate their social, email, and site design.
+                      Additionally, I'm proficient at Photoshop and Lightroom.
+                    </p>
+                  </Col>
+                </Row>
+              </div>
+            </Col>
+            <Col sm="12" md={{ size: '5', offset: '1' }}>
+              <Img
+                fluid={data.file.childImageSharp.fluid}
+                className={GDStyle.img}
+                alt="Graphic art spelling 'stories'"
+              />
+            </Col>
+          </Row>
+        </section>
         <Row className={GDStyle.links}>
           <Col>
             <a href="/marketing">Marketing</a> |{' '}
             <a href="/socialmedia">Social Media</a>
           </Col>
         </Row>
-      </section>
+      </>
     )}
   />
 )

@@ -10,7 +10,7 @@ import Styling from '../components/Styling'
 import { Container } from 'reactstrap'
 import 'bootstrap/dist/css/bootstrap.min.css'
 
-export const HomePageTemplate = ({ body, childImageSharp }) => (
+const HomePageTemplate = ({ body, childImageSharp }) => (
   <main className="Home">
     <HomeHero large backgroundImage={childImageSharp} />
     <Photography />
