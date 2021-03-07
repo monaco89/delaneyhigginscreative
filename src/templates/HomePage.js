@@ -21,10 +21,10 @@ const HomePageTemplate = ({ body }) => (
   </main>
 )
 
-const HomePage = ({ data: { page, file } }) => (
+const HomePage = ({ data: { page } }) => (
   <Layout meta={page.frontmatter.meta || false}>
     <Container fluid={true}>
-      <HomePageTemplate {...page} {...file} body={page.html} />
+      <HomePageTemplate {...page} body={page.html} />
     </Container>
   </Layout>
 )
@@ -41,5 +41,13 @@ export const pageQuery = graphql`
         featuredImage
       }
     }
+    # file: file(relativePath: { eq: "header.jpg" }) {
+    #   childImageSharp {
+    #     # Specify the image processing specifications right in the query.
+    #     fluid(maxWidth: 1200, quality: 90) {
+    #       ...GatsbyImageSharpFluid
+    #     }
+    #   }
+    # }
   }
 `

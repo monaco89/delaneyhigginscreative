@@ -7,7 +7,6 @@ import '../style/Content.css'
 
 const encodeMarkdownURIs = (source = '') => {
   const markdownLinkRegex = /\[(.+)\]\((.+)(".+)\)/g
-  console.log(source)
   return source.replace(markdownLinkRegex, (match, linkURI) => {
     if (!linkURI) return match
     const replaced = match.replace(linkURI, encodeURI(linkURI))

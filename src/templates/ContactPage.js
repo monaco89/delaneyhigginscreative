@@ -38,7 +38,7 @@ const ContactPageTemplate = ({
                 rel="noopener noreferrer"
               >
                 <MapPin color="black" />
-                _____________________________ {address}
+                __________________________ {address}
               </a>
             )}
             {phone && (
@@ -49,7 +49,7 @@ const ContactPageTemplate = ({
             )}
             {email && (
               <a className="Contact--Details--Item" href={`mailto:${email}`}>
-                <Mail color="black" /> _______________________ {email}
+                <Mail color="black" /> ____________________ {email}
               </a>
             )}
           </div>

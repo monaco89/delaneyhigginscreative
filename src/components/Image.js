@@ -22,7 +22,6 @@ class Image extends React.Component {
       title = '',
       alt = ''
     } = this.props
-    console.log(src.images.fallback.src)
     let style = {}
     if (background) {
       style = {
