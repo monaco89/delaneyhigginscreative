@@ -31,23 +31,19 @@ const HomePage = ({ data: { page, file } }) => (
 
 export default HomePage
 
-export const pageQuery = graphql`
-  query HomePage($id: String!) {
-    page: markdownRemark(id: { eq: $id }) {
-      ...Meta
-      html
-      frontmatter {
-        title
-        featuredImage
-      }
-    }
-    file: file(relativePath: { eq: "header.jpg" }) {
-      childImageSharp {
-        # Specify the image processing specifications right in the query.
-        fluid(maxWidth: 1200, quality: 90) {
-          ...GatsbyImageSharpFluid
-        }
-      }
+export const pageQuery = graphql`query HomePage($id: String!) {
+  page: markdownRemark(id: {eq: $id}) {
+    ...Meta
+    html
+    frontmatter {
+      title
+      featuredImage
     }
   }
+  file: file(relativePath: {eq: "header.jpg"}) {
+    childImageSharp {
+      gatsbyImageData(quality: 90, layout: FULL_WIDTH)
+    }
+  }
+}
 `

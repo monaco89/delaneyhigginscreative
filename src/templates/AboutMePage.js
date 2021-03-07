@@ -3,7 +3,7 @@ import { graphql } from 'gatsby'
 import PageHeader from '../components/PageHeader'
 import Content from '../components/Content'
 import Layout from '../components/Layout'
-import Img from 'gatsby-image'
+import { GatsbyImage } from "gatsby-plugin-image";
 import { Row, Col } from 'reactstrap'
 import * as Styles from '../style/AboutMe.module.css'
 
@@ -25,7 +25,7 @@ const AboutMePageTemplate = ({
     <section className={`${Styles.pageSection} section Contact--Section1`}>
       <Row>
         <Col xs="12" md="4" className={Styles.col}>
-          <Img fluid={aboutMePic.childImageSharp.fluid} alt="about me" />
+          <GatsbyImage image={aboutMePic.childImageSharp.gatsbyImageData} alt="about me" />
         </Col>
         <Col>
           <Content source={body} />
@@ -51,24 +51,21 @@ const AboutMePage = ({ data: { page, aboutMePic } }) => (
 
 export default AboutMePage
 
-export const pageQuery = graphql`
-  query AboutMePage($id: String!) {
-    page: markdownRemark(id: { eq: $id }) {
-      ...Meta
-      html
-      frontmatter {
-        title
-        template
-        subtitle
-        featuredImage
-      }
-    }
-    aboutMePic: file(relativePath: { eq: "aboutme.jpg" }) {
-      childImageSharp {
-        fluid {
-          ...GatsbyImageSharpFluid
-        }
-      }
+export const pageQuery = graphql`query AboutMePage($id: String!) {
+  page: markdownRemark(id: {eq: $id}) {
+    ...Meta
+    html
+    frontmatter {
+      title
+      template
+      subtitle
+      featuredImage
     }
   }
+  aboutMePic: file(relativePath: {eq: "aboutme.jpg"}) {
+    childImageSharp {
+      gatsbyImageData(layout: FULL_WIDTH)
+    }
+  }
+}
 `

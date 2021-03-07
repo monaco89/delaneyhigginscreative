@@ -1,7 +1,7 @@
 import React from 'react'
 import { MapPin, Smartphone, Mail } from 'react-feather'
 import { graphql } from 'gatsby'
-import ContactMe from '../../static/images/contact_me.jpg'
+import { StaticImage } from 'gatsby-plugin-image'
 import PageHeader from '../components/PageHeader'
 import FormSimpleAjax from '../components/FormSimpleAjax'
 import Content from '../components/Content'
@@ -12,7 +12,6 @@ const ContactPageTemplate = ({
   body,
   title,
   subtitle,
-  featuredImage,
   address,
   phone,
   email
@@ -22,10 +21,11 @@ const ContactPageTemplate = ({
     <section className="section Contact--Section1">
       <div className="container Contact--Section1--Container">
         <div>
-          <img
-            src={ContactMe}
+          <StaticImage
+            src="../images/contact_me.jpg"
             style={{ width: '100%' }}
             alt="computer and notepad"
+            placeholder="blurred"
           />
           <div className="Contact--Details">
             {address && (

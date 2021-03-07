@@ -11,7 +11,7 @@ const HomeHero = ({ backgroundImage, large, className = '' }) => {
         <Image
           background
           resolutions="large"
-          src={backgroundImage.fluid.src}
+          src={backgroundImage.gatsbyImageData}
           alt="delaney higgins"
           size="cover"
         />

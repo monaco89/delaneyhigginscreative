@@ -1,5 +1,6 @@
 import React from 'react'
 import * as ImageStyle from '../style/Image.module.css'
+import { StaticImage } from 'gatsby-plugin-image'
 class Image extends React.Component {
   constructor(props) {
     super(props)
@@ -46,7 +47,7 @@ class Image extends React.Component {
           />
         )}
         {!background && (
-          <img
+          <StaticImage
             className={`${ImageStyle.BackgroundImage}.${className}`}
             src={fullSrc}
             srcSet={secSet}
@@ -55,6 +56,7 @@ class Image extends React.Component {
             onKeyDown={onClick}
             title={title}
             alt={alt}
+            placeholder="blurred"
           />
         )}
       </>
