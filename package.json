@@ -36,7 +36,6 @@
     "gatsby-transformer-yaml": "^2.4.13",
     "lodash": "^4.17.15",
     "modern-normalize": "^1.0.0",
-    "netlify-cms-app": "2.12.25",
     "postcss-preset-env": "^6.7.0",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
