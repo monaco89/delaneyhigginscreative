@@ -15,7 +15,7 @@ export const query = graphql`
   }
 `
 
-export default class Meta extends Component {
+class Meta extends Component {
   render() {
     const {
       title,
@@ -92,3 +92,5 @@ export default class Meta extends Component {
     )
   }
 }
+
+export default Meta

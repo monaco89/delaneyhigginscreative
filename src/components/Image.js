@@ -1,5 +1,5 @@
 import React from 'react'
-import ImageStyle from '../style/Image.module.css'
+import * as ImageStyle from '../style/Image.module.css'
 class Image extends React.Component {
   constructor(props) {
     super(props)

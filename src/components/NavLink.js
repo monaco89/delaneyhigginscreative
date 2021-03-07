@@ -3,8 +3,10 @@ import { Link } from 'gatsby'
 
 import '../style/NavLink.css'
 
-export default ({ className, children, ...props }) => (
+const NavLink = ({ className, children, ...props }) => (
   <Link {...props} className={`NavLink ${className || ''}`}>
     {children}
   </Link>
 )
+
+export default NavLink

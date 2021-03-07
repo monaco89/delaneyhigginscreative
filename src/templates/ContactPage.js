@@ -8,8 +8,7 @@ import Content from '../components/Content'
 import Layout from '../components/Layout'
 import '../style/ContactPage.css'
 
-// Export Template for use in CMS preview
-export const ContactPageTemplate = ({
+const ContactPageTemplate = ({
   body,
   title,
   subtitle,

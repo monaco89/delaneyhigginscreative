@@ -1,8 +1,8 @@
 import React from 'react'
 import { Row, Col } from 'reactstrap'
-import AboutMeStyle from '../style/AboutMe.module.css'
+import * as AboutMeStyle from '../style/AboutMe.module.css'
 import { StaticQuery, graphql } from 'gatsby'
-import Img from 'gatsby-image'
+import Image from 'gatsby-image'
 // import Content from '../components/Content'
 
 const AboutMe = () => (
@@ -28,20 +28,16 @@ const AboutMe = () => (
         </Row>
         <section className={AboutMeStyle.section}>
           <Row style={{ alignItems: 'center' }}>
-            <Col sm="12" md="5" className={AboutMeStyle.img}>
+            <Col sm="12" md="5">
               <a href="/about">
-                <Img
+                <Image
                   fluid={data.file.childImageSharp.fluid}
                   className={AboutMeStyle.dh}
                   alt="delaney higgins"
                 />
               </a>
             </Col>
-            <Col
-              sm="12"
-              md={{ size: '5', offset: '1' }}
-              className={AboutMeStyle.description}
-            >
+            <Col sm="12" md={{ size: '5', offset: '1' }}>
               <p className={AboutMeStyle.bio}>
                 Delaney specializes in styling, photography, and graphic design.
                 She has cultivated her skills with Anthropologie over the past

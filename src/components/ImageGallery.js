@@ -1,6 +1,6 @@
 import * as React from 'react'
 import styled from 'styled-components'
-import GalleryStyle from '../style/ImageGallery.module.css'
+import * as GalleryStyle from '../style/ImageGallery.module.css'
 import { Maximize, Minimize } from 'react-feather'
 
 const ExpandButton = styled((props) => <button {...props} />)`

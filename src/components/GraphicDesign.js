@@ -1,6 +1,6 @@
 import React from 'react'
 import { Row, Col } from 'reactstrap'
-import GDStyle from '../style/GraphicDesign.module.css'
+import * as GDStyle from '../style/GraphicDesign.module.css'
 import { StaticQuery, graphql } from 'gatsby'
 import Img from 'gatsby-image'
 

@@ -8,7 +8,7 @@ import Footer from './Footer'
 import 'modern-normalize/modern-normalize.css'
 import '../style/globalStyles.css'
 
-export default ({ children, meta, title }) => (
+const Layout = ({ children, meta, title }) => (
   <StaticQuery
     query={graphql`
       query IndexLayoutQuery {
@@ -49,3 +49,5 @@ export default ({ children, meta, title }) => (
     }}
   />
 )
+
+export default Layout

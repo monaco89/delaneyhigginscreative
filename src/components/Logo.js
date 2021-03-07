@@ -1,6 +1,6 @@
 import React from 'react'
 
-export default () => (
+const Logo = () => (
   <div
     className="Logo"
     style={{
@@ -8,3 +8,5 @@ export default () => (
     }}
   />
 )
+
+export default Logo

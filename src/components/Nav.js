@@ -7,7 +7,7 @@ import Logo from './Logo'
 
 import '../style/Nav.css'
 
-export class Navigation extends Component {
+class Navigation extends Component {
   state = {
     active: false,
     activeSubNav: false,
@@ -185,4 +185,6 @@ export class Navigation extends Component {
   }
 }
 
-export default () => <Location>{(route) => <Navigation {...route} />}</Location>
+const Nav = () => <Location>{(route) => <Navigation {...route} />}</Location>
+
+export default Nav
