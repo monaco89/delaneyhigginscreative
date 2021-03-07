@@ -18,10 +18,10 @@ const Photography = () => (
             <Row className={SectionStyle.picture}>
               <StaticImage
                 src="../images/people.jpg"
-                // className={SectionStyle.img}
                 alt="People"
                 placeholder="blurred"
-                // objectFit="cover"
+                transformOptions={{ fit: 'contain' }}
+                backgroundColor="transparent"
               />
             </Row>
             <Row>
@@ -34,10 +34,10 @@ const Photography = () => (
             <Row className={SectionStyle.picture}>
               <StaticImage
                 src="../images/treats.jpg"
-                className={SectionStyle.img}
                 alt="Treats"
-                objectFit="cover"
+                transformOptions={{ fit: 'contain' }}
                 placeholder="blurred"
+                backgroundColor="transparent"
               />
             </Row>
             <Row>
@@ -50,10 +50,10 @@ const Photography = () => (
             <Row className={SectionStyle.picture}>
               <StaticImage
                 src="../images/places.jpg"
-                className={SectionStyle.img}
                 alt="Places"
-                objectFit="cover"
+                transformOptions={{ fit: 'contain' }}
                 placeholder="blurred"
+                backgroundColor="transparent"
               />
             </Row>
             <Row>
@@ -66,10 +66,10 @@ const Photography = () => (
             <Row className={SectionStyle.picture}>
               <StaticImage
                 src="../images/things.jpg"
-                className={SectionStyle.img}
                 alt="Things"
-                objectFit="cover"
+                transformOptions={{ fit: 'contain' }}
                 placeholder="blurred"
+                backgroundColor="transparent"
               />
             </Row>
             <Row>

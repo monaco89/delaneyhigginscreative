@@ -21,9 +21,10 @@ const Styling = () => (
             <Row className={SectionStyle.picture}>
               <StaticImage
                 src="../images/interior.jpeg"
-                className={SectionStyle.img}
                 alt="Interior"
                 placeholder="blurred"
+                transformOptions={{ fit: 'contain' }}
+                backgroundColor="transparent"
               />
             </Row>
             <Row>
@@ -36,9 +37,10 @@ const Styling = () => (
             <Row className={SectionStyle.picture}>
               <StaticImage
                 src="../images/prop.jpg"
-                className={SectionStyle.img}
                 alt="Prop"
                 placeholder="blurred"
+                transformOptions={{ fit: 'contain' }}
+                backgroundColor="transparent"
               />
             </Row>
             <Row>
@@ -51,9 +53,10 @@ const Styling = () => (
             <Row className={SectionStyle.picture}>
               <StaticImage
                 src="../images/fashion.jpeg"
-                className={SectionStyle.img}
                 alt="Fashion"
                 placeholder="blurred"
+                transformOptions={{ fit: 'contain' }}
+                backgroundColor="transparent"
               />
             </Row>
             <Row>
@@ -66,9 +69,10 @@ const Styling = () => (
             <Row className={SectionStyle.picture}>
               <StaticImage
                 src="../images/holiday.jpg"
-                className={SectionStyle.img}
                 alt="Holiday"
                 placeholder="blurred"
+                transformOptions={{ fit: 'contain' }}
+                backgroundColor="transparent"
               />
             </Row>
             <Row>

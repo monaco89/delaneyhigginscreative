@@ -10,9 +10,9 @@ import Styling from '../components/Styling'
 import { Container } from 'reactstrap'
 import 'bootstrap/dist/css/bootstrap.min.css'
 
-const HomePageTemplate = ({ body, childImageSharp }) => (
+const HomePageTemplate = ({ body }) => (
   <main className="Home">
-    <HomeHero large backgroundImage={childImageSharp} />
+    <HomeHero large />
     <Photography />
     <AboutMe body={body} />
     <Styling />
@@ -31,19 +31,15 @@ const HomePage = ({ data: { page, file } }) => (
 
 export default HomePage
 
-export const pageQuery = graphql`query HomePage($id: String!) {
-  page: markdownRemark(id: {eq: $id}) {
-    ...Meta
-    html
-    frontmatter {
-      title
-      featuredImage
+export const pageQuery = graphql`
+  query HomePage($id: String!) {
+    page: markdownRemark(id: { eq: $id }) {
+      ...Meta
+      html
+      frontmatter {
+        title
+        featuredImage
+      }
     }
   }
-  file: file(relativePath: {eq: "header.jpg"}) {
-    childImageSharp {
-      gatsbyImageData(quality: 90, layout: FULL_WIDTH)
-    }
-  }
-}
 `

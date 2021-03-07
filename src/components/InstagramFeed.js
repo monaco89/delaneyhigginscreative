@@ -12,12 +12,7 @@ const InstagramFeed = () => (
           <StaticImage
             alt="instagram profile"
             src="../images/insta1.jpg"
-            style={{
-              objectFit: 'cover',
-              width: '100%',
-              height: '100%',
-              maxHeight: '15rem'
-            }}
+            layout="fullWidth"
           />
         </a>
       </Col>
@@ -26,12 +21,7 @@ const InstagramFeed = () => (
           <StaticImage
             alt="instagram profile"
             src="../images/insta2.jpg"
-            style={{
-              objectFit: 'cover',
-              width: '100%',
-              height: '100%',
-              maxHeight: '15rem'
-            }}
+            layout="fullWidth"
           />
         </a>
       </Col>
@@ -53,12 +43,7 @@ const InstagramFeed = () => (
           <StaticImage
             alt="instagram profile"
             src="../images/insta3.jpg"
-            style={{
-              objectFit: 'cover',
-              width: '100%',
-              height: '100%',
-              maxHeight: '15rem'
-            }}
+            layout="fullWidth"
           />
         </a>
       </Col>
@@ -67,12 +52,7 @@ const InstagramFeed = () => (
           <StaticImage
             alt="instagram profile"
             src="../images/insta4.jpg"
-            style={{
-              objectFit: 'cover',
-              width: '100%',
-              height: '100%',
-              maxHeight: '15rem'
-            }}
+            layout="fullWidth"
           />
         </a>
       </Col>
