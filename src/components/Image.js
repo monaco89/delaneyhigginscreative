@@ -1,6 +1,6 @@
 import React from 'react'
 import * as ImageStyle from '../style/Image.module.css'
-import { StaticImage } from 'gatsby-plugin-image'
+import { StaticImage, GatsbyImage } from 'gatsby-plugin-image'
 class Image extends React.Component {
   constructor(props) {
     super(props)
@@ -18,22 +18,15 @@ class Image extends React.Component {
       className = '',
       src,
       secSet = '',
-      fullSrc,
-      smallSrc,
       onClick,
       title = '',
       alt = ''
     } = this.props
-
-    fullSrc = `${src}${''}`
-    smallSrc = `${src}${''}`
-
+    console.log(src.images.fallback.src)
     let style = {}
     if (background) {
       style = {
-        backgroundImage: `url(${
-          this.state.isIntersecting ? fullSrc : smallSrc
-        })`,
+        backgroundImage: `url(${src.images.fallback.src})`,
         backgroundSize
       }
     }
@@ -45,13 +38,24 @@ class Image extends React.Component {
             className={`${ImageStyle.BackgroundImage} absolute ${ImageStyle.BackgroundImage}.${className}`}
             style={style}
           />
+          // <GatsbyImage
+          //   className={`${ImageStyle.BackgroundImage}.${className}`}
+          //   image={src}
+          //   // srcSet={secSet}
+          //   // sizes={'100vw'}
+          //   onClick={onClick}
+          //   onKeyDown={onClick}
+          //   title={title}
+          //   alt={alt}
+          //   placeholder="blurred"
+          // />
         )}
         {!background && (
-          <StaticImage
+          <GatsbyImage
             className={`${ImageStyle.BackgroundImage}.${className}`}
-            src={fullSrc}
-            srcSet={secSet}
-            sizes={'100vw'}
+            image={src}
+            // srcSet={secSet}
+            // sizes={'100vw'}
             onClick={onClick}
             onKeyDown={onClick}
             title={title}
