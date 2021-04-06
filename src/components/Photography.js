@@ -14,34 +14,18 @@ const Photography = () => (
     <section className={SectionStyle.section}>
       <Row>
         <Col xs="12" md="3" className={SectionStyle.link}>
-          <a href="/people">
+          <a href="/things">
             <Row className={SectionStyle.picture}>
               <StaticImage
-                src="../images/people.jpg"
-                alt="People"
-                placeholder="blurred"
-                transformOptions={{ fit: 'contain' }}
-                backgroundColor="transparent"
-              />
-            </Row>
-            <Row>
-              <h2 className={SectionStyle.subTitle}>People</h2>
-            </Row>
-          </a>
-        </Col>
-        <Col xs="12" md="3" className={SectionStyle.link}>
-          <a href="/treats">
-            <Row className={SectionStyle.picture}>
-              <StaticImage
-                src="../images/treats.jpg"
-                alt="Treats"
+                src="../images/things.jpg"
+                alt="Things"
                 transformOptions={{ fit: 'contain' }}
                 placeholder="blurred"
                 backgroundColor="transparent"
               />
             </Row>
             <Row>
-              <h2 className={SectionStyle.subTitle}>Treats</h2>
+              <h2 className={SectionStyle.subTitle}>Things</h2>
             </Row>
           </a>
         </Col>
@@ -62,18 +46,34 @@ const Photography = () => (
           </a>
         </Col>
         <Col xs="12" md="3" className={SectionStyle.link}>
-          <a href="/things">
+          <a href="/treats">
             <Row className={SectionStyle.picture}>
               <StaticImage
-                src="../images/things.jpg"
-                alt="Things"
+                src="../images/treats.jpg"
+                alt="Treats"
                 transformOptions={{ fit: 'contain' }}
                 placeholder="blurred"
                 backgroundColor="transparent"
               />
             </Row>
             <Row>
-              <h2 className={SectionStyle.subTitle}>Things</h2>
+              <h2 className={SectionStyle.subTitle}>Treats</h2>
+            </Row>
+          </a>
+        </Col>
+        <Col xs="12" md="3" className={SectionStyle.link}>
+          <a href="/people">
+            <Row className={SectionStyle.picture}>
+              <StaticImage
+                src="../images/people.jpg"
+                alt="People"
+                placeholder="blurred"
+                transformOptions={{ fit: 'contain' }}
+                backgroundColor="transparent"
+              />
+            </Row>
+            <Row>
+              <h2 className={SectionStyle.subTitle}>People</h2>
             </Row>
           </a>
         </Col>
