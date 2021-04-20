@@ -1,5 +1,5 @@
 import React from 'react'
-import { MapPin, Smartphone, Mail } from 'react-feather'
+import { FiMapPin, FiSmartphone, FiMail } from 'react-icons/fi'
 import { graphql } from 'gatsby'
 import { StaticImage } from 'gatsby-plugin-image'
 import PageHeader from '../components/PageHeader'
@@ -23,7 +23,7 @@ const ContactPageTemplate = ({
         <div>
           <StaticImage
             src="../images/contact_me.jpg"
-            style={{ width: '100%' }}
+            layout="fullWidth"
             alt="computer and notepad"
             placeholder="blurred"
           />
@@ -37,19 +37,19 @@ const ContactPageTemplate = ({
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <MapPin color="black" />
+                <FiMapPin color="black" />
                 __________________________ {address}
               </a>
             )}
             {phone && (
               <a className="Contact--Details--Item" href={`tel:${phone}`}>
-                <Smartphone color="black" />
-                _________________________________ {phone}
+                <FiSmartphone color="black" />
+                __________________________ {phone}
               </a>
             )}
             {email && (
               <a className="Contact--Details--Item" href={`mailto:${email}`}>
-                <Mail color="black" /> ____________________ {email}
+                <FiMail color="black" /> ______________________ {email}
               </a>
             )}
           </div>

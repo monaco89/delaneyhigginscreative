@@ -1,13 +1,13 @@
-import React, { Component } from 'react'
+import React from 'react'
 import { Location } from '@reach/router'
-import { Menu, X } from 'react-feather'
+import { IoMdMenu, IoMdClose } from 'react-icons/io'
 import { FaPinterest, FaInstagram } from 'react-icons/fa'
 import { FiMail } from 'react-icons/fi'
 import Logo from './Logo'
 
 import '../style/Nav.css'
 
-class Navigation extends Component {
+class Navigation extends React.Component {
   state = {
     active: false,
     activeSubNav: false,
@@ -80,9 +80,6 @@ class Navigation extends Component {
                   <NavLink to="/interior" className="Nav--GroupLink">
                     Interior
                   </NavLink>
-                  {/* <NavLink to="/tabletop" className="Nav--GroupLink">
-                    Tabletop
-                  </NavLink> */}
                   <NavLink to="/fashion" className="Nav--GroupLink">
                     Fashion
                   </NavLink>
@@ -125,9 +122,6 @@ class Navigation extends Component {
                   <NavLink to="/things" className="Nav--GroupLink">
                     Things
                   </NavLink>
-                  {/* <NavLink to="/interiors" className="Nav--GroupLink">
-                    Interiors
-                  </NavLink> */}
                 </div>
               </span>
             </div>
@@ -177,7 +171,7 @@ class Navigation extends Component {
             onClick={this.handleMenuToggle}
             onKeyDown={this.handleMenuToggle}
           >
-            {active ? <X /> : <Menu />}
+            {active ? <IoMdClose /> : <IoMdMenu />}
           </button>
         </div>
       </nav>

@@ -1,7 +1,7 @@
 import * as React from 'react'
 import styled from 'styled-components'
 import * as GalleryStyle from '../style/ImageGallery.module.css'
-import { Maximize, Minimize } from 'react-feather'
+import { FiMaximize, FiMinimize } from 'react-icons/fi'
 
 const ExpandButton = styled((props) => <button {...props} />)`
   background: none;
@@ -43,7 +43,7 @@ const ImageGallery = ({ images }) => {
 const ImageItem = ({ image, focus }) => {
   const isMobile = window.innerWidth <= 768
   const [expanded, setExpanded] = React.useState(false)
-  const ExpandIcon = expanded ? Minimize : Maximize
+  const ExpandIcon = expanded ? FiMinimize : FiMaximize
 
   return (
     <GalleryImageListItem expanded={expanded}>
