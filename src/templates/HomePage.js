@@ -2,7 +2,7 @@ import React from 'react'
 import { graphql } from 'gatsby'
 import HomeHero from '../components/HomeHero'
 import AboutMe from '../components/AboutMe'
-import GraphicDesign from '../components/GraphicDesign'
+import Design from '../components/Design'
 import InstagramFeed from '../components/InstagramFeed'
 import Layout from '../components/Layout'
 import Photography from '../components/Photography'
@@ -16,7 +16,7 @@ const HomePageTemplate = ({ body }) => (
     <Photography />
     <AboutMe body={body} />
     <Styling />
-    <GraphicDesign />
+    <Design />
     <InstagramFeed />
   </main>
 )
@@ -41,13 +41,5 @@ export const pageQuery = graphql`
         featuredImage
       }
     }
-    # file: file(relativePath: { eq: "header.jpg" }) {
-    #   childImageSharp {
-    #     # Specify the image processing specifications right in the query.
-    #     fluid(maxWidth: 1200, quality: 90) {
-    #       ...GatsbyImageSharpFluid
-    #     }
-    #   }
-    # }
   }
 `

@@ -62,7 +62,7 @@ class Navigation extends Component {
                 role="navigation"
                 className={`NavLink ${
                   this.props.location.pathname.includes('prop') ||
-                  this.props.location.pathname.includes('interior') ||
+                  this.props.location.pathname === '/interior' ||
                   this.props.location.pathname.includes('tabletop') ||
                   this.props.location.pathname.includes('fashion') ||
                   this.props.location.pathname.includes('holiday')
@@ -133,27 +133,27 @@ class Navigation extends Component {
             </div>
             <div
               className={`Nav--Group ${
-                this.state.activeSubNav === 'graphicdesign' ? 'active' : ''
+                this.state.activeSubNav === 'design' ? 'active' : ''
               }`}
             >
               <span
                 role="navigation"
                 className={`NavLink ${
-                  this.props.location.pathname.includes('marketing') ||
-                  this.props.location.pathname.includes('socialmedia')
+                  this.props.location.pathname.includes('interiordesign') ||
+                  this.props.location.pathname.includes('graphicdesign')
                     ? 'active'
                     : ''
                 }`}
-                onClick={() => this.toggleSubNav('graphicdesign')}
-                onKeyDown={() => this.toggleSubNav('graphicdesign')}
+                onClick={() => this.toggleSubNav('design')}
+                onKeyDown={() => this.toggleSubNav('design')}
               >
-                Graphic Design
+                Design
                 <div className="Nav--GroupLinks">
-                  <NavLink to="/marketing" className="Nav--GroupLink">
-                    Marketing
+                  <NavLink to="/interiordesign" className="Nav--GroupLink">
+                    Interior Design
                   </NavLink>
-                  <NavLink to="/socialmedia" className="Nav--GroupLink">
-                    Social Media
+                  <NavLink to="/graphicdesign" className="Nav--GroupLink">
+                    Graphic Design
                   </NavLink>
                 </div>
               </span>

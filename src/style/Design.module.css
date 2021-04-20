@@ -1,0 +1,10 @@
+.section {
+  background-color: lightgray;
+  padding: 5vmax;
+}
+
+@media (max-width: 600px) {
+  .section {
+    padding: 3.3vmax;
+  }
+}
