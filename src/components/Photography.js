@@ -14,18 +14,18 @@ const Photography = () => (
     <section className={SectionStyle.section}>
       <Row>
         <Col xs="12" md="3" className={SectionStyle.link}>
-          <a href="/things">
+          <a href="/product">
             <Row className={SectionStyle.picture}>
               <StaticImage
                 src="../images/things.jpg"
-                alt="Things"
+                alt="Product"
                 transformOptions={{ fit: 'contain' }}
                 placeholder="blurred"
                 backgroundColor="transparent"
               />
             </Row>
             <Row>
-              <h2 className={SectionStyle.subTitle}>Things</h2>
+              <h2 className={SectionStyle.subTitle}>Product</h2>
             </Row>
           </a>
         </Col>

@@ -100,7 +100,7 @@ class Navigation extends React.Component {
                   this.props.location.pathname.includes('people') ||
                   this.props.location.pathname.includes('places') ||
                   this.props.location.pathname.includes('treats') ||
-                  this.props.location.pathname.includes('things') ||
+                  this.props.location.pathname.includes('product') ||
                   this.props.location.pathname.includes('interiors')
                     ? 'active'
                     : ''
@@ -119,8 +119,8 @@ class Navigation extends React.Component {
                   <NavLink to="/treats" className="Nav--GroupLink">
                     Treats
                   </NavLink>
-                  <NavLink to="/things" className="Nav--GroupLink">
-                    Things
+                  <NavLink to="/product" className="Nav--GroupLink">
+                    Product
                   </NavLink>
                 </div>
               </span>
