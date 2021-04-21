@@ -18,20 +18,14 @@ const HomeHero = ({ large, className = '' }) => (
       //   fit: 'fill'
       // }}
     />
-    <div
-      style={{
-        // By using the same grid area for both, they are stacked on top of each other
-        gridArea: '1/1',
-        position: 'relative',
-        placeItems: 'center',
-        display: 'grid'
-      }}
-    >
+    <div className="logoContainer">
       <StaticImage
         src="../images/name.png"
         className="logo"
         alt="delaney higgins"
+        objectFit="contain"
       />
+      <h1 className="logoHeader">Creative Portfolio</h1>
     </div>
   </div>
 )

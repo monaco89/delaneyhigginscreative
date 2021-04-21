@@ -32,7 +32,7 @@ class Meta extends Component {
     } = this.props
 
     return (
-      <Helmet>
+      <Helmet htmlAttributes={{ lang: 'en' }}>
         {title && <title>{title}</title>}
         {title && <meta property="og:title" content={title} />}
         {description && <meta name="description" content={description} />}

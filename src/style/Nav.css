@@ -12,9 +12,9 @@
   color: black;
 }
 
-.Nav a:hover {
+/* .Nav a:hover {
   color: #898888;
-}
+} */
 
 .Nav--Container {
   display: flex;
@@ -62,6 +62,7 @@
 .NavLink:focus {
   border-bottom-color: #898888;
   text-decoration: none;
+  /* color: #898888 */
 }
 
 .Nav--Group {
@@ -97,12 +98,20 @@
   max-height: 0;
   overflow: hidden;
   transition: 0.3s ease all;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 .Nav--Group.active .Nav--GroupLinks {
   max-height: 100vh;
   opacity: 1;
   transition: 0.6s ease all;
+}
+
+.Nav--GroupLink:focus,
+.Nav--GroupLink:hover {
+  background-color: #898888;
+  color: white !important;
+  transition: 0.3s ease all;
 }
 
 .Nav--Group.active .Nav--GroupParent::after {

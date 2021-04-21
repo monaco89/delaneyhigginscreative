@@ -30,7 +30,6 @@ const Layout = ({ children, meta, title }) => (
             {title}
             {/* Add font link tags here */}
           </Helmet>
-
           <Meta
             absoluteImageUrl={
               socialMediaCard && socialMediaCard.image && socialMediaCard.image
@@ -38,11 +37,8 @@ const Layout = ({ children, meta, title }) => (
             {...meta}
             {...data.settingsYaml}
           />
-
           <Nav />
-
           <>{children}</>
-
           <Footer />
         </>
       )
