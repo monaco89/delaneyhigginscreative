@@ -11,7 +11,7 @@ const HomeHero = () => (
       }}
       layout="fullWidth"
       alt="Delaney Higgins Creative Banner"
-      src={'../images/banner.jpg'}
+      src={'../images/Banner.jpg'}
       formats={['auto', 'webp', 'avif']}
     />
     <div className="logoContainer">
