@@ -17,6 +17,11 @@
   margin: 0 auto;
 }
 
+.section a,
+.section a:hover {
+  color: black;
+}
+
 .line {
   height: 3px;
   background: black;

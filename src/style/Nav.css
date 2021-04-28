@@ -3,18 +3,8 @@
   position: absolute;
   top: 0;
   z-index: 2;
-  /* border-bottom: 1px solid var(--lightGrey); */
-  /* box-shadow: 0 2px 5px rgba(0, 0, 0, 0.025); */
   width: 100%;
 }
-
-.Nav a {
-  color: black;
-}
-
-/* .Nav a:hover {
-  color: #898888;
-} */
 
 .Nav--Container {
   display: flex;
@@ -35,7 +25,6 @@
 }
 
 .Nav .Logo {
-  /* margin-right: 3rem; */
   position: relative;
   background-size: 70%;
 }
@@ -54,7 +43,7 @@
   text-decoration: none;
   border-bottom: 2px solid;
   border-bottom-color: transparent;
-  font-size: 1.2rem;
+  font-size: 1.3rem;
 }
 
 .NavLink:hover,
@@ -62,7 +51,11 @@
 .NavLink:focus {
   border-bottom-color: #898888;
   text-decoration: none;
-  /* color: #898888 */
+}
+
+.NavLink:hover,
+.NavLink:focus {
+  color: #898888;
 }
 
 .Nav--Group {
@@ -101,6 +94,11 @@
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
+.Nav--GroupLinks a,
+.Nav--GroupLinks a:visited {
+  color: black;
+}
+
 .Nav--Group.active .Nav--GroupLinks {
   max-height: 100vh;
   opacity: 1;
@@ -110,7 +108,6 @@
 .Nav--GroupLink:focus,
 .Nav--GroupLink:hover {
   background-color: #898888;
-  color: white !important;
   transition: 0.3s ease all;
 }
 

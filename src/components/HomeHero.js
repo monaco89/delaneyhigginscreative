@@ -12,20 +12,14 @@ const HomeHero = ({ large, className = '' }) => (
       layout="fullWidth"
       // aspectRatio={3 / 1}
       alt="Delaney Higgins Creative Banner"
-      src={'../images/header.jpg'}
+      src={'../images/banner.jpg'}
       formats={['auto', 'webp', 'avif']}
       // transformOptions={{
       //   fit: 'fill'
       // }}
     />
     <div className="logoContainer">
-      <StaticImage
-        src="../images/name.png"
-        className="logo"
-        alt="delaney higgins"
-        objectFit="contain"
-      />
-      <h1 className="logoHeader">Creative Portfolio</h1>
+      <h1 className="logoHeader">Delaney Higgins Creative Co.</h1>
     </div>
   </div>
 )

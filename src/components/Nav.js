@@ -49,9 +49,20 @@ class Navigation extends React.Component {
           <a href="/" onClick={this.handleLinkClick} className="mobileLogo">
             <Logo />
           </a>
+          <a href="/" onClick={this.handleLinkClick} className="desktopLogo">
+            <Logo />
+          </a>
           <div className="Nav--Links">
-            <a href="/" onClick={this.handleLinkClick} className="desktopLogo">
-              <Logo />
+            <a
+              href="/"
+              className={`NavLink ${
+                this.props.location.pathname === '/' ? 'active' : ''
+              }`}
+              style={{
+                color: this.props.location.pathname === '/' ? 'white' : 'black'
+              }}
+            >
+              Home
             </a>
             <div
               className={`Nav--Group ${
@@ -71,6 +82,10 @@ class Navigation extends React.Component {
                 }`}
                 onClick={() => this.toggleSubNav('styling')}
                 onKeyDown={() => this.toggleSubNav('styling')}
+                style={{
+                  color:
+                    this.props.location.pathname === '/' ? 'white' : 'black'
+                }}
               >
                 Styling
                 <div className="Nav--GroupLinks">
@@ -107,6 +122,10 @@ class Navigation extends React.Component {
                 }`}
                 onClick={() => this.toggleSubNav('photography')}
                 onKeyDown={() => this.toggleSubNav('photography')}
+                style={{
+                  color:
+                    this.props.location.pathname === '/' ? 'white' : 'black'
+                }}
               >
                 Photography
                 <div className="Nav--GroupLinks">
@@ -140,6 +159,10 @@ class Navigation extends React.Component {
                 }`}
                 onClick={() => this.toggleSubNav('design')}
                 onKeyDown={() => this.toggleSubNav('design')}
+                style={{
+                  color:
+                    this.props.location.pathname === '/' ? 'white' : 'black'
+                }}
               >
                 Design
                 <div className="Nav--GroupLinks">
@@ -152,17 +175,38 @@ class Navigation extends React.Component {
                 </div>
               </span>
             </div>
-            <NavLink to="/about/">About Me</NavLink>
-            <NavLink to="https://instagram.com/higginsdelaney" target="_blank">
+            <NavLink
+              to="/about/"
+              style={{
+                color: this.props.location.pathname === '/' ? 'white' : 'black'
+              }}
+            >
+              About Me
+            </NavLink>
+            <NavLink
+              to="https://instagram.com/higginsdelaney"
+              target="_blank"
+              style={{
+                color: this.props.location.pathname === '/' ? 'white' : 'black'
+              }}
+            >
               <FaInstagram />
             </NavLink>
             <NavLink
               to="https://www.pinterest.com/delaneyhigginscreative"
               target="_blank"
+              style={{
+                color: this.props.location.pathname === '/' ? 'white' : 'black'
+              }}
             >
               <FaPinterest />
             </NavLink>
-            <NavLink to="/contact/">
+            <NavLink
+              to="/contact/"
+              style={{
+                color: this.props.location.pathname === '/' ? 'white' : 'black'
+              }}
+            >
               <FiMail />
             </NavLink>
           </div>

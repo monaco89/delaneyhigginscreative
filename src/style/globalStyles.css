@@ -45,11 +45,11 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
-a:visited,
+/* a:visited,
 a,
 a:hover {
-  color: black !important;
-}
+  color: black;
+} */
 
 strong {
   font-weight: 600;
@@ -71,7 +71,7 @@ h6 {
 }
 
 h2 {
-  font-family: adorn-garland, sans-serif;
+  font-family: mina, sans-serif;
   font-weight: 400;
   font-style: normal;
 }
@@ -276,6 +276,11 @@ blockquote {
   margin-top: 10%;
   margin-bottom: 10%;
   font-family: orpheuspro;
+  color: black;
+}
+
+.followAlong:hover {
+  color: black;
 }
 
 .Logo {
@@ -283,8 +288,8 @@ blockquote {
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
-  height: 4rem;
-  width: 4rem;
+  height: 9rem;
+  width: 9rem;
   align-items: center;
   justify-content: center;
 }
