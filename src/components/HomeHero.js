@@ -2,7 +2,7 @@ import React from 'react'
 import { StaticImage } from 'gatsby-plugin-image'
 import '../style/HomeHero.css'
 
-const HomeHero = ({ large, className = '' }) => (
+const HomeHero = () => (
   <div className="HomeHero">
     <StaticImage
       style={{
@@ -10,13 +10,9 @@ const HomeHero = ({ large, className = '' }) => (
         maxHeight: 800
       }}
       layout="fullWidth"
-      // aspectRatio={3 / 1}
       alt="Delaney Higgins Creative Banner"
       src={'../images/banner.jpg'}
       formats={['auto', 'webp', 'avif']}
-      // transformOptions={{
-      //   fit: 'fill'
-      // }}
     />
     <div className="logoContainer">
       <h1 className="logoHeader">Delaney Higgins Creative Co.</h1>
