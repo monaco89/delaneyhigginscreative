@@ -35,6 +35,9 @@
     margin-left: 0px;
     max-width: 200px;
   }
+  .logoHeader {
+    font-size: 2rem;
+  }
   .logoContainer {
     place-items: center;
   }

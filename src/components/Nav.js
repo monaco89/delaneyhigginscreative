@@ -215,7 +215,16 @@ class Navigation extends React.Component {
             onClick={this.handleMenuToggle}
             onKeyDown={this.handleMenuToggle}
           >
-            {active ? <IoMdClose /> : <IoMdMenu />}
+            {active ? (
+              <IoMdClose />
+            ) : (
+              <IoMdMenu
+                style={{
+                  color:
+                    this.props.location.pathname === '/' ? 'white' : 'black'
+                }}
+              />
+            )}
           </button>
         </div>
       </nav>

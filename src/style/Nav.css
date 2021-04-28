@@ -147,6 +147,11 @@
     margin-left: auto;
     z-index: 1;
   }
+  .Nav--MenuButton svg {
+    width: 35px;
+    height: 50px;
+  }
+
   .Nav .Logo {
     z-index: 1;
   }
@@ -183,6 +188,7 @@
   .Nav .NavLink {
     font-size: 1.8rem;
     font-weight: 300;
+    color: black !important;
   }
 
   .Nav .NavLink:nth-of-type(2) {
