@@ -7,7 +7,7 @@ const Styling = () => (
   <>
     <Row>
       <Col>
-        <h2 className={SectionStyle.title}>Styling</h2>
+        <h2 className={SectionStyle.title}>styling</h2>
         <hr className={SectionStyle.line} />
       </Col>
     </Row>

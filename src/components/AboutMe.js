@@ -8,7 +8,7 @@ const AboutMe = () => (
   <section className={`${AboutMeStyle.homeSection} section`}>
     <Row>
       <Col>
-        <h2 className={AboutMeStyle.title}>About Me</h2>
+        <h2 className={AboutMeStyle.title}>about me</h2>
         <hr className={AboutMeStyle.line} />
       </Col>
     </Row>

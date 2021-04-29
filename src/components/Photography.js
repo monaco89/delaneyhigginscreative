@@ -7,7 +7,7 @@ const Photography = () => (
   <>
     <Row>
       <Col>
-        <h2 className={SectionStyle.title}>Photography</h2>
+        <h2 className={SectionStyle.title}>photography</h2>
         <hr className={SectionStyle.line} />
       </Col>
     </Row>

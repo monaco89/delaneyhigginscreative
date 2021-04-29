@@ -1,7 +1,7 @@
 ---
 template: AboutMePage
 slug: about
-title: About Me
+title: about Me
 subtitle: ''
 featuredImage: ''
 meta:
