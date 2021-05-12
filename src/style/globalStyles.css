@@ -292,6 +292,7 @@ blockquote {
   width: 9rem;
   align-items: center;
   justify-content: center;
+  padding-top: 10px;
 }
 
 .footer {
