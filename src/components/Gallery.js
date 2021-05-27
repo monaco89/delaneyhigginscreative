@@ -1,51 +1,46 @@
-import React, { useState, useCallback } from 'react'
+import React from 'react'
+import { QueryClient, QueryClientProvider } from 'react-query'
 import Layout from './Layout'
-import axios from 'axios'
 import PageHeader from './PageHeader'
-import ImageGallery from './ImageGallery'
+import ImagesSection from './ImagesSection'
+
+const queryClient = new QueryClient()
 
 const Gallery = ({ tag, url, title }) => {
-  const [images, setImages] = useState([])
-  const [loaded, setIsLoaded] = useState(false)
-
-  const fetchImages = useCallback(() => {
-    axios
-      .get(`https://res.cloudinary.com/nickmonaco/image/list/${tag}.json`)
-      .then((res) => {
-        setImages(res.data.resources)
-        setIsLoaded(true)
-      })
-  }, [tag])
-
-  React.useEffect(() => {
-    fetchImages()
-  }, [fetchImages])
-
   return (
-    <Layout
-      meta={{
-        canonicalLink: url,
-        title,
-        description: `${title} images by delaney higgins`
-      }}
-    >
-      <section className="section" style={{ backgroundColor: title === "Social Media" ? "lightgray" : "white"}}>
-        <div className="container">
-          <div className="content">
-            <PageHeader title={title} subtitle="" />
-            {loaded ? (
-              images ? (
-                <ImageGallery images={images} />
-              ) : (
-                'No Pictures Available'
-              )
-            ) : (
-              'Loading...'
-            )}
+    <QueryClientProvider client={queryClient}>
+      <Layout
+        meta={{
+          canonicalLink: url,
+          title,
+          description: `${title} images by delaney higgins`
+        }}
+      >
+        <section
+          className="section"
+          style={{
+            backgroundColor: title === 'graphic design' ? 'lightgray' : 'white'
+          }}
+        >
+          <div className="container">
+            <div className="content">
+              <PageHeader title={title} />
+              <ImagesSection tag={tag} />
+              {tag === 'graphicdesign' && (
+                <>
+                  <PageHeader title="Typography" section />
+                  <ImagesSection tag="typography" />
+                  <PageHeader title="Social Media Graphics" section />
+                  <ImagesSection tag="socialmediagraphics" />
+                  <PageHeader title="Web and Branding Graphics" section />
+                  <ImagesSection tag="webandbranding" />
+                </>
+              )}
+            </div>
           </div>
-        </div>
-      </section>
-    </Layout>
+        </section>
+      </Layout>
+    </QueryClientProvider>
   )
 }
 

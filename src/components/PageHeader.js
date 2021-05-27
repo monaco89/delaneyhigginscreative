@@ -6,9 +6,10 @@ import '../style/PageHeader.css'
 const PageHeader = ({
   title,
   subtitle,
-  backgroundImage,
+  // backgroundImage,
   large,
-  className = ''
+  className = '',
+  section
 }) => {
   if (large) className += ' PageHeader-large'
   return (
@@ -23,7 +24,12 @@ const PageHeader = ({
         />
       )} */}
       <div className="container relative">
-        <h1 className="PageHeader--Title" style={{ color: title === "Social Media" ? "black" : ""}}>{title}</h1>
+        <h1
+          className={section ? 'PageHeader--SectionTitle' : 'PageHeader--Title'}
+          style={{ color: title === 'Social Media' ? 'black' : '' }}
+        >
+          {title}
+        </h1>
         <hr className="PageHeader--Line" />
         {subtitle && (
           <Content className="PageHeader--Subtitle" src={subtitle} />

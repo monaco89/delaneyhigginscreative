@@ -19,6 +19,14 @@
   font-family: mina, sans-serif;
 }
 
+.PageHeader--SectionTitle {
+  margin-top: 15px;
+  font-size: calc(1.3vw + 1rem);
+  font-family: orpheuspro;
+  font-weight: 400;
+  color: black;
+}
+
 .PageHeader--Line {
   height: 3px;
   background: black;
