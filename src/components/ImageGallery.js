@@ -1,9 +1,9 @@
-import * as React from 'react'
-import styled from 'styled-components'
-import * as GalleryStyle from '../style/ImageGallery.module.css'
-import { FiMaximize, FiMinimize } from 'react-icons/fi'
+import * as React from 'react';
+import styled from 'styled-components';
+import { FiMaximize, FiMinimize } from 'react-icons/fi';
+import * as GalleryStyle from '../style/ImageGallery.module.css';
 
-const ExpandButton = styled((props) => <button {...props} />)`
+const ExpandButton = styled((props) => <button type="button" {...props} />)`
   background: none;
   border: none;
   cursor: pointer;
@@ -12,7 +12,7 @@ const ExpandButton = styled((props) => <button {...props} />)`
   position: absolute;
   top: 5px;
   right: 5px;
-`
+`;
 
 const GalleryImageListItem = styled.div`
   position: ${(props) => (props.expanded ? 'absolute' : 'relative')};
@@ -26,10 +26,10 @@ const GalleryImageListItem = styled.div`
   right: 0;
   margin-left: 0;
   margin-right: 0;
-`
+`;
 
 const ImageGallery = ({ images }) => {
-  const focus = React.createRef()
+  const focus = React.createRef();
 
   return (
     <div className={GalleryStyle.photos} ref={focus}>
@@ -37,13 +37,13 @@ const ImageGallery = ({ images }) => {
         <ImageItem image={image} key={image.public_id} focus={focus} />
       ))}
     </div>
-  )
-}
+  );
+};
 
 const ImageItem = ({ image, focus }) => {
-  const isMobile = window.innerWidth <= 768
-  const [expanded, setExpanded] = React.useState(false)
-  const ExpandIcon = expanded ? FiMinimize : FiMaximize
+  const isMobile = window.innerWidth <= 768;
+  const [expanded, setExpanded] = React.useState(false);
+  const ExpandIcon = expanded ? FiMinimize : FiMaximize;
 
   return (
     <GalleryImageListItem expanded={expanded}>
@@ -55,11 +55,11 @@ const ImageItem = ({ image, focus }) => {
         {!isMobile && (
           <ExpandButton
             onClick={() => {
-              setExpanded(!expanded)
+              setExpanded(!expanded);
               !expanded &&
                 focus.current.scrollIntoView({
-                  behavior: 'smooth'
-                })
+                  behavior: 'smooth',
+                });
             }}
             aria-label={expanded ? 'Collapse image' : 'Expand image'}
           >
@@ -68,7 +68,7 @@ const ImageItem = ({ image, focus }) => {
         )}
       </figure>
     </GalleryImageListItem>
-  )
-}
+  );
+};
 
-export default ImageGallery
+export default ImageGallery;

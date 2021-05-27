@@ -1,6 +1,6 @@
-import React from 'react'
-import Gallery from '../components/Gallery'
+import React from 'react';
+import Gallery from '../components/Gallery';
 
-const PlacesPage = () => <Gallery tag="places" url="places" title="places" />
+const PlacesPage = () => <Gallery tag="places" url="places" title="places" />;
 
-export default PlacesPage
+export default PlacesPage;
