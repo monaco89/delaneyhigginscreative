@@ -1,9 +1,10 @@
 import React from 'react';
 import { useQuery } from 'react-query';
 import { loadImagesByTag } from '../utils/api';
+import ImageCarousel from './ImageCarousel';
 import ImageGallery from './ImageGallery';
 
-const ImageSection = ({ tag }) => {
+const ImageSection = ({ tag, carousel }) => {
   const { isLoading, isError, data, error } = useQuery(`images-${tag}`, () =>
     loadImagesByTag(tag)
   );
@@ -16,11 +17,18 @@ const ImageSection = ({ tag }) => {
     return <span>Error: {error.message}</span>;
   }
 
-  console.log(data);
   return (
     <>
       {isError && <p>{error.message}</p>}
-      {!isLoading ? <ImageGallery images={data || []} /> : 'Loading...'}
+      {!isLoading ? (
+        carousel ? (
+          <ImageCarousel images={data || []} />
+        ) : (
+          <ImageGallery images={data || []} />
+        )
+      ) : (
+        'Loading...'
+      )}
     </>
   );
 };

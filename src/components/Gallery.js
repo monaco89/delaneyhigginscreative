@@ -1,10 +1,10 @@
-import React from 'react'
-import { QueryClient, QueryClientProvider } from 'react-query'
-import Layout from './Layout'
-import PageHeader from './PageHeader'
-import ImagesSection from './ImagesSection'
+import React from 'react';
+import { QueryClient, QueryClientProvider } from 'react-query';
+import Layout from './Layout';
+import PageHeader from './PageHeader';
+import ImagesSection from './ImagesSection';
 
-const queryClient = new QueryClient()
+const queryClient = new QueryClient();
 
 const Gallery = ({ tag, url, title }) => {
   return (
@@ -13,13 +13,13 @@ const Gallery = ({ tag, url, title }) => {
         meta={{
           canonicalLink: url,
           title,
-          description: `${title} images by delaney higgins`
+          description: `${title} images by delaney higgins`,
         }}
       >
         <section
           className="section"
           style={{
-            backgroundColor: title === 'graphic design' ? 'lightgray' : 'white'
+            backgroundColor: title === 'graphic design' ? 'lightgray' : 'white',
           }}
         >
           <div className="container">
@@ -29,11 +29,11 @@ const Gallery = ({ tag, url, title }) => {
               {tag === 'graphicdesign' && (
                 <>
                   <PageHeader title="Typography" section />
-                  <ImagesSection tag="typography" />
+                  <ImagesSection tag="typography" carousel />
                   <PageHeader title="Social Media Graphics" section />
-                  <ImagesSection tag="socialmediagraphics" />
+                  <ImagesSection tag="socialmediagraphics" carousel />
                   <PageHeader title="Web and Branding Graphics" section />
-                  <ImagesSection tag="webandbranding" />
+                  <ImagesSection tag="webandbranding" carousel />
                 </>
               )}
             </div>
@@ -41,7 +41,7 @@ const Gallery = ({ tag, url, title }) => {
         </section>
       </Layout>
     </QueryClientProvider>
-  )
-}
+  );
+};
 
-export default Gallery
+export default Gallery;
