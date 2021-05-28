@@ -1,9 +1,9 @@
-require('dotenv').config()
+require('dotenv').config();
 
 module.exports = {
   siteMetadata: {
     title: 'Delaney Higgins',
-    siteUrl: 'https://delaneyhiggins.com'
+    siteUrl: 'https://delaneyhiggins.com',
   },
   plugins: [
     'gatsby-plugin-react-helmet',
@@ -21,24 +21,29 @@ module.exports = {
         // Enables "Add to Homescreen" prompt and disables browser UI (including back button)
         // see https://developers.google.com/web/fundamentals/web-app-manifest/#display
         display: 'standalone',
-        icon: `${__dirname}/static/images/miniLogo.png` // This path is relative to the root of the site.
-      }
+        icon: `${__dirname}/static/images/miniLogo.png`, // This path is relative to the root of the site.
+      },
     },
-
+    {
+      resolve: `gatsby-plugin-canonical-urls`,
+      options: {
+        siteUrl: `https://delaneyhiggins.com,
+      },
+    },
     // Add static assets before markdown files
     {
       resolve: 'gatsby-source-filesystem',
       options: {
         path: `${__dirname}/static/images`,
-        name: 'images'
-      }
+        name: 'images',
+      },
     },
     {
       resolve: 'gatsby-source-filesystem',
       options: {
         path: `${__dirname}/content`,
-        name: 'pages'
-      }
+        name: 'pages',
+      },
     },
 
     // images
@@ -55,21 +60,21 @@ module.exports = {
           {
             resolve: 'gatsby-remark-images',
             options: {
-              maxWidth: 800
-            }
+              maxWidth: 800,
+            },
           },
-          `gatsby-remark-responsive-iframe`
-        ]
-      }
+          `gatsby-remark-responsive-iframe`,
+        ],
+      },
     },
     {
-      resolve: `gatsby-plugin-postcss`
+      resolve: `gatsby-plugin-postcss`,
     },
     {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
-        trackingId: process.env.GOOGLE_ID || 'none'
-      }
+        trackingId: process.env.GOOGLE_ID || 'none',
+      },
     },
     // {
     //   resolve: `gatsby-source-cloudinary`,
@@ -89,10 +94,10 @@ module.exports = {
         // Setting a color is optional.
         color: 'black',
         // Disable the loading spinner.
-        showSpinner: false
-      }
+        showSpinner: false,
+      },
     },
     'gatsby-plugin-sitemap',
-    'gatsby-plugin-netlify' // make sure to keep it last in the array
-  ]
-}
+    'gatsby-plugin-netlify', // make sure to keep it last in the array
+  ],
+};

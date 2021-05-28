@@ -6100,6 +6100,13 @@ gatsby-page-utils@^1.6.0:
     lodash "^4.17.21"
     micromatch "^4.0.2"
 
+gatsby-plugin-canonical-urls@^3.6.0:
+  version "3.6.0"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-canonical-urls/-/gatsby-plugin-canonical-urls-3.6.0.tgz#4dc3273038d9a8cc73857245d10be3941e1a7f26"
+  integrity sha512-P/In2c6FCeFYH2mSS72MuDA3SUffXK4oh8Akf5XDdvNrvbdM9I+P920X3eGA3mVrvg0+T8AcSVjiTspLH1KxWw==
+  dependencies:
+    "@babel/runtime" "^7.12.5"
+
 gatsby-plugin-google-analytics@^3.0.0:
   version "3.6.0"
   resolved "https://registry.yarnpkg.com/gatsby-plugin-google-analytics/-/gatsby-plugin-google-analytics-3.6.0.tgz#5b4826044cc626eb56783ceec5e7eabe3ff8ee37"
