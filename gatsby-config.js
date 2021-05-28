@@ -27,7 +27,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-canonical-urls`,
       options: {
-        siteUrl: `https://delaneyhiggins.com,
+        siteUrl: `https://delaneyhiggins.com`,
       },
     },
     // Add static assets before markdown files
