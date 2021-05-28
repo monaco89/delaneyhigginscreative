@@ -1,14 +1,19 @@
-import React from 'react'
-import { Row, Col } from 'reactstrap'
-import { StaticImage } from 'gatsby-plugin-image'
+import React from 'react';
+import { Row, Col } from 'reactstrap';
+import { StaticImage } from 'gatsby-plugin-image';
 
-const nodeURL = 'https://instagram.com/higginsdelaney/'
+const nodeURL = 'https://instagram.com/higginsdelaney/';
 
 const InstagramFeed = () => (
   <section className="section">
     <Row>
       <Col xs="6" md="2" className="insta">
-        <a href={`${nodeURL}`} target="_blank" rel="noreferrer">
+        <a
+          href={`${nodeURL}`}
+          target="_blank"
+          rel="noreferrer"
+          title="Instagram Photo"
+        >
           <StaticImage
             alt="instagram profile"
             src="../images/insta1.jpg"
@@ -17,7 +22,12 @@ const InstagramFeed = () => (
         </a>
       </Col>
       <Col xs="6" md="2" className="insta">
-        <a href={`${nodeURL}`} target="_blank" rel="noreferrer">
+        <a
+          href={`${nodeURL}`}
+          target="_blank"
+          rel="noreferrer"
+          title="Instagram Photo"
+        >
           <StaticImage
             alt="instagram profile"
             src="../images/insta2.jpg"
@@ -33,13 +43,19 @@ const InstagramFeed = () => (
             target="_blank"
             rel="noreferrer"
             className="followAlong"
+            title="View Instagram Profile"
           >
             Follow Along
           </a>
         </h3>
       </Col>
       <Col xs="6" md="2" className="insta">
-        <a href={`${nodeURL}`} target="_blank" rel="noreferrer">
+        <a
+          href={`${nodeURL}`}
+          target="_blank"
+          rel="noreferrer"
+          title="Instagram Photo"
+        >
           <StaticImage
             alt="instagram profile"
             src="../images/insta3.jpg"
@@ -48,7 +64,12 @@ const InstagramFeed = () => (
         </a>
       </Col>
       <Col xs="6" md="2" className="insta">
-        <a href={`${nodeURL}`} target="_blank" rel="noreferrer">
+        <a
+          href={`${nodeURL}`}
+          target="_blank"
+          rel="noreferrer"
+          title="Instagram Photo"
+        >
           <StaticImage
             alt="instagram profile"
             src="../images/insta4.jpg"
@@ -58,6 +79,6 @@ const InstagramFeed = () => (
       </Col>
     </Row>
   </section>
-)
+);
 
-export default InstagramFeed
+export default InstagramFeed;

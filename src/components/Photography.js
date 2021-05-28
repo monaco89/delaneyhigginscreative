@@ -1,7 +1,7 @@
-import React from 'react'
-import { Row, Col } from 'reactstrap'
-import * as SectionStyle from '../style/fourColumnSection.module.css'
-import { StaticImage } from 'gatsby-plugin-image'
+import React from 'react';
+import { Row, Col } from 'reactstrap';
+import * as SectionStyle from '../style/fourColumnSection.module.css';
+import { StaticImage } from 'gatsby-plugin-image';
 
 const Photography = () => (
   <>
@@ -18,7 +18,7 @@ const Photography = () => (
             <Row className={SectionStyle.picture}>
               <StaticImage
                 src="../images/things.jpg"
-                alt="Product"
+                alt="Necklace"
                 transformOptions={{ fit: 'contain' }}
                 placeholder="blurred"
                 backgroundColor="transparent"
@@ -34,7 +34,7 @@ const Photography = () => (
             <Row className={SectionStyle.picture}>
               <StaticImage
                 src="../images/places.jpg"
-                alt="Places"
+                alt="Sun rays on Lincoln Memorial"
                 transformOptions={{ fit: 'contain' }}
                 placeholder="blurred"
                 backgroundColor="transparent"
@@ -50,7 +50,7 @@ const Photography = () => (
             <Row className={SectionStyle.picture}>
               <StaticImage
                 src="../images/treats.jpg"
-                alt="Treats"
+                alt="Sweet Desserts"
                 transformOptions={{ fit: 'contain' }}
                 placeholder="blurred"
                 backgroundColor="transparent"
@@ -66,7 +66,7 @@ const Photography = () => (
             <Row className={SectionStyle.picture}>
               <StaticImage
                 src="../images/people.jpg"
-                alt="People"
+                alt="Lady Smiling in the sun"
                 placeholder="blurred"
                 transformOptions={{ fit: 'contain' }}
                 backgroundColor="transparent"
@@ -80,6 +80,6 @@ const Photography = () => (
       </Row>
     </section>
   </>
-)
+);
 
-export default Photography
+export default Photography;

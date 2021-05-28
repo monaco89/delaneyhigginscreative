@@ -1,31 +1,31 @@
-import React from 'react'
-import { Location } from '@reach/router'
-import { IoMdMenu, IoMdClose } from 'react-icons/io'
-import { FaPinterest, FaInstagram } from 'react-icons/fa'
-import { FiMail } from 'react-icons/fi'
-import Logo from './Logo'
+import React from 'react';
+import { Location } from '@reach/router';
+import { IoMdMenu, IoMdClose } from 'react-icons/io';
+import { FaPinterest, FaInstagram } from 'react-icons/fa';
+import { FiMail } from 'react-icons/fi';
+import Logo from './Logo';
 
-import '../style/Nav.css'
+import '../style/Nav.css';
 
 class Navigation extends React.Component {
   state = {
     active: false,
     activeSubNav: false,
-    currentPath: false
-  }
+    currentPath: false,
+  };
 
   componentDidMount = () =>
-    this.setState({ currentPath: this.props.location.pathname })
+    this.setState({ currentPath: this.props.location.pathname });
 
-  handleMenuToggle = () => this.setState({ active: !this.state.active })
+  handleMenuToggle = () => this.setState({ active: !this.state.active });
 
   // Only close nav if it is open
-  handleLinkClick = () => this.state.active && this.handleMenuToggle()
+  handleLinkClick = () => this.state.active && this.handleMenuToggle();
 
   toggleSubNav = (subNav) =>
     this.setState({
-      activeSubNav: this.state.activeSubNav === subNav ? false : subNav
-    })
+      activeSubNav: this.state.activeSubNav === subNav ? false : subNav,
+    });
 
   render() {
     const { active } = this.state,
@@ -41,15 +41,25 @@ class Navigation extends React.Component {
         >
           {children}
         </a>
-      )
+      );
 
     return (
-      <nav className={`Nav ${active ? 'Nav-active' : ''}`}>
+      <nav className={`Nav ${active ? 'Nav-active' : ''}`} role="navigation">
         <div className="Nav--Container container">
-          <a href="/" onClick={this.handleLinkClick} className="mobileLogo">
+          <a
+            href="/"
+            onClick={this.handleLinkClick}
+            className="mobileLogo"
+            title="Home"
+          >
             <Logo />
           </a>
-          <a href="/" onClick={this.handleLinkClick} className="desktopLogo">
+          <a
+            href="/"
+            onClick={this.handleLinkClick}
+            className="desktopLogo"
+            title="Home"
+          >
             <Logo />
           </a>
           <div className="Nav--Links">
@@ -59,7 +69,7 @@ class Navigation extends React.Component {
                 this.props.location.pathname === '/' ? 'active' : ''
               }`}
               style={{
-                color: this.props.location.pathname === '/' ? 'white' : 'black'
+                color: this.props.location.pathname === '/' ? 'white' : 'black',
               }}
             >
               Home
@@ -84,7 +94,7 @@ class Navigation extends React.Component {
                 onKeyDown={() => this.toggleSubNav('styling')}
                 style={{
                   color:
-                    this.props.location.pathname === '/' ? 'white' : 'black'
+                    this.props.location.pathname === '/' ? 'white' : 'black',
                 }}
               >
                 Styling
@@ -124,7 +134,7 @@ class Navigation extends React.Component {
                 onKeyDown={() => this.toggleSubNav('photography')}
                 style={{
                   color:
-                    this.props.location.pathname === '/' ? 'white' : 'black'
+                    this.props.location.pathname === '/' ? 'white' : 'black',
                 }}
               >
                 Photography
@@ -161,7 +171,7 @@ class Navigation extends React.Component {
                 onKeyDown={() => this.toggleSubNav('design')}
                 style={{
                   color:
-                    this.props.location.pathname === '/' ? 'white' : 'black'
+                    this.props.location.pathname === '/' ? 'white' : 'black',
                 }}
               >
                 Design
@@ -178,34 +188,39 @@ class Navigation extends React.Component {
             <NavLink
               to="/about/"
               style={{
-                color: this.props.location.pathname === '/' ? 'white' : 'black'
+                color: this.props.location.pathname === '/' ? 'white' : 'black',
               }}
             >
               About Me
             </NavLink>
             <NavLink
               to="https://instagram.com/higginsdelaney"
+              rel="noopener noreferrer"
               target="_blank"
               style={{
-                color: this.props.location.pathname === '/' ? 'white' : 'black'
+                color: this.props.location.pathname === '/' ? 'white' : 'black',
               }}
+              title="Instagram"
             >
               <FaInstagram />
             </NavLink>
             <NavLink
               to="https://www.pinterest.com/delaneyhigginscreative"
+              rel="noopener noreferrer"
               target="_blank"
               style={{
-                color: this.props.location.pathname === '/' ? 'white' : 'black'
+                color: this.props.location.pathname === '/' ? 'white' : 'black',
               }}
+              title="Pinterest"
             >
               <FaPinterest />
             </NavLink>
             <NavLink
               to="/contact/"
               style={{
-                color: this.props.location.pathname === '/' ? 'white' : 'black'
+                color: this.props.location.pathname === '/' ? 'white' : 'black',
               }}
+              title="Contact Me"
             >
               <FiMail />
             </NavLink>
@@ -214,6 +229,7 @@ class Navigation extends React.Component {
             className="Button-blank Nav--MenuButton"
             onClick={this.handleMenuToggle}
             onKeyDown={this.handleMenuToggle}
+            aria-label="Navigation Menu"
           >
             {active ? (
               <IoMdClose />
@@ -221,17 +237,17 @@ class Navigation extends React.Component {
               <IoMdMenu
                 style={{
                   color:
-                    this.props.location.pathname === '/' ? 'white' : 'black'
+                    this.props.location.pathname === '/' ? 'white' : 'black',
                 }}
               />
             )}
           </button>
         </div>
       </nav>
-    )
+    );
   }
 }
 
-const Nav = () => <Location>{(route) => <Navigation {...route} />}</Location>
+const Nav = () => <Location>{(route) => <Navigation {...route} />}</Location>;
 
-export default Nav
+export default Nav;

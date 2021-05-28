@@ -1,7 +1,7 @@
-import React from 'react'
-import { Row, Col } from 'reactstrap'
-import * as SectionStyle from '../style/fourColumnSection.module.css'
-import { StaticImage } from 'gatsby-plugin-image'
+import React from 'react';
+import { Row, Col } from 'reactstrap';
+import * as SectionStyle from '../style/fourColumnSection.module.css';
+import { StaticImage } from 'gatsby-plugin-image';
 
 const Styling = () => (
   <>
@@ -21,7 +21,7 @@ const Styling = () => (
             <Row className={SectionStyle.picture}>
               <StaticImage
                 src="../images/interior.jpeg"
-                alt="Interior"
+                alt="White nightstand"
                 placeholder="blurred"
                 transformOptions={{ fit: 'contain' }}
                 backgroundColor="transparent"
@@ -37,7 +37,7 @@ const Styling = () => (
             <Row className={SectionStyle.picture}>
               <StaticImage
                 src="../images/prop.jpg"
-                alt="Prop"
+                alt="Various accessories"
                 placeholder="blurred"
                 transformOptions={{ fit: 'contain' }}
                 backgroundColor="transparent"
@@ -53,7 +53,7 @@ const Styling = () => (
             <Row className={SectionStyle.picture}>
               <StaticImage
                 src="../images/fashion.jpeg"
-                alt="Fashion"
+                alt="Delaney with a hat"
                 placeholder="blurred"
                 transformOptions={{ fit: 'contain' }}
                 backgroundColor="transparent"
@@ -69,7 +69,7 @@ const Styling = () => (
             <Row className={SectionStyle.picture}>
               <StaticImage
                 src="../images/holiday.jpg"
-                alt="Holiday"
+                alt="Wrapped Christmas presents"
                 placeholder="blurred"
                 transformOptions={{ fit: 'contain' }}
                 backgroundColor="transparent"
@@ -83,6 +83,6 @@ const Styling = () => (
       </Row>
     </section>
   </>
-)
+);
 
-export default Styling
+export default Styling;
