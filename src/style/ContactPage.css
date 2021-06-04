@@ -1,6 +1,6 @@
 .Contact {
   width: 100%;
-  padding: 2rem 0;
+  padding: 3rem 0;
 }
 
 .Contact--Details {
@@ -39,6 +39,9 @@
     margin-top: 20px;
   }
   .Contact--Details--Item {
+    padding: 1rem 0;
+  }
+  .Contact {
     padding: 1rem 0;
   }
 }
