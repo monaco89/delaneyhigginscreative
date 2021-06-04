@@ -33,7 +33,7 @@ const AboutMePageTemplate = ({
           />
         </Col>
         <Col xs="12" md="5">
-          <Content source={body} />
+          <Content source={body} className="lh30" />
         </Col>
       </Row>
       <br />

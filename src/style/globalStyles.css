@@ -305,3 +305,7 @@ blockquote {
   color: black;
   text-decoration: none;
 }
+
+.lh30 {
+  line-height: 30px;
+}
