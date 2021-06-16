@@ -36,7 +36,7 @@ const ImageItem = ({ image, focus, expandable = true }) => {
     <GalleryImageListItem expanded={expanded} expandable={expandable}>
       <figure>
         <img
-          src={`https://res.cloudinary.com/nickmonaco/image/upload/${image.public_id}.jpg`}
+          src={`https://res.cloudinary.com/nickmonaco/image/upload/${image.public_id}.${image.format}`}
           alt="style by delaney"
         />
         {!isMobile && expandable && (
