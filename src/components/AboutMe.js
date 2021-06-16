@@ -1,14 +1,14 @@
-import React from 'react'
-import { Row, Col } from 'reactstrap'
-import * as AboutMeStyle from '../style/AboutMe.module.css'
-import { StaticImage } from 'gatsby-plugin-image'
+import React from 'react';
+import { Row, Col } from 'reactstrap';
+import * as AboutMeStyle from '../style/AboutMe.module.css';
+import { StaticImage } from 'gatsby-plugin-image';
 // import Content from '../components/Content'
 
 const AboutMe = () => (
   <section className={`${AboutMeStyle.homeSection} section`}>
     <Row>
       <Col>
-        <h2 className={AboutMeStyle.title}>about me</h2>
+        <h2 className={AboutMeStyle.title}>about</h2>
         <hr className={AboutMeStyle.line} />
       </Col>
     </Row>
@@ -38,6 +38,6 @@ const AboutMe = () => (
     </section>
     {/* <div className="container">{<Content source={body} />}</div> */}
   </section>
-)
+);
 
-export default AboutMe
+export default AboutMe;

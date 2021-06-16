@@ -28,7 +28,7 @@ const AboutMePageTemplate = ({
         <Col xs="12" md="6" className={Styles.col}>
           <GatsbyImage
             image={aboutMePic.childImageSharp.gatsbyImageData}
-            alt="about me"
+            alt="about"
             style={{ maxWidth: '500px' }}
           />
         </Col>

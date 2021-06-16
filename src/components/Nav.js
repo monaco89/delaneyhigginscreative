@@ -191,7 +191,7 @@ class Navigation extends React.Component {
                 color: this.props.location.pathname === '/' ? 'white' : 'black',
               }}
             >
-              About Me
+              About
             </NavLink>
             <NavLink
               to="https://instagram.com/higginsdelaney"
