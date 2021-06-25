@@ -6,7 +6,7 @@ subtitle: ''
 featuredImage: ''
 meta:
   description: Learn about me and what i do.
-  title: About
+  title: About | Delaney Higgins
 ---
 
 Delaney Higgins is a freelance photographer, stylist, and graphic designer based in Washington, DC. Delaney studied Business Management at Manhattan College, and spent 5 years in NYC which heavily influenced her creative mind and allowed her to explore different fields of work.

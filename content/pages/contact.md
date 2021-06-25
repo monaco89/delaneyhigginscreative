@@ -9,7 +9,7 @@ phone: 914 758 9271
 email: delaneyahiggins@gmail.com
 meta:
   description: Contact me and make some magic together
-  title: Contact me
+  title: Contact me | Delaney Higgins
 ---
 
 Interested in creating something together? Reach out to me and we will make some magic!
