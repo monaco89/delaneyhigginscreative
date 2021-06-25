@@ -1,12 +1,11 @@
-import React from 'react'
-import Helmet from 'react-helmet'
-import { StaticQuery, graphql } from 'gatsby'
-import Meta from './Meta'
-import Nav from './Nav'
-import Footer from './Footer'
+import React from 'react';
+import { StaticQuery, graphql } from 'gatsby';
+import Meta from './Meta';
+import Nav from './Nav';
+import Footer from './Footer';
 
-import 'modern-normalize/modern-normalize.css'
-import '../style/globalStyles.css'
+import 'modern-normalize/modern-normalize.css';
+import '../style/globalStyles.css';
 
 const Layout = ({ children, meta, title }) => (
   <StaticQuery
@@ -22,15 +21,12 @@ const Layout = ({ children, meta, title }) => (
       }
     `}
     render={(data) => {
-      const { siteTitle, socialMediaCard } = data.settingsYaml || {}
+      const { siteTitle, socialMediaCard } = data.settingsYaml || {};
 
       return (
         <>
-          <Helmet defaultTitle={siteTitle} titleTemplate={`%s | ${siteTitle}`}>
-            {title}
-            {/* Add font link tags here */}
-          </Helmet>
           <Meta
+            siteTitle={title || siteTitle}
             absoluteImageUrl={
               socialMediaCard && socialMediaCard.image && socialMediaCard.image
             }
@@ -41,9 +37,9 @@ const Layout = ({ children, meta, title }) => (
           <>{children}</>
           <Footer />
         </>
-      )
+      );
     }}
   />
-)
+);
 
-export default Layout
+export default Layout;
