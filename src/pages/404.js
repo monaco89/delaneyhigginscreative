@@ -1,8 +1,8 @@
-import React from 'react'
-import Helmet from 'react-helmet'
-import { Link, StaticQuery, graphql } from 'gatsby'
+import React from 'react';
+import Helmet from 'react-helmet';
+import { Link, StaticQuery, graphql } from 'gatsby';
 
-import Layout from '../components/Layout'
+import Layout from '../components/Layout';
 
 const Error = () => (
   <StaticQuery
@@ -22,7 +22,7 @@ const Error = () => (
           <div className="container skinny taCenter">
             <h1>404 - Page Not Found</h1>
             <p>
-              We can't find the page you are looking for!
+              We can&#39;t find the page you are looking for!
               <br />
               Head back to <Link to="/">Delaney Higgins</Link>
             </p>
@@ -31,6 +31,6 @@ const Error = () => (
       </Layout>
     )}
   />
-)
+);
 
-export default Error
+export default Error;

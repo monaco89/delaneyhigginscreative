@@ -7,7 +7,7 @@ import Footer from './Footer';
 import 'modern-normalize/modern-normalize.css';
 import '../style/globalStyles.css';
 
-const Layout = ({ children, meta, title }) => (
+const Layout = ({ children, meta }) => (
   <StaticQuery
     query={graphql`
       query IndexLayoutQuery {
@@ -26,7 +26,7 @@ const Layout = ({ children, meta, title }) => (
       return (
         <>
           <Meta
-            siteTitle={title || siteTitle}
+            siteTitle={siteTitle}
             absoluteImageUrl={
               socialMediaCard && socialMediaCard.image && socialMediaCard.image
             }
