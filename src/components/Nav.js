@@ -95,9 +95,6 @@ class Navigation extends React.Component {
               className={`NavLink ${
                 this.props.location.pathname === '/' ? 'active' : ''
               }`}
-              style={{
-                color: this.props.location.pathname === '/' ? 'white' : 'black',
-              }}
             >
               Home
             </a>
@@ -119,10 +116,6 @@ class Navigation extends React.Component {
                 }`}
                 onClick={() => this.toggleSubNav('styling')}
                 onKeyDown={() => this.toggleSubNav('styling')}
-                style={{
-                  color:
-                    this.props.location.pathname === '/' ? 'white' : 'black',
-                }}
               >
                 Styling
                 <div className="Nav--GroupLinks">
@@ -183,10 +176,6 @@ class Navigation extends React.Component {
                 }`}
                 onClick={() => this.toggleSubNav('photography')}
                 onKeyDown={() => this.toggleSubNav('photography')}
-                style={{
-                  color:
-                    this.props.location.pathname === '/' ? 'white' : 'black',
-                }}
               >
                 Photography
                 <div className="Nav--GroupLinks">
@@ -244,10 +233,6 @@ class Navigation extends React.Component {
                 }`}
                 onClick={() => this.toggleSubNav('design')}
                 onKeyDown={() => this.toggleSubNav('design')}
-                style={{
-                  color:
-                    this.props.location.pathname === '/' ? 'white' : 'black',
-                }}
               >
                 Design
                 <div className="Nav--GroupLinks">
@@ -274,9 +259,6 @@ class Navigation extends React.Component {
             </div>
             <NavLink
               to="/about/"
-              style={{
-                color: this.props.location.pathname === '/' ? 'white' : 'black',
-              }}
               currentPath={this.state.currentPath}
               active={this.state.active}
               setState={this.handleState}
@@ -287,9 +269,6 @@ class Navigation extends React.Component {
               to="https://instagram.com/higginsdelaney"
               rel="noopener noreferrer"
               target="_blank"
-              style={{
-                color: this.props.location.pathname === '/' ? 'white' : 'black',
-              }}
               title="Instagram"
               currentPath={this.state.currentPath}
               active={this.state.active}
@@ -301,9 +280,6 @@ class Navigation extends React.Component {
               to="https://www.pinterest.com/delaneyhigginscreative"
               rel="noopener noreferrer"
               target="_blank"
-              style={{
-                color: this.props.location.pathname === '/' ? 'white' : 'black',
-              }}
               title="Pinterest"
               currentPath={this.state.currentPath}
               active={this.state.active}
@@ -313,9 +289,6 @@ class Navigation extends React.Component {
             </NavLink>
             <NavLink
               to="/contact/"
-              style={{
-                color: this.props.location.pathname === '/' ? 'white' : 'black',
-              }}
               title="Contact Me"
               currentPath={this.state.currentPath}
               active={this.state.active}
@@ -325,21 +298,13 @@ class Navigation extends React.Component {
             </NavLink>
           </div>
           <button
+            type="button"
             className="Button-blank Nav--MenuButton"
             onClick={this.handleMenuToggle}
             onKeyDown={this.handleMenuToggle}
             aria-label="Navigation Menu"
           >
-            {active ? (
-              <IoMdClose />
-            ) : (
-              <IoMdMenu
-                style={{
-                  color:
-                    this.props.location.pathname === '/' ? 'white' : 'black',
-                }}
-              />
-            )}
+            {active ? <IoMdClose /> : <IoMdMenu />}
           </button>
         </div>
       </nav>

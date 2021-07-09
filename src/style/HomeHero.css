@@ -1,5 +1,6 @@
 .HomeHero {
-  background-color: var(--darkGrey);
+  /* background-color: var(--darkGrey); */
+  background-color: white;
   color: white;
   /* padding: 15rem 0; */
   text-align: center;
@@ -18,7 +19,7 @@
 
 .logoHeader {
   font-size: 4.5rem;
-  color: white;
+  color: var(--darkGrey);
   font-family: orpheuspro;
 }
 
