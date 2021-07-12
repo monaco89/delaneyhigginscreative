@@ -1,0 +1,25 @@
+version: 0.2
+phases:
+  install:
+    runtime-versions:
+      nodejs: latest
+    commands:
+      - yarn global add gatsby
+  pre_build:
+    commands:
+      - yarn install --frozen-lockfile
+  build:
+    commands:
+      - yarn build
+  post_build:
+    commands:
+      - yarn deploy
+artifacts:
+  base-directory: public
+  files:
+    - "**/*"
+  discard-paths: no
+# cache:
+#   paths:
+#     - ".cache/*"
+#     - "public/*"
