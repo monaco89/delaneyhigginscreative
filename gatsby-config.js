@@ -72,39 +72,14 @@ module.exports = {
       },
     },
     {
-      resolve: `gatsby-plugin-s3`,
-      options: {
-        bucketName: process.env.TARGET_BUCKET_NAME || 'fake-bucket',
-        region: process.env.AWS_REGION,
-        protocol: targetAddress.protocol.slice(0, -1),
-        hostname: targetAddress.hostname,
-        acl: null,
-        params: {
-          // In case you want to add any custom content types: https://github.com/jariz/gatsby-plugin-s3/blob/master/recipes/custom-content-type.md
-        },
-      },
-    },
-    {
       resolve: `gatsby-plugin-postcss`,
     },
     {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
-        trackingId: process.env.GOOGLE_ID || 'none',
+        trackingId: process.env.GOOGLE_ANALYTICS_TRACKING_ID || 'none',
       },
     },
-    // {
-    //   resolve: `gatsby-source-cloudinary`,
-    //   options: {
-    //     cloudName: process.env.CLOUDINARY_CLOUD_NAME,
-    //     apiKey: process.env.CLOUDINARY_API_KEY,
-    //     apiSecret: process.env.CLOUDINARY_API_SECRET,
-    //     resourceType: `image`,
-    //     // prefix: `gatsby-source-cloudinary/`
-    //     tags: true,
-    //     maxResults: 1000
-    //   }
-    // },
     {
       resolve: 'gatsby-plugin-nprogress',
       options: {
@@ -112,6 +87,19 @@ module.exports = {
         color: 'black',
         // Disable the loading spinner.
         showSpinner: false,
+      },
+    },
+    {
+      resolve: `gatsby-plugin-s3`,
+      options: {
+        bucketName: process.env.TARGET_BUCKET_NAME || 'fake-bucket',
+        region: process.env.AWS_REGION || 'us-east-1',
+        protocol: targetAddress.protocol.slice(0, -1),
+        hostname: targetAddress.hostname,
+        acl: null,
+        params: {
+          // In case you want to add any custom content types: https://github.com/jariz/gatsby-plugin-s3/blob/master/recipes/custom-content-type.md
+        },
       },
     },
     'gatsby-plugin-sitemap',
