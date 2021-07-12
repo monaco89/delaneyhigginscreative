@@ -1,5 +1,9 @@
 require('dotenv').config();
 
+const targetAddress = new URL(
+  process.env.TARGET_ADDRESS || `http://delaneyhiggins.local`
+);
+
 module.exports = {
   siteMetadata: {
     title: 'Delaney Higgins',
@@ -65,6 +69,19 @@ module.exports = {
           },
           `gatsby-remark-responsive-iframe`,
         ],
+      },
+    },
+    {
+      resolve: `gatsby-plugin-s3`,
+      options: {
+        bucketName: process.env.TARGET_BUCKET_NAME || 'fake-bucket',
+        region: process.env.AWS_REGION,
+        protocol: targetAddress.protocol.slice(0, -1),
+        hostname: targetAddress.hostname,
+        acl: null,
+        params: {
+          // In case you want to add any custom content types: https://github.com/jariz/gatsby-plugin-s3/blob/master/recipes/custom-content-type.md
+        },
       },
     },
     {

@@ -24,6 +24,7 @@
     "gatsby-plugin-offline": "^4.0.0",
     "gatsby-plugin-postcss": "^4.0.0",
     "gatsby-plugin-react-helmet": "^4.0.0",
+    "gatsby-plugin-s3": "^0.3.8",
     "gatsby-plugin-sharp": "^3.0.0",
     "gatsby-plugin-sitemap": "^4.0.0",
     "gatsby-remark-images": "^5.1.0",
