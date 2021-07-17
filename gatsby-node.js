@@ -1,9 +1,9 @@
-const { groupBy, get, kebabCase, each } = require('lodash')
-const path = require('path')
+const { groupBy, get, kebabCase, each } = require('lodash');
+const path = require('path');
 // const { createFilePath } = require('gatsby-source-filesystem')
 
 exports.createPages = ({ actions, graphql }) => {
-  const { createPage } = actions
+  const { createPage } = actions;
 
   return graphql(`
     {
@@ -25,25 +25,23 @@ exports.createPages = ({ actions, graphql }) => {
     }
   `).then((result) => {
     if (result.errors) {
-      result.errors.forEach((e) => console.error(e.toString()))
-      return Promise.reject(result.errors)
+      result.errors.forEach((e) => console.error(e.toString()));
+      return Promise.reject(result.errors);
     }
 
-    const mdFiles = result.data.allMarkdownRemark.edges
+    const mdFiles = result.data.allMarkdownRemark.edges;
 
-    const contentTypes = groupBy(mdFiles, 'node.fields.contentType')
+    const contentTypes = groupBy(mdFiles, 'node.fields.contentType');
 
     each(contentTypes, (pages, contentType) => {
       const pagesToCreate = pages.filter((page) =>
         // get pages with template field
         get(page, `node.frontmatter.template`)
-      )
-      if (!pagesToCreate.length) return console.log(`Skipping ${contentType}`)
-
-      console.log(`Creating ${pagesToCreate.length} ${contentType}`)
+      );
+      if (!pagesToCreate.length) return console.log(`Skipping ${contentType}`);
 
       pagesToCreate.forEach((page, index) => {
-        const id = page.node.id
+        const id = page.node.id;
         createPage({
           // page slug set in md frontmatter
           path: page.node.fields.slug,
@@ -52,56 +50,56 @@ exports.createPages = ({ actions, graphql }) => {
           ),
           // additional data can be passed via context
           context: {
-            id
-          }
-        })
-      })
-    })
-  })
-}
+            id,
+          },
+        });
+      });
+    });
+  });
+};
 
 exports.onCreateNode = ({ node, actions, getNode }) => {
-  const { createNodeField } = actions
+  const { createNodeField } = actions;
 
   // Create smart slugs
   // https://github.com/Vagr9K/gatsby-advanced-starter/blob/master/gatsby-node.js
-  let slug
+  let slug;
   if (node.internal.type === 'MarkdownRemark') {
-    const fileNode = getNode(node.parent)
-    const parsedFilePath = path.parse(fileNode.relativePath)
+    const fileNode = getNode(node.parent);
+    const parsedFilePath = path.parse(fileNode.relativePath);
 
     if (get(node, 'frontmatter.slug')) {
-      slug = `/${node.frontmatter.slug.toLowerCase()}/`
+      slug = `/${node.frontmatter.slug.toLowerCase()}/`;
     } else if (
       // home page gets root slug
       parsedFilePath.name === 'home' &&
       parsedFilePath.dir === 'pages'
     ) {
-      slug = `/`
+      slug = `/`;
     } else if (get(node, 'frontmatter.title')) {
       slug = `/${kebabCase(parsedFilePath.dir)}/${kebabCase(
         node.frontmatter.title
-      )}/`
+      )}/`;
     } else if (parsedFilePath.dir === '') {
-      slug = `/${parsedFilePath.name}/`
+      slug = `/${parsedFilePath.name}/`;
     } else {
-      slug = `/${parsedFilePath.dir}/`
+      slug = `/${parsedFilePath.dir}/`;
     }
 
     createNodeField({
       node,
       name: 'slug',
-      value: slug
-    })
+      value: slug,
+    });
 
     // Add contentType to node.fields
     createNodeField({
       node,
       name: 'contentType',
-      value: parsedFilePath.dir
-    })
+      value: parsedFilePath.dir,
+    });
   }
-}
+};
 
 // Random fix for https://github.com/gatsbyjs/gatsby/issues/5700
-module.exports.resolvableExtensions = () => ['.json']
+module.exports.resolvableExtensions = () => ['.json'];

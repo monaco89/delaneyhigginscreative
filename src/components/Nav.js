@@ -90,14 +90,14 @@ class Navigation extends React.Component {
             <Logo />
           </a>
           <div className="Nav--Links">
-            <a
+            {/* <a
               href="/"
               className={`NavLink ${
                 this.props.location.pathname === '/' ? 'active' : ''
               }`}
             >
               Home
-            </a>
+            </a> */}
             <div
               className={`Nav--Group ${
                 this.state.activeSubNav === 'styling' ? 'active' : ''
@@ -294,7 +294,7 @@ class Navigation extends React.Component {
               active={this.state.active}
               setState={this.handleState}
             >
-              <FiMail />
+              Contact
             </NavLink>
           </div>
           <button

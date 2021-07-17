@@ -5,7 +5,7 @@ import { StaticImage } from 'gatsby-plugin-image';
 const nodeURL = 'https://instagram.com/higginsdelaney/';
 
 const InstagramFeed = () => (
-  <section className="section">
+  <section className="section" style={{ background: '#e4e1d5' }}>
     <Row>
       <Col xs="6" md="2" className="insta">
         <a

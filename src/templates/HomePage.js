@@ -13,10 +13,10 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 const HomePageTemplate = ({ body }) => (
   <main className="Home">
     <HomeHero large />
-    <Photography />
     <AboutMe body={body} />
-    <Styling />
+    <Photography />
     <Design />
+    <Styling />
     <InstagramFeed />
   </main>
 );

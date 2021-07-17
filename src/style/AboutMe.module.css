@@ -6,22 +6,17 @@
 .bio {
   color: black;
   font-size: calc(0.8vw + 1rem);
-  /* font-weight: 400; */
   font-family: adobe-garamond-pro;
   line-height: 1.2;
   text-align: center;
-  /* padding-top: 50px; */
-}
-
-.section {
-  /* padding-top: 3.3vmax; */
-  padding-bottom: 3.3vmax;
-  padding-right: 2vw;
-  padding-left: 14vw;
+  padding: 50px;
+  margin-top: 100px;
 }
 
 .homeSection {
-  background-color: lightgray;
+  margin-top: 60px;
+  background-color: #e4e1d5;
+  max-height: 800px;
 }
 
 .line {
@@ -35,10 +30,15 @@
 
 .title {
   font-size: calc(3.6vw + 1rem);
-  color: #595959;
+  color: black;
+  font-weight: 400;
   padding-top: 3.3vmax;
   padding-right: 7vw;
   padding-left: 7vw;
+  font-family: orpheuspro;
+  position: absolute;
+  z-index: 1;
+  right: 0;
 }
 .mb20 {
   margin-bottom: 20px;
