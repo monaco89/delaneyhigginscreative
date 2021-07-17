@@ -15,7 +15,7 @@
 
 .homeSection {
   margin-top: 60px;
-  background-color: #e4e1d5;
+  background-color: #f5f4ef;
   max-height: 800px;
 }
 
@@ -29,7 +29,7 @@
 }
 
 .title {
-  font-size: calc(3.6vw + 1rem);
+  font-size: calc(3.4vw + 1rem);
   color: black;
   font-weight: 400;
   padding-top: 3.3vmax;
@@ -54,23 +54,22 @@
 
   .title {
     font-size: 2.5rem;
+    position: relative;
   }
 
   .bio {
-    padding-top: 3.3vmax;
+    padding: 2vmax;
+    margin-top: 40px;
   }
 
   .pageSection {
     padding: 1rem;
   }
-
-  .section {
-    padding-top: 3.3vmax;
-    padding-bottom: 3.3vmax;
-    padding-right: 7vw;
-    padding-left: 7vw;
-  }
   .line {
     height: 1px;
+  }
+  .homeSection {
+    margin-top: 0px;
+    max-height: 1200px;
   }
 }

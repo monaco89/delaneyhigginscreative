@@ -297,7 +297,8 @@ blockquote {
 
 .footer {
   padding: 2rem 0;
-  background: var(--lightGrey);
+  /* background: var(--lightGrey); */
+  background-color: #f5f4ef;
   font-family: adobe-garamond-pro;
 }
 

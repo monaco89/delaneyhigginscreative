@@ -4,9 +4,9 @@
 }
 
 .Contact--Details {
-  margin-top: 3rem;
-  background-color: #d3d3d3;
-  padding: 2em;
+  /* margin-top: 3rem; */
+  background-color: #f5f4ef;
+  padding: 2em 2em 0em 2em;
 }
 
 .Contact--Details--Item {
