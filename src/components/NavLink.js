@@ -1,12 +1,31 @@
-import React from 'react'
-import { Link } from 'gatsby'
+import React from 'react';
+import '../style/NavLink.css';
 
-import '../style/NavLink.css'
+function NavLink({
+  to,
+  className,
+  children,
+  currentPath,
+  active,
+  handleMenuToggle,
+  ...props
+}) {
+  // Only close nav if it is open
+  function handleLinkClick() {
+    return active && handleMenuToggle();
+  }
 
-const NavLink = ({ className, children, ...props }) => (
-  <Link {...props} className={`NavLink ${className || ''}`}>
-    {children}
-  </Link>
-)
+  return (
+    <a
+      href={to}
+      className={`NavLink ${to === currentPath ? 'active' : ''} ${className}`}
+      onClick={handleLinkClick}
+      onKeyDown={handleLinkClick}
+      {...props}
+    >
+      {children}
+    </a>
+  );
+}
 
-export default NavLink
+export default NavLink;

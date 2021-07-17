@@ -9,12 +9,12 @@
   font-family: adobe-garamond-pro;
   line-height: 1.2;
   text-align: center;
-  padding: 50px;
+  padding: 2vmax;
   margin-top: 100px;
 }
 
 .homeSection {
-  margin-top: 60px;
+  margin-top: 3vmax;
   background-color: #f5f4ef;
   max-height: 800px;
 }
@@ -47,6 +47,13 @@
 .col {
   text-align: center;
 }
+@media (max-width: 800px) {
+  .homeSection {
+    margin-top: 0;
+    background-color: #f5f4ef;
+    max-height: 800px;
+  }
+}
 @media (max-width: 600px) {
   .col {
     margin-bottom: 5px;
@@ -58,7 +65,6 @@
   }
 
   .bio {
-    padding: 2vmax;
     margin-top: 40px;
   }
 
